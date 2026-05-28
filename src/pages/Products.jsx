@@ -4,336 +4,238 @@ import "./Products.css";
 const products = [
   {
     id: 1,
-    brand: "Dreamease",
     category: "Feminine Hygiene Care",
     desc: "Premium feminine hygiene and wellness essentials.",
+
     subproducts: [
-      "Disposable Period Panty",
-      "Sanitary Pads Ultra Soft XL with Wings",
-      "Panty Liners 185mm",
-      "Panty Liners 155mm",
-      "Menstrual Cup Small",
-      "Menstrual Cup Medium",
-      "Menstrual Cup Large",
-      "Intimate Wash Natural Sulfate Free",
-      "Period Relax & Relief Cream",
-      "Pregnancy Test Kit",
+      {
+        name: "Disposable Period Panty",
+      },
+
+      {
+        name: "Sanitary Pads Ultra Soft XL with Wings",
+      },
+
+      {
+        name: "Panty Liners",
+        sizes: ["155mm", "185mm"],
+      },
+
+      {
+        name: "Menstrual Cup",
+        sizes: ["Small", "Medium", "Large"],
+        colors: ["Pink", "Purple"],
+      },
+
+      {
+        name: "Intimate Wash Natural Sulfate Free",
+      },
+
+      {
+        name: "Period Relax & Relief Cream",
+      },
+
+      {
+        name: "Pregnancy Test Kit",
+      },
     ],
   },
 
   {
     id: 2,
-    brand: "Dreamease",
     category: "Baby Care",
     desc: "Dermatologically safe baby hygiene products.",
+
     subproducts: [
-      "Baby Diapers Pant Style NB",
-      "Baby Diapers Pant Style S",
-      "Baby Diapers Pant Style M",
-      "Baby Diapers Pant Style L",
-      "Baby Diapers Pant Style XL",
-      "Baby Wipes Regular 99% Water Based",
-      "Baby Wipes Honey",
+      {
+        name: "Baby Diapers Pant Style",
+        sizes: ["NB", "S", "M", "L", "XL"],
+      },
+
+      {
+        name: "Baby Wipes",
+        variants: [
+          "Regular 99% Water Based",
+          "Honey",
+        ],
+      },
     ],
   },
 
   {
     id: 3,
-    brand: "Dreamease",
     category: "Adult Incontinence",
     desc: "Comfort-focused adult care and protection solutions.",
+
     subproducts: [
-      "Adult Pant Diaper Standard M",
-      "Adult Pant Diaper Standard L",
-      "Adult Pant Diaper Standard XL",
-      "Adult Pant Diaper Premium M",
-      "Adult Pant Diaper Premium L",
-      "Adult Pant Diaper Premium XL",
-      "Adult Tape Diaper Premium M",
-      "Adult Tape Diaper Premium L",
-      "Adult Tape Diaper Premium XL",
-      "Underpad Sheet Regular",
-      "Underpad Sheet with Sticking Release Tape",
+      {
+        name: "Adult Pant Diaper Standard",
+        sizes: ["M", "L", "XL"],
+      },
+
+      {
+        name: "Adult Pant Diaper Premium",
+        sizes: ["M", "L", "XL"],
+      },
+
+      {
+        name: "Adult Tape Diaper Premium",
+        sizes: ["M", "L", "XL"],
+      },
+
+      {
+        name: "Underpad Sheet",
+        variants: [
+          "Regular",
+          "With Sticking Release Tape",
+        ],
+      },
     ],
   },
 
   {
     id: 4,
-    brand: "Dreamease",
     category: "Women's Wellness",
     desc: "Daily wellness gummies and nutrition support.",
+
     subproducts: [
-      "UTI Defence Gummies",
-      "Iron Gummies",
-      "Calcium & Vitamin-D Gummies",
-      "Multivitamin & Minerals Gummies",
+      {
+        name: "UTI Defence Gummies",
+      },
+
+      {
+        name: "Iron Gummies",
+      },
+
+      {
+        name: "Calcium & Vitamin-D Gummies",
+      },
+
+      {
+        name: "Multivitamin & Minerals Gummies",
+      },
     ],
   },
 
   {
     id: 5,
-    brand: "Aurum Care",
     category: "Medical Disposables / Surgical",
     desc: "Hospital-grade disposable and surgical products.",
-    subproducts: [
-      "Au-Fix Infusion Set Classic",
-      "Au-Fix Infusion Set Ultra",
-      "Au-Safe Disposable Syringes",
-      "Au-Flon IV Cannula",
-      "Scalp Vein Set",
-      "Urine Bag Classic",
-      "Urine Bag Premium",
-      "Urine Bag Superior",
-      "Urine Bag with Urometer",
-      "2-Way Foley Balloon Catheter",
-      "Oxygen Mask",
-      "Nebulizer Mask",
-      "Nasal Cannula",
-      "High Oxygen Concentration Mask",
-      "Au-Care Surgical Gloves",
-      "Au-Pore Microporous Paper Tape",
-      "Au-Plast Elastic Adhesive Bandage",
-    ],
-  },
 
-  {
-    id: 6,
-    brand: "Wellness Surgical / Kramson",
-    category: "Wound Care & Cotton",
-    desc: "Cotton, gauze, bandages and wound care essentials.",
     subproducts: [
-      "Wellness Surgical Absorbent Cotton",
-      "Kramson Absorbent Cotton",
-      "Wellness Surgical Zigzag Cotton",
-      "Roller Bandage Rolled Gauze",
-      "Gauze Cloth / Bandage Than Roll",
-      "Crepe Bandage",
-      "Premium Crepe Bandage",
-      "POP Bandage Kramson",
-      "Gauze Swabs Sterile Kramson",
-      "Elastic Adhesive Bandage Kramson",
-      "Cannula Fixer Kramson",
-      "Microporous Paper Tape Wellness Surgical",
-    ],
-  },
+      {
+        name: "Au-Fix Infusion Set",
+        variants: [
+          "Classic",
+          "Ultra with Air Vent",
+        ],
+      },
 
-  {
-    id: 7,
-    brand: "Samson",
-    category: "Orthopaedic Supports & Braces",
-    desc: "Orthopaedic rehabilitation and support products.",
-    subproducts: [
-      "Cervical Orthosis Philadelphia",
-      "Cervical Collar Soft with Support",
-      "Cervical Collar Soft Firm Density",
-      "Cervical Collar Hard Adjustable",
-      "Contoured Lumbo Sacral Support",
-      "Lumbo Sacral Belt",
-      "Lumbo Corset",
-      "Taylor's Brace",
-      "Posture Corrector",
-      "Abdominal Belt",
-      "Hernia Belt",
-      "Pelvic Binder",
-      "Chest Binder",
-      "Rib Belt",
-      "Knee Brace Immobilizer",
-      "Elastic Knee Support",
-      "Knee Cap Hinged",
-      "ROM Knee Brace",
-      "Functional Knee Support",
-      "Ankle Brace",
-      "Foot Walker Boot",
-      "Air Ankle Splint",
-      "Shoulder Support",
-      "Clavicle Brace",
-      "Wrist Splint",
-      "Thumb Spica Splint",
-      "ROM Elbow Brace",
-      "Compression Stockings",
-      "Varicose Vein Stockings",
-      "Abdominal Binder",
-      "Hip Brace",
-      "Foot Care Supports",
-      "Finger Splints",
-    ],
-  },
+      {
+        name: "Au-Safe Disposable Syringes",
+        sizes: ["2ml", "3ml", "5ml", "10ml"],
+      },
 
-  {
-    id: 8,
-    brand: "Samson",
-    category: "Fracture Aids",
-    desc: "Immobilization and fracture management products.",
-    subproducts: [
-      "Universal Shoulder Immobilizer",
-      "Elastic Shoulder Immobilizer",
-      "Shoulder Support",
-      "Clavicle Brace",
-      "Arm Sling Pouch Baggy",
-      "Pouch Arm Sling Tropical",
-      "Arm Immobilizer Adjustable",
-      "Cast Shoes",
-      "Cast Cover Arm",
-      "Cast Cover Leg",
-      "Shoulder Abduction Pillow",
-      "Arm Sling Strap",
-      "Humerus Brace",
-      "Heel Off-loading Shoes",
-      "Forefoot Off-loading Shoes",
-    ],
-  },
+      {
+        name: "Au-Flon IV Cannula",
+        sizes: [
+          "18G",
+          "20G",
+          "22G",
+          "24G",
+          "26G",
+        ],
+      },
 
-  {
-    id: 9,
-    brand: "Samson",
-    category: "Traction Kits",
-    desc: "Professional traction systems and accessories.",
-    subproducts: [
-      "Cervical Traction Head Halter",
-      "Cervical Traction Kit Sitting",
-      "Cervical Traction Kit Sleeping",
-      "Pelvic Traction Belt",
-      "Pelvic Traction Kit",
-      "Traction Pulley Bracket",
-      "Traction Weight Bag",
-      "Skin Traction Set PUF Liner",
-      "Leg Traction Brace",
-      "Ankle Traction Belt",
-    ],
-  },
+      {
+        name: "Scalp Vein Set",
+        sizes: ["22G", "23G", "24G"],
+      },
 
-  {
-    id: 10,
-    brand: "Samson",
-    category: "Physiotherapy & Rehabilitation",
-    desc: "Recovery, rehabilitation and physiotherapy aids.",
-    subproducts: [
-      "Cervical Pillow",
-      "Tailbone Support Coccyx Cushion",
-      "Lumbo Back Rest",
-      "Ring Seat Pillow",
-      "Knee Rest Pillow",
-      "Foot Rest Pillow",
-      "Neck Corrector & Relaxer",
-      "Weight Cuff",
-      "Resistance Band",
-      "Hot & Cold Pack",
-      "Ice Bag",
-      "Hand Gripper",
-      "Wrist & Arm Exerciser",
-      "Anti Burst Gym Ball",
-      "Spirometer",
-      "Nebuliser",
-      "Heating Pad Ortho",
-      "Ortho Heating Gel Bag Electric",
-      "Air Mattress",
-    ],
-  },
+      {
+        name: "Urine Bag",
+        variants: [
+          "Classic",
+          "Premium",
+          "Superior",
+          "With Urometer",
+        ],
+      },
 
-  {
-    id: 11,
-    brand: "Samson",
-    category: "Walking Aids & Mobility",
-    desc: "Mobility assistance and rehabilitation equipment.",
-    subproducts: [
-      "Commode Stool",
-      "Commode Chair",
-      "Walking Stick",
-      "Foldable Stick",
-      "Quadra Stick",
-      "Elbow Crutch Adjustable",
-      "Walker Invalid's HD",
-      "Walker Invalid's Front Wheel HD",
-      "Axillary Crutch Pair",
-      "Walking Stick Quadripod",
-      "Wheelchair",
-      "Wheelchair with Commode",
-      "Electric Wheelchair",
-    ],
-  },
+      {
+        name: "2-Way Foley Balloon Catheter",
+        sizes: ["6FR to 20FR"],
+      },
 
-  {
-    id: 12,
-    brand: "Samson",
-    category: "Surgical Dressing",
-    desc: "Professional surgical dressing products.",
-    subproducts: [
-      "SAM POP Plaster of Paris Bandage",
-      "SAM PORE Microporous Paper Tape 5m",
-      "SAM PORE Microporous Paper Tape 9m",
-      "Kinesiology Therapeutic Tape",
-      "SAM CREPE Cotton Crepe Bandage",
-      "SAM NETT Stockinette",
-      "SAM PLAST Elastic Adhesive Bandage",
-      "SAM FIX Cannula Fixator",
-      "CAST PAD Soft Roll",
-    ],
-  },
+      {
+        name: "Oxygen Mask",
+      },
 
-  {
-    id: 13,
-    brand: "Samson Sport",
-    category: "Sport Gear",
-    desc: "Sports supports and gym protection products.",
-    subproducts: [
-      "Abdominal Support",
-      "Lumbo Sacral Support",
-      "Weight Lifting Belt",
-      "Knee Support",
-      "Wrist Wrap with Thumb Loop",
-      "Tennis Elbow Support",
-      "Ankle Support",
-      "Shoulder Support",
-      "Samgrip Gym Gloves",
-      "Yoga Mat TPE",
-      "Dual Patella Support",
-      "Knee Pad",
-    ],
-  },
+      {
+        name: "Nebulizer Mask",
+      },
 
-  {
-    id: 14,
-    brand: "Samson Junior",
-    category: "Junior / Paediatric Range",
-    desc: "Healthcare and orthopaedic products for children.",
-    subproducts: [
-      "Cervical Orthosis Philadelphia Child",
-      "Cervical Collar Soft Firm Density Child",
-      "Universal Shoulder Immobilizer Child",
-      "Clavicle Brace Child",
-      "Arm Sling Pouch Child",
-      "Foot Drop Splint Child",
-      "Ankle Brace Child",
-      "Foot Walker Boot Short Child",
-      "Wrist Splint Child",
-      "Thumb Spica Splint Child",
-      "Knee Brace Immobilizer Child",
-      "Knee Wrap Hinged Child",
-      "Skin Traction Set Child",
-      "Arch Support PU Gel Child",
-      "Flat Foot Insole Paediatric Child",
-      "Pavlik Harness",
+      {
+        name: "Nasal Cannula",
+      },
+
+      {
+        name: "High Oxygen Concentration Mask",
+      },
+
+      {
+        name: "Au-Care Surgical Gloves",
+        sizes: ['6.5"', '7"', '7.5"'],
+      },
+
+      {
+        name: "Au-Pore Microporous Paper Tape",
+        sizes: ["5.1m", "9.1m"],
+      },
+
+      {
+        name: "Au-Plast Elastic Adhesive Bandage",
+      },
     ],
   },
 ];
 
-const categories = ["All", ...new Set(products.map((p) => p.category))];
+const categories = [
+  "All",
+  ...new Set(products.map((p) => p.category)),
+];
 
 const Products = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [viewMode, setViewMode] = useState("grid");
+
+  const [activeCategory, setActiveCategory] =
+    useState("All");
+
+  const [searchQuery, setSearchQuery] =
+    useState("");
+
+  const [viewMode, setViewMode] =
+    useState("grid");
+
+  const [selectedProduct, setSelectedProduct] =
+    useState(null);
 
   const filtered = products.filter((p) => {
+
     const matchCat =
-      activeCategory === "All" || p.category === activeCategory;
+      activeCategory === "All" ||
+      p.category === activeCategory;
+
+    const query = searchQuery.toLowerCase();
 
     const matchSearch =
       searchQuery.trim() === "" ||
-      p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+
+      p.category.toLowerCase().includes(query) ||
+
+      p.desc.toLowerCase().includes(query) ||
+
       p.subproducts.some((item) =>
-        item.toLowerCase().includes(searchQuery.toLowerCase())
+        item.name.toLowerCase().includes(query)
       );
 
     return matchCat && matchSearch;
@@ -341,81 +243,127 @@ const Products = () => {
 
   return (
     <div className="products-page">
+
       <section className="products-hero">
-        <p className="products-eyebrow">CATALOG</p>
+
+        <p className="products-eyebrow">
+          CATALOG
+        </p>
 
         <h1 className="products-title">
           Our complete{" "}
+
           <span className="products-title-accent">
             healthcare product range
           </span>
+
         </h1>
 
         <p className="products-subtitle">
-          Browse our extensive range of medical, surgical, orthopedic,
-          rehabilitation and wellness products.
+          Browse our extensive range of medical,
+          surgical, orthopedic, rehabilitation and
+          wellness products.
         </p>
+
       </section>
 
       <section className="products-controls">
+
         <div className="search-bar">
-          <span className="search-icon">🔍</span>
+
+          <span className="search-icon">
+            🔍
+          </span>
 
           <input
             type="text"
             placeholder="Search categories or products..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) =>
+              setSearchQuery(e.target.value)
+            }
           />
 
           <div className="view-toggles">
+
             <button
-              className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
-              onClick={() => setViewMode("grid")}
+              className={`view-btn ${
+                viewMode === "grid"
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                setViewMode("grid")
+              }
             >
               ⬜
             </button>
 
             <button
-              className={`view-btn ${viewMode === "list" ? "active" : ""}`}
-              onClick={() => setViewMode("list")}
+              className={`view-btn ${
+                viewMode === "list"
+                  ? "active"
+                  : ""
+              }`}
+              onClick={() =>
+                setViewMode("list")
+              }
             >
               ☰
             </button>
+
           </div>
         </div>
 
         <div className="category-pills">
+
           {categories.map((cat) => (
+
             <button
               key={cat}
               className={`pill ${
-                activeCategory === cat ? "pill-active" : ""
+                activeCategory === cat
+                  ? "pill-active"
+                  : ""
               }`}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() =>
+                setActiveCategory(cat)
+              }
             >
               {cat}
             </button>
+
           ))}
+
         </div>
       </section>
 
       <section className="products-grid-section">
+
         <div
           className={`products-grid ${
-            viewMode === "list" ? "products-list" : ""
+            viewMode === "list"
+              ? "products-list"
+              : ""
           }`}
         >
+
           {filtered.map((product) => (
-            <div className="product-card" key={product.id}>
+
+            <div
+              className="product-card"
+              key={product.id}
+            >
+
               <div className="product-card-img placeholder-card">
-                <div className="placeholder-icon">🏥</div>
+
+                <div className="placeholder-icon">
+                  🏥
+                </div>
+
               </div>
 
               <div className="product-card-body">
-                <p className="product-brand">
-                  {product.brand}
-                </p>
 
                 <p className="product-category-name">
                   {product.category}
@@ -425,36 +373,123 @@ const Products = () => {
                   {product.desc}
                 </p>
 
-                <div className="subproducts-wrapper">
-                  <h4>Products Included:</h4>
-
-                  <ul className="subproducts-list">
-                    {product.subproducts.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-
                 <div className="product-card-footer">
-                  <button className="btn-view-details">
+
+                  <button
+                    className="btn-view-details"
+                    onClick={() =>
+                      setSelectedProduct(product)
+                    }
+                  >
                     View Details →
                   </button>
 
-                  <button className="btn-quote-icon" title="Request Quote">
+                  <button
+                    className="btn-quote-icon"
+                    title="Request Quote"
+                  >
                     💬
                   </button>
+
                 </div>
+
               </div>
+
             </div>
+
           ))}
+
         </div>
 
         {filtered.length === 0 && (
+
           <div className="no-results">
             No products found.
           </div>
+
         )}
+
       </section>
+
+      {selectedProduct && (
+
+        <div
+          className="modal-overlay"
+          onClick={() =>
+            setSelectedProduct(null)
+          }
+        >
+
+          <div
+            className="modal-content"
+            onClick={(e) =>
+              e.stopPropagation()
+            }
+          >
+
+            <div className="modal-header">
+
+              <h2>
+                {selectedProduct.category}
+              </h2>
+
+              <button
+                className="modal-close"
+                onClick={() =>
+                  setSelectedProduct(null)
+                }
+              >
+                ✕
+              </button>
+
+            </div>
+
+            <div className="modal-products">
+
+              {selectedProduct.subproducts.map(
+                (item, index) => (
+
+                  <div
+                    className="modal-product-item"
+                    key={index}
+                  >
+
+                    <h4>{item.name}</h4>
+
+                    {item.sizes && (
+                      <p>
+                        <strong>Sizes:</strong>{" "}
+                        {item.sizes.join(", ")}
+                      </p>
+                    )}
+
+                    {item.colors && (
+                      <p>
+                        <strong>Colors:</strong>{" "}
+                        {item.colors.join(", ")}
+                      </p>
+                    )}
+
+                    {item.variants && (
+                      <p>
+                        <strong>Variants:</strong>{" "}
+                        {item.variants.join(", ")}
+                      </p>
+                    )}
+
+                  </div>
+
+                )
+              )}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      )}
+
     </div>
   );
 };
