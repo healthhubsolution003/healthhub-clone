@@ -4,11 +4,11 @@
   background: #fff;
   min-height: 100vh;
 }
-
+ 
 /* ───────────────────────────── */
 /* HERO */
 /* ───────────────────────────── */
-
+ 
 .products-eyebrow {
   font-size: 0.72rem;
   font-weight: 700;
@@ -17,13 +17,13 @@
   text-transform: uppercase;
   margin-bottom: 0.75rem;
 }
-
+ 
 .products-hero {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 24px 32px;
 }
-
+ 
 .products-title {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 800;
@@ -31,22 +31,22 @@
   margin: 0 0 1rem;
   line-height: 1.2;
 }
-
+ 
 .products-title-accent {
   color: #2a9d7c;
 }
-
+ 
 .products-subtitle {
   font-size: 0.95rem;
   color: #4a5568;
   line-height: 1.7;
   margin: 0;
 }
-
+ 
 /* ───────────────────────────── */
 /* CONTROLS */
 /* ───────────────────────────── */
-
+ 
 .products-controls {
   max-width: 1100px;
   margin: 0 auto;
@@ -55,9 +55,7 @@
   flex-direction: column;
   gap: 20px;
 }
-
-/* SEARCH BAR */
-
+ 
 .search-bar {
   display: flex;
   align-items: center;
@@ -68,7 +66,7 @@
   gap: 10px;
   height: 48px;
 }
-
+ 
 .search-bar input {
   flex: 1;
   border: none;
@@ -77,19 +75,17 @@
   color: #1a2a3a;
   background: transparent;
 }
-
+ 
 .search-bar input::placeholder {
   color: #a0aec0;
 }
-
+ 
 .search-icon {
   display: flex;
   align-items: center;
   flex-shrink: 0;
 }
-
-/* VIEW TOGGLES */
-
+ 
 .view-toggles {
   display: flex;
   gap: 4px;
@@ -97,7 +93,7 @@
   padding-left: 12px;
   margin-left: 4px;
 }
-
+ 
 .view-btn {
   background: none;
   border: none;
@@ -109,21 +105,19 @@
   align-items: center;
   transition: color 0.15s, background 0.15s;
 }
-
+ 
 .view-btn.active,
 .view-btn:hover {
   color: #0d1f2d;
   background: #f1f5f9;
 }
-
-/* CATEGORY PILLS */
-
+ 
 .category-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-
+ 
 .pill {
   padding: 7px 16px;
   border-radius: 999px;
@@ -136,63 +130,61 @@
   transition: all 0.15s;
   white-space: nowrap;
 }
-
+ 
 .pill:hover {
   border-color: #2a9d7c;
   color: #2a9d7c;
 }
-
+ 
 .pill-active {
   background: #0d1f2d;
   border-color: #0d1f2d;
   color: #fff;
   font-weight: 600;
 }
-
+ 
 .pill-active:hover {
   background: #1a3a52;
   border-color: #1a3a52;
   color: #fff;
 }
-
+ 
 /* ───────────────────────────── */
 /* GRID */
 /* ───────────────────────────── */
-
+ 
 .products-grid-section {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 24px 80px;
 }
-
+ 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
-/* LIST MODE */
-
+ 
 .products-list {
   grid-template-columns: 1fr;
 }
-
+ 
 .products-list .product-card {
   display: flex;
   flex-direction: row;
 }
-
+ 
 .products-list .product-card-img {
   width: 220px;
   flex-shrink: 0;
   height: auto;
   min-height: 160px;
 }
-
+ 
 /* ───────────────────────────── */
 /* PRODUCT CARD */
 /* ───────────────────────────── */
-
+ 
 .product-card {
   border: 1.5px solid #e2e8f0;
   border-radius: 16px;
@@ -203,47 +195,47 @@
   transition: box-shadow 0.2s, transform 0.2s;
   height: 100%;
 }
-
+ 
 .product-card:hover {
   box-shadow: 0 8px 32px rgba(13, 31, 45, 0.1);
   transform: translateY(-2px);
 }
-
+ 
 .product-card-img {
   width: 100%;
   height: 200px;
   overflow: hidden;
   background: #f8fafc;
 }
-
+ 
 .placeholder-card {
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
 }
-
+ 
 .placeholder-icon {
   font-size: 3rem;
   opacity: 0.8;
 }
-
+ 
 .product-card-body {
   padding: 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  height: 100%;
 }
-
+ 
+/* Category name — teal, no brand line above it */
 .product-category-name {
   font-size: 1rem;
   font-weight: 800;
-  color: #0d1f2d;
-  margin-bottom: 10px;
+  color: #2a9d7c;
+  margin: 0 0 10px;
   line-height: 1.4;
 }
-
+ 
 .product-card-desc {
   font-size: 0.83rem;
   color: #718096;
@@ -251,9 +243,7 @@
   margin: 0 0 14px;
   flex: 1;
 }
-
-/* FOOTER */
-
+ 
 .product-card-footer {
   display: flex;
   align-items: center;
@@ -261,9 +251,7 @@
   margin-top: auto;
   padding-top: 14px;
 }
-
-/* BUTTONS */
-
+ 
 .btn-view-details {
   flex: 1;
   background: #0d1f2d;
@@ -278,11 +266,11 @@
   transition: background 0.2s;
   letter-spacing: 0.01em;
 }
-
+ 
 .btn-view-details:hover {
   background: #1a3a52;
 }
-
+ 
 .btn-quote-icon {
   width: 40px;
   height: 40px;
@@ -295,22 +283,19 @@
   cursor: pointer;
   color: #4a5568;
   flex-shrink: 0;
-  transition:
-    border-color 0.2s,
-    color 0.2s,
-    background 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
-
+ 
 .btn-quote-icon:hover {
   border-color: #2a9d7c;
   color: #2a9d7c;
   background: #f0fdf8;
 }
-
+ 
 /* ───────────────────────────── */
 /* MODAL */
 /* ───────────────────────────── */
-
+ 
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -320,127 +305,188 @@
   justify-content: center;
   z-index: 999;
   padding: 20px;
+  backdrop-filter: blur(4px);
 }
-
+ 
 .modal-content {
   width: 100%;
-  max-width: 720px;
+  max-width: 600px;
   background: #fff;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
   max-height: 85vh;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 24px 64px rgba(13, 31, 45, 0.18);
 }
-
+ 
 .modal-header {
-  padding: 22px 24px;
-  border-bottom: 1px solid #e2e8f0;
+  padding: 24px 24px 20px;
+  border-bottom: 1.5px solid #e2e8f0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0fdf8 100%);
 }
-
+ 
+.modal-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #2a9d7c;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+ 
 .modal-header h2 {
-  margin: 0;
-  font-size: 1.3rem;
+  margin: 0 0 6px;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: #0d1f2d;
+  line-height: 1.3;
 }
-
+ 
+.modal-desc {
+  margin: 0;
+  font-size: 0.83rem;
+  color: #718096;
+  line-height: 1.5;
+}
+ 
 .modal-close {
   border: none;
-  background: transparent;
-  font-size: 1.3rem;
+  background: #e2e8f0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 0.85rem;
   cursor: pointer;
-  color: #64748b;
+  color: #4a5568;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
 }
-
+ 
+.modal-close:hover {
+  background: #0d1f2d;
+  color: #fff;
+}
+ 
 .modal-products {
   padding: 24px;
   overflow-y: auto;
+}
+ 
+.modal-products-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0d1f2d;
+  margin: 0 0 16px;
+}
+ 
+.modal-subproducts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 10px;
 }
-
-.modal-product-item {
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.modal-product-item h4 {
-  margin: 0 0 10px;
-  color: #0d1f2d;
-  font-size: 1rem;
-}
-
-.modal-product-item p {
-  margin: 6px 0;
-  color: #475569;
-  font-size: 0.9rem;
+ 
+.modal-subproducts-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #2d3748;
   line-height: 1.5;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: background 0.15s, border-color 0.15s;
 }
-
+ 
+.modal-subproducts-list li:hover {
+  background: #f0fdf8;
+  border-color: #2a9d7c40;
+}
+ 
+.modal-bullet {
+  color: #2a9d7c;
+  font-size: 0.55rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+ 
 /* ───────────────────────────── */
 /* NO RESULTS */
 /* ───────────────────────────── */
-
+ 
 .no-results {
   text-align: center;
   padding: 60px 24px;
   color: #718096;
   font-size: 0.95rem;
 }
-
+ 
 /* ───────────────────────────── */
 /* RESPONSIVE */
 /* ───────────────────────────── */
-
+ 
 @media (max-width: 900px) {
-
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+ 
   .products-list {
     grid-template-columns: 1fr;
   }
 }
-
+ 
 @media (max-width: 580px) {
-
   .products-grid {
     grid-template-columns: 1fr;
   }
-
+ 
   .products-list .product-card {
     flex-direction: column;
   }
-
+ 
   .products-list .product-card-img {
     width: 100%;
     height: 200px;
   }
-
+ 
   .category-pills {
     gap: 6px;
   }
-
+ 
   .pill {
     font-size: 0.78rem;
     padding: 6px 12px;
   }
-
+ 
   .product-card-body {
     padding: 16px;
   }
-
+ 
   .modal-content {
     max-height: 92vh;
+    border-radius: 16px;
   }
-
+ 
   .modal-products {
     padding: 18px;
   }
+ 
+  .modal-header {
+    padding: 18px 18px 16px;
+  }
 }
+ 

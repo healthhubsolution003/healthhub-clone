@@ -10,53 +10,37 @@ const products = [
     subproducts: [
       "Disposable Period Panty",
       "Sanitary Pads Ultra Soft XL with Wings",
-      "Panty Liners 185mm",
-      "Panty Liners 155mm",
-      "Menstrual Cup Small",
-      "Menstrual Cup Medium",
-      "Menstrual Cup Large",
+      "Panty Liners (155mm & 185mm)",
+      "Menstrual Cup (Small, Medium & Large)",
       "Intimate Wash Natural Sulfate Free",
       "Period Relax & Relief Cream",
       "Pregnancy Test Kit",
     ],
   },
-
   {
     id: 2,
     brand: "Dreamease",
     category: "Baby Care",
     desc: "Dermatologically safe baby hygiene products.",
     subproducts: [
-      "Baby Diapers Pant Style NB",
-      "Baby Diapers Pant Style S",
-      "Baby Diapers Pant Style M",
-      "Baby Diapers Pant Style L",
-      "Baby Diapers Pant Style XL",
+      "Baby Diapers Pant Style (NB, S, M, L & XL)",
       "Baby Wipes Regular 99% Water Based",
       "Baby Wipes Honey",
     ],
   },
-
   {
     id: 3,
     brand: "Dreamease",
     category: "Adult Incontinence",
     desc: "Comfort-focused adult care and protection solutions.",
     subproducts: [
-      "Adult Pant Diaper Standard M",
-      "Adult Pant Diaper Standard L",
-      "Adult Pant Diaper Standard XL",
-      "Adult Pant Diaper Premium M",
-      "Adult Pant Diaper Premium L",
-      "Adult Pant Diaper Premium XL",
-      "Adult Tape Diaper Premium M",
-      "Adult Tape Diaper Premium L",
-      "Adult Tape Diaper Premium XL",
+      "Adult Pant Diaper Standard (M, L & XL)",
+      "Adult Pant Diaper Premium (M, L & XL)",
+      "Adult Tape Diaper Premium (M, L & XL)",
       "Underpad Sheet Regular",
       "Underpad Sheet with Sticking Release Tape",
     ],
   },
-
   {
     id: 4,
     brand: "Dreamease",
@@ -69,22 +53,17 @@ const products = [
       "Multivitamin & Minerals Gummies",
     ],
   },
-
   {
     id: 5,
     brand: "Aurum Care",
     category: "Medical Disposables / Surgical",
     desc: "Hospital-grade disposable and surgical products.",
     subproducts: [
-      "Au-Fix Infusion Set Classic",
-      "Au-Fix Infusion Set Ultra",
+      "Au-Fix Infusion Set (Classic & Ultra)",
       "Au-Safe Disposable Syringes",
       "Au-Flon IV Cannula",
       "Scalp Vein Set",
-      "Urine Bag Classic",
-      "Urine Bag Premium",
-      "Urine Bag Superior",
-      "Urine Bag with Urometer",
+      "Urine Bag (Classic, Premium, Superior & with Urometer)",
       "2-Way Foley Balloon Catheter",
       "Oxygen Mask",
       "Nebulizer Mask",
@@ -95,20 +74,17 @@ const products = [
       "Au-Plast Elastic Adhesive Bandage",
     ],
   },
-
   {
     id: 6,
     brand: "Wellness Surgical / Kramson",
     category: "Wound Care & Cotton",
     desc: "Cotton, gauze, bandages and wound care essentials.",
     subproducts: [
-      "Wellness Surgical Absorbent Cotton",
-      "Kramson Absorbent Cotton",
-      "Wellness Surgical Zigzag Cotton",
-      "Roller Bandage Rolled Gauze",
+      "Absorbent Cotton (Wellness Surgical & Kramson)",
+      "Zigzag Cotton",
+      "Roller Bandage / Rolled Gauze",
       "Gauze Cloth / Bandage Than Roll",
-      "Crepe Bandage",
-      "Premium Crepe Bandage",
+      "Crepe Bandage (Standard & Premium)",
       "POP Bandage Kramson",
       "Gauze Swabs Sterile Kramson",
       "Elastic Adhesive Bandage Kramson",
@@ -116,7 +92,6 @@ const products = [
       "Microporous Paper Tape Wellness Surgical",
     ],
   },
-
   {
     id: 7,
     brand: "Samson",
@@ -124,9 +99,7 @@ const products = [
     desc: "Orthopaedic rehabilitation and support products.",
     subproducts: [
       "Cervical Orthosis Philadelphia",
-      "Cervical Collar Soft with Support",
-      "Cervical Collar Soft Firm Density",
-      "Cervical Collar Hard Adjustable",
+      "Cervical Collar (Soft with Support, Soft Firm Density & Hard Adjustable)",
       "Contoured Lumbo Sacral Support",
       "Lumbo Sacral Belt",
       "Lumbo Corset",
@@ -158,31 +131,25 @@ const products = [
       "Finger Splints",
     ],
   },
-
   {
     id: 8,
     brand: "Samson",
     category: "Fracture Aids",
     desc: "Immobilization and fracture management products.",
     subproducts: [
-      "Universal Shoulder Immobilizer",
-      "Elastic Shoulder Immobilizer",
+      "Shoulder Immobilizer (Universal & Elastic)",
       "Shoulder Support",
       "Clavicle Brace",
-      "Arm Sling Pouch Baggy",
-      "Pouch Arm Sling Tropical",
+      "Arm Sling Pouch (Baggy & Tropical)",
       "Arm Immobilizer Adjustable",
       "Cast Shoes",
-      "Cast Cover Arm",
-      "Cast Cover Leg",
+      "Cast Cover (Arm & Leg)",
       "Shoulder Abduction Pillow",
       "Arm Sling Strap",
       "Humerus Brace",
-      "Heel Off-loading Shoes",
-      "Forefoot Off-loading Shoes",
+      "Off-loading Shoes (Heel & Forefoot)",
     ],
   },
-
   {
     id: 9,
     brand: "Samson",
@@ -190,8 +157,7 @@ const products = [
     desc: "Professional traction systems and accessories.",
     subproducts: [
       "Cervical Traction Head Halter",
-      "Cervical Traction Kit Sitting",
-      "Cervical Traction Kit Sleeping",
+      "Cervical Traction Kit (Sitting & Sleeping)",
       "Pelvic Traction Belt",
       "Pelvic Traction Kit",
       "Traction Pulley Bracket",
@@ -201,7 +167,6 @@ const products = [
       "Ankle Traction Belt",
     ],
   },
-
   {
     id: 10,
     brand: "Samson",
@@ -229,29 +194,21 @@ const products = [
       "Air Mattress",
     ],
   },
-
   {
     id: 11,
     brand: "Samson",
     category: "Walking Aids & Mobility",
     desc: "Mobility assistance and rehabilitation equipment.",
     subproducts: [
-      "Commode Stool",
-      "Commode Chair",
-      "Walking Stick",
-      "Foldable Stick",
-      "Quadra Stick",
+      "Commode (Stool & Chair)",
+      "Walking Stick (Standard, Foldable & Quadra)",
       "Elbow Crutch Adjustable",
-      "Walker Invalid's HD",
-      "Walker Invalid's Front Wheel HD",
+      "Walker Invalid's (HD & Front Wheel HD)",
       "Axillary Crutch Pair",
       "Walking Stick Quadripod",
-      "Wheelchair",
-      "Wheelchair with Commode",
-      "Electric Wheelchair",
+      "Wheelchair (Standard, with Commode & Electric)",
     ],
   },
-
   {
     id: 12,
     brand: "Samson",
@@ -259,8 +216,7 @@ const products = [
     desc: "Professional surgical dressing products.",
     subproducts: [
       "SAM POP Plaster of Paris Bandage",
-      "SAM PORE Microporous Paper Tape 5m",
-      "SAM PORE Microporous Paper Tape 9m",
+      "SAM PORE Microporous Paper Tape (5m & 9m)",
       "Kinesiology Therapeutic Tape",
       "SAM CREPE Cotton Crepe Bandage",
       "SAM NETT Stockinette",
@@ -269,7 +225,6 @@ const products = [
       "CAST PAD Soft Roll",
     ],
   },
-
   {
     id: 13,
     brand: "Samson Sport",
@@ -290,28 +245,27 @@ const products = [
       "Knee Pad",
     ],
   },
-
   {
     id: 14,
     brand: "Samson Junior",
     category: "Junior / Paediatric Range",
     desc: "Healthcare and orthopaedic products for children.",
     subproducts: [
-      "Cervical Orthosis Philadelphia Child",
-      "Cervical Collar Soft Firm Density Child",
-      "Universal Shoulder Immobilizer Child",
-      "Clavicle Brace Child",
-      "Arm Sling Pouch Child",
-      "Foot Drop Splint Child",
-      "Ankle Brace Child",
-      "Foot Walker Boot Short Child",
-      "Wrist Splint Child",
-      "Thumb Spica Splint Child",
-      "Knee Brace Immobilizer Child",
-      "Knee Wrap Hinged Child",
-      "Skin Traction Set Child",
-      "Arch Support PU Gel Child",
-      "Flat Foot Insole Paediatric Child",
+      "Cervical Orthosis Philadelphia (Child)",
+      "Cervical Collar Soft Firm Density (Child)",
+      "Universal Shoulder Immobilizer (Child)",
+      "Clavicle Brace (Child)",
+      "Arm Sling Pouch (Child)",
+      "Foot Drop Splint (Child)",
+      "Ankle Brace (Child)",
+      "Foot Walker Boot Short (Child)",
+      "Wrist Splint (Child)",
+      "Thumb Spica Splint (Child)",
+      "Knee Brace Immobilizer (Child)",
+      "Knee Wrap Hinged (Child)",
+      "Skin Traction Set (Child)",
+      "Arch Support PU Gel (Child)",
+      "Flat Foot Insole Paediatric (Child)",
       "Pavlik Harness",
     ],
   },
@@ -323,11 +277,11 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [viewMode, setViewMode] = useState("grid");
+  const [modalProduct, setModalProduct] = useState(null);
 
   const filtered = products.filter((p) => {
     const matchCat =
       activeCategory === "All" || p.category === activeCategory;
-
     const matchSearch =
       searchQuery.trim() === "" ||
       p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -335,7 +289,6 @@ const Products = () => {
       p.subproducts.some((item) =>
         item.toLowerCase().includes(searchQuery.toLowerCase())
       );
-
     return matchCat && matchSearch;
   });
 
@@ -343,14 +296,12 @@ const Products = () => {
     <div className="products-page">
       <section className="products-hero">
         <p className="products-eyebrow">CATALOG</p>
-
         <h1 className="products-title">
           Our complete{" "}
           <span className="products-title-accent">
             healthcare product range
           </span>
         </h1>
-
         <p className="products-subtitle">
           Browse our extensive range of medical, surgical, orthopedic,
           rehabilitation and wellness products.
@@ -360,14 +311,12 @@ const Products = () => {
       <section className="products-controls">
         <div className="search-bar">
           <span className="search-icon">🔍</span>
-
           <input
             type="text"
             placeholder="Search categories or products..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-
           <div className="view-toggles">
             <button
               className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
@@ -375,7 +324,6 @@ const Products = () => {
             >
               ⬜
             </button>
-
             <button
               className={`view-btn ${viewMode === "list" ? "active" : ""}`}
               onClick={() => setViewMode("list")}
@@ -389,9 +337,7 @@ const Products = () => {
           {categories.map((cat) => (
             <button
               key={cat}
-              className={`pill ${
-                activeCategory === cat ? "pill-active" : ""
-              }`}
+              className={`pill ${activeCategory === cat ? "pill-active" : ""}`}
               onClick={() => setActiveCategory(cat)}
             >
               {cat}
@@ -413,33 +359,16 @@ const Products = () => {
               </div>
 
               <div className="product-card-body">
-                <p className="product-brand">
-                  {product.brand}
-                </p>
-
-                <p className="product-category-name">
-                  {product.category}
-                </p>
-
-                <p className="product-card-desc">
-                  {product.desc}
-                </p>
-
-                <div className="subproducts-wrapper">
-                  <h4>Products Included:</h4>
-
-                  <ul className="subproducts-list">
-                    {product.subproducts.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+                <p className="product-category-name">{product.category}</p>
+                <p className="product-card-desc">{product.desc}</p>
 
                 <div className="product-card-footer">
-                  <button className="btn-view-details">
+                  <button
+                    className="btn-view-details"
+                    onClick={() => setModalProduct(product)}
+                  >
                     View Details →
                   </button>
-
                   <button className="btn-quote-icon" title="Request Quote">
                     💬
                   </button>
@@ -450,11 +379,47 @@ const Products = () => {
         </div>
 
         {filtered.length === 0 && (
-          <div className="no-results">
-            No products found.
-          </div>
+          <div className="no-results">No products found.</div>
         )}
       </section>
+
+      {/* MODAL */}
+      {modalProduct && (
+        <div
+          className="modal-overlay"
+          onClick={() => setModalProduct(null)}
+        >
+          <div
+            className="modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-header">
+              <div>
+                <p className="modal-eyebrow">{modalProduct.brand}</p>
+                <h2>{modalProduct.category}</h2>
+                <p className="modal-desc">{modalProduct.desc}</p>
+              </div>
+              <button
+                className="modal-close"
+                onClick={() => setModalProduct(null)}
+              >
+                ✕
+              </button>
+            </div>
+            <div className="modal-products">
+              <h4 className="modal-products-heading">Products Included</h4>
+              <ul className="modal-subproducts-list">
+                {modalProduct.subproducts.map((item, index) => (
+                  <li key={index}>
+                    <span className="modal-bullet">✦</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
