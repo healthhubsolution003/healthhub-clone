@@ -100,8 +100,8 @@ const products = [
     image: adultincontinence,
     desc: "Comfort-focused adult care and protection solutions.",
     subproducts: [
-  { name: "Adult Pant Diaper Standard (M, L & XL)", image: sub31, desc: "Comfortable standard fit" },
-  { name: "Adult Pant Diaper Premium (M, L & XL)", image: sub32, desc: "Premium protection & comfort" },
+  { name: "Adult Pant Diaper Standard (M, L & XL)", image: sub31, desc: "Comfortable standard fit" ,contain: true},
+  { name: "Adult Pant Diaper Premium (M, L & XL)", image: sub32, desc: "Premium protection & comfort" ,contain: true},
   { name: "Adult Tape Diaper Premium (M, L & XL)", image: sub33, desc: "Secure tape closure" },
   { name: "Underpad Sheet Regular", image: sub34, desc: "Absorbent regular underpad" },
   { name: "Underpad Sheet with Sticking Release Tape", image: sub35, desc: "With sticking release tape" },
