@@ -113,6 +113,24 @@ import sub813 from "../assets/8.13.png";
 import sub814 from "../assets/8.14.png";
 import sub815 from "../assets/8.15.png";
 
+import sub91 from "../assets/9.1.png";
+import sub92 from "../assets/9.2.png";
+import sub93 from "../assets/9.3.png";
+import sub94 from "../assets/9.4.png";
+import sub95 from "../assets/9.5.png";
+import sub96 from "../assets/9.6.png";
+import sub97 from "../assets/9.7.png";
+import sub98 from "../assets/9.8.png";
+import sub99 from "../assets/9.9.png";
+import sub910 from "../assets/9.10.png";
+import sub911 from "../assets/9.11.png";
+import sub912 from "../assets/9.12.png";
+import sub913 from "../assets/9.13.png";
+import sub914 from "../assets/9.14.png";
+import sub915 from "../assets/9.15.png";
+import sub916 from "../assets/9.16.png";
+import sub917 from "../assets/9.17.png";
+
 import sub121 from "../assets/12.1.png";
 import sub122 from "../assets/12.2.png";
 import sub123 from "../assets/12.3.png";
@@ -328,65 +346,53 @@ const products = [
     { name: "Heel Off-loading Shoes", image: sub814, desc: "S, M, L, XL sizes" },
     { name: "Forefoot Off-loading Shoes", image: sub815, desc: "S, M, L, XL sizes" },
   ],
-},
-{
+},{
   id: 9,
   brand: "Samson",
-  category: "Traction Kits",
-  image: tractionkit,
-  desc: "Professional traction systems and accessories.",
+  category: "Knee Support / Braces",
+  image: orthopedic,
+  desc: "Comprehensive knee support and bracing solutions.",
   subproducts: [
-    "Cervical Traction Head Halter",
-    "Cervical Traction Kit Sitting with Weight Bag",
-    "Cervical Traction Kit Sleeping with Weight Bag",
-    "Pelvic Traction Belt",
-    "Pelvic Traction Kit with Weight Bag",
-    "Traction Pulley Bracket",
-    "Traction Weight Bag",
-    "Skin Traction Set PUF Liner",
-    "Leg Traction Brace",
-    "Ankle Traction Belt",
+    { name: "Knee Brace/Immobilizer Long Type 19\"/48cm", image: sub91, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Brace/Immobilizer Short Type 14\"/36cm", image: sub92, desc: "CH, S, M, L, XL, XXL sizes" },
+    { name: "Elastic Knee Support", image: sub93, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Brace/Immobilizer Long Type 22\"/56cm", image: sub94, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap Soft (Pair)", image: sub95, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap Open Patella", image: sub96, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap Rigid Hinged (Nylon Hinges)", image: sub97, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap Hinged (Aluminium Hinges)", image: sub98, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap Hinged with Patella Gel Pad", image: sub99, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Cap with Patella Ring (Single)", image: sub910, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Knee Support Hinged Dry-Tex", image: sub911, desc: "S, M, L, XL, XXL sizes" },
+    { name: "R.O.M Knee Brace 18\"/46cm", image: sub912, desc: "Universal size" },
+    { name: "Knee Support Dry-Tex", image: sub913, desc: "Universal, SPL sizes" },
+    { name: "Knee Cap Furo (Pair)", image: sub914, desc: "S, M, L, XL, XXL sizes" },
+    { name: "R.O.M Knee Brace Height Adjustable", image: sub915, desc: "Universal size" },
+    { name: "Gel Knee Cushion For Prayers (Pair)", image: sub916, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Functional Knee Support", image: sub917, desc: "S, M, L, XL, XXL sizes" },
   ],
-},
-{
+},{
   id: 10,
   brand: "Samson",
-  category: "Physiotherapy & Rehabilitation",
-  image: physiotherapy,
-  desc: "Recovery, rehabilitation and physiotherapy aids.",
+  category: "Ankle Support / Braces",
+  image: walkingaids,
+  desc: "Ankle support, braces and splints for all needs.",
   subproducts: [
-    "Cervical Pillow Round",
-    "Cervical Pillow Regular",
-    "Cervical Pillow Contoured",
-    "Cervical Pillow Memory Foam",
-    "Cervical Pillow Travel",
-    "Tailbone Support Coccyx Cushion",
-    "Lumbo Back Rest Moulded Foam",
-    "Ring Seat Pillow",
-    "Coccyx Cushion Seat",
-    "Hospital Back Rest",
-    "Anatomic Pillow",
-    "Lumbo Back Rest Short",
-    "Knee Rest Pillow",
-    "Foot Rest Pillow",
-    "Neck Corrector & Relaxer",
-    "Weight Cuff",
-    "Exercising Gel Ball TPR Egg Shape",
-    "Exercising Ball PU",
-    "Hot & Cold Pack",
-    "Sam Band Resistance Band",
-    "Hip Resistance Band",
-    "Ice Bag",
-    "Cool Pack",
-    "Hot & Cold Eye Mask",
-    "Cool Eyes",
-    "Hand Gripper",
-    "Adjustable Hand Gripper",
-    "Wrist & Arm Exerciser",
-    "Piano Finger Exerciser",
-    "Silicone Finger Exerciser",
-    "Gel Exercise Ball Round Shape",
-    "Anti Burst Gym Ball",
+    { name: "Ankle Binder", image: sub161, desc: "S, M, L, XL sizes" },
+    { name: "Anklet (Pair)", image: sub162, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Foot Drop Splint Right/Left with Liner", image: sub163, desc: "CH, S, M, L, XL sizes" },
+    { name: "Ankle Splint", image: sub164, desc: "Universal size" },
+    { name: "Ankle Brace", image: sub165, desc: "CH, S, M, L, XL sizes" },
+    { name: "PF Night Splint", image: sub166, desc: "S, M, L sizes" },
+    { name: "Dorsal Night Splint", image: sub167, desc: "S/M, L/XL sizes" },
+    { name: "Ankle Support with Binder", image: sub168, desc: "S, M, L, XL, XXL sizes" },
+    { name: "Air Ankle Splint", image: sub169, desc: "Universal size" },
+    { name: "Gel Ankle Splint", image: sub1610, desc: "Universal size" },
+    { name: "Foot Walker Boot with Airway", image: sub1611, desc: "S, M, L sizes" },
+    { name: "R.O.M Foot Walker Boot", image: sub1612, desc: "S, M, L sizes" },
+    { name: "Foot Walker Boot Short (With Airway)", image: sub1612, desc: "S, M, L sizes" },
+    { name: "R.O.M Foot Walker Boot", image: sub1612, desc: "S, M, L sizes" },
+    { name: "R.O.M Foot Walker Boot", image: sub1612, desc: "S, M, L sizes" },
   ],
 },
 {
