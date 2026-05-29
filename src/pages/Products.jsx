@@ -4,7 +4,7 @@ import "./Products.css";
 
 import adultincontinence from "../assets/adultincontinence.png";
 import womenswellness from "../assets/womenswellness.png";
-import tractionkit from "../assets/tractionkit.png";
+
 import walkingaids from "../assets/walkingaids.jpeg";
 import sportgear from "../assets/sportgear.png";
 import last from "../assets/last.png";
@@ -12,7 +12,6 @@ import hygiene from "../assets/hygiene.jpg";
 import baby from "../assets/baby.jpg";
 import fractureaids from "../assets/fractureaids.JPG";
 import orthopedic from "../assets/orthopedic.jpg";
-import physiotherapy from "../assets/physiotherapy.jpg";
 import surgical from "../assets/surgical.jpg";
 import surgicaldressing from "../assets/surgicaldressing.JPG";
 import woundcare from "../assets/woundcare&cotton.jpeg";
