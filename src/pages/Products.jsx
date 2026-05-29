@@ -48,6 +48,18 @@ import sub510 from "../assets/5.10.png";
 import sub511 from "../assets/5.11.jpeg";
 import sub512 from "../assets/5.12.png";
 import sub513 from "../assets/5.13.jpeg";
+import sub61 from "../assets/6.1.png";
+import sub62 from "../assets/6.2.png";
+import sub63 from "../assets/6.3.jpg";
+import sub64 from "../assets/6.4.png";
+import sub65 from "../assets/6.5.png";
+import sub66 from "../assets/6.6.png";
+import sub67 from "../assets/6.7.jpg";
+import sub68 from "../assets/6.8.jpeg";
+import sub69 from "../assets/6.9.jpg";
+import sub610 from "../assets/6.10.jpeg";
+import sub611 from "../assets/6.11.png";
+import sub612 from "../assets/6.12.png";
 
 const products = [
  
@@ -141,19 +153,19 @@ const products = [
     image: woundcare,
     desc: "Cotton, gauze, bandages and wound care essentials.",
     subproducts: [
-      "Absorbent Cotton",
-      "Absorbent Cotton ",
-      "Zigzag Cotton",
-      "Roller Bandage ",
-      "Gauze Than / Bandage Than",
-      "Crepe Bandage (Standard)",
-      "Crepe Bandage (Premium)",
-      "POP Bandages",
-      "Gauze Swabs (Sterile)",
-      "Elastic Adhesive Bandage",
-      "Cannula Fixer",
-      "Microporous Paper Tape",
-    ],
+  { name: "Absorbent Cotton Wellness Surgical", image: sub61, desc: "Premium absorbent cotton" },
+  { name: "Absorbent Cotton Kramson", image: sub62, desc: "Premium absorbent cotton" },
+  { name: "Zigzag Cotton", image: sub63, desc: "Zigzag cut cotton rolls" },
+  { name: "Roller Bandage / Rolled Gauze", image: sub64, desc: "Standard roller bandage" },
+  { name: "Gauze Cloth / Bandage Than Roll", image: sub65, desc: "Gauze cloth bandage roll" },
+  { name: "Crepe Bandage (Standard & Premium)", image: sub66, desc: "Standard & Premium variants" },
+  { name: "POP Bandage Kramson", image: sub67, desc: "Plaster of paris bandage" },
+  { name: "Gauze Swabs Sterile Kramson", image: sub68, desc: "Sterile gauze swabs" },
+  { name: "Elastic Adhesive Bandage Kramson", image: sub69, desc: "Elastic adhesive bandage" },
+  { name: "Cannula Fixer Kramson", image: sub610, desc: "Secure cannula fixation" },
+  { name: "Microporous Paper Tape Wellness Surgical", image: sub611, desc: "Gentle microporous tape" },
+  { name: "Roller Bandage Kramson", image: sub612, desc: "Kramson roller bandage" },
+],
   },
   {
     id: 7,
