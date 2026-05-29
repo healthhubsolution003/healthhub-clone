@@ -60,6 +60,28 @@ import sub69 from "../assets/6.9.jpg";
 import sub610 from "../assets/6.10.jpeg";
 import sub611 from "../assets/6.11.png";
 import sub612 from "../assets/6.12.png";
+
+import sub131 from "../assets/13.1.png";
+import sub132 from "../assets/13.2.png";
+import sub133 from "../assets/13.3.png";
+import sub134 from "../assets/13.4.png";
+import sub135 from "../assets/13.5.png";
+import sub136 from "../assets/13.6.png";
+import sub137 from "../assets/13.7.png";
+import sub138 from "../assets/13.8.png";
+import sub139 from "../assets/13.9.png";
+import sub1310 from "../assets/13.10.png";
+import sub1311 from "../assets/13.11.png";
+import sub1312 from "../assets/13.12.png";
+import sub1313 from "../assets/13.13.png";
+import sub1314 from "../assets/13.14.png";
+import sub1315 from "../assets/13.15.png";
+import sub1316 from "../assets/13.16.png";
+import sub1317 from "../assets/13.17.png";
+import sub1318 from "../assets/13.18.png";
+import sub1319 from "../assets/13.19.png";
+import sub1320 from "../assets/13.20.png";
+
 import sub141 from "../assets/14.1.png";
 import sub142 from "../assets/14.2.png";
 import sub143 from "../assets/14.3.png";
@@ -329,19 +351,27 @@ const products = [
      image: sportgear,
     desc: "Sports supports and gym protection products.",
     subproducts: [
-      "Abdominal Support",
-      "Lumbo Sacral Support",
-      "Weight Lifting Belt",
-      "Knee Support",
-      "Wrist Wrap with Thumb Loop",
-      "Tennis Elbow Support",
-      "Ankle Support",
-      "Shoulder Support",
-      "Samgrip Gym Gloves",
-      "Yoga Mat TPE",
-      "Dual Patella Support",
-      "Knee Pad",
-    ],
+  { name: "Abdominal Support", image: sub131, desc: "Core abdominal support" },
+  { name: "Lumbo Sacral Support", image: sub132, desc: "Lower back support" },
+  { name: "Weight Lifting Belt", image: sub133, desc: "Gym weight lifting belt" },
+  { name: "Knee Support (Pair)", image: sub134, desc: "Active knee support pair" },
+  { name: "Knee Support (Neoprene)", image: sub135, desc: "Neoprene knee support" },
+  { name: "Knee Support with Strap", image: sub136, desc: "Knee support with strap" },
+  { name: "Weight Lifting Knee Strap (Pair)", image: sub137, desc: "Knee strap for lifting" },
+  { name: "Wrist Wrap with Thumb Loop (Pair)", image: sub138, desc: "Wrist wrap & thumb loop" },
+  { name: "Wrist Support with Thumb Loop Neoprene (Pair)", image: sub139, desc: "Neoprene wrist support" },
+  { name: "Tennis Elbow / Golf Support", image: sub1310, desc: "Elbow pain relief support" },
+  { name: "Elbow Support With Strap", image: sub1311, desc: "Elbow support with strap" },
+  { name: "Ankle Support With Strap", image: sub1312, desc: "Ankle support with strap" },
+  { name: "Ankle Support (Neoprene)", image: sub1313, desc: "Neoprene ankle support" },
+  { name: "Shoulder Support", image: sub1314, desc: "Shoulder compression support" },
+  { name: "Finger Support", image: sub1315, desc: "Protective finger support" },
+  { name: "Samgrip Gym Gloves", image: sub1316, desc: "Grip gym gloves" },
+  { name: "Yoga Mat TPE", image: sub1317, desc: "Eco-friendly TPE yoga mat" },
+  { name: "Dual Patella Support", image: sub1318, desc: "Dual patella knee support" },
+  { name: "Knee Pad", image: sub1319, desc: "Protective knee pad" },
+  { name: "Knee Support Copper Fit (Pair)", image: sub1320, desc: "Copper fit knee support" },
+],
   },
   {
     id: 14,
