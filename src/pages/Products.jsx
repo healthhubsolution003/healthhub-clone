@@ -60,6 +60,22 @@ import sub69 from "../assets/6.9.jpg";
 import sub610 from "../assets/6.10.jpeg";
 import sub611 from "../assets/6.11.png";
 import sub612 from "../assets/6.12.png";
+import sub141 from "../assets/14.1.png";
+import sub142 from "../assets/14.2.png";
+import sub143 from "../assets/14.3.png";
+import sub144 from "../assets/14.4.png";
+import sub145 from "../assets/14.5.png";
+import sub146 from "../assets/14.6.png";
+import sub147 from "../assets/14.7.png";
+import sub148 from "../assets/14.8.png";
+import sub149 from "../assets/14.9.png";
+import sub1410 from "../assets/14.10.png";
+import sub1411 from "../assets/14.11.png";
+import sub1412 from "../assets/14.12.png";
+import sub1413 from "../assets/14.13.png";
+import sub1414 from "../assets/14.14.png";
+import sub1415 from "../assets/14.15.png";
+import sub1416 from "../assets/14.16.png";
 
 const products = [
  
@@ -334,23 +350,23 @@ const products = [
      image: last,
     desc: "Healthcare and orthopaedic products for children.",
     subproducts: [
-      "Cervical Orthosis Philadelphia (Child)",
-      "Cervical Collar Soft Firm Density (Child)",
-      "Universal Shoulder Immobilizer (Child)",
-      "Clavicle Brace (Child)",
-      "Arm Sling Pouch (Child)",
-      "Foot Drop Splint (Child)",
-      "Ankle Brace (Child)",
-      "Foot Walker Boot Short (Child)",
-      "Wrist Splint (Child)",
-      "Thumb Spica Splint (Child)",
-      "Knee Brace Immobilizer (Child)",
-      "Knee Wrap Hinged (Child)",
-      "Skin Traction Set (Child)",
-      "Arch Support PU Gel (Child)",
-      "Flat Foot Insole Paediatric (Child)",
-      "Pavlik Harness",
-    ],
+  { name: "Cervical Orthosis Philadelphia (Child)", image: sub141, desc: "Paediatric cervical support" },
+  { name: "Cervical Collar Soft Firm Density (Child)", image: sub142, desc: "Soft firm density collar" },
+  { name: "Universal Shoulder Immobilizer (Child)", image: sub143, desc: "Universal shoulder support" },
+  { name: "Clavicle Brace (Child)", image: sub144, desc: "Paediatric clavicle brace" },
+  { name: "Arm Sling Pouch (Child)", image: sub145, desc: "Comfortable arm sling" },
+  { name: "Foot Drop Splint (Child)", image: sub146, desc: "Foot drop correction splint" },
+  { name: "Ankle Brace (Child)", image: sub147, desc: "Paediatric ankle support" },
+  { name: "Foot Walker Boot Short (Child)", image: sub148, desc: "Short foot walker boot" },
+  { name: "Wrist Splint (Child)", image: sub149, desc: "Paediatric wrist splint" },
+  { name: "Thumb Spica Splint (Child)", image: sub1410, desc: "Thumb spica support" },
+  { name: "Knee Brace Immobilizer (Child)", image: sub1411, desc: "Knee immobilizer brace" },
+  { name: "Knee Wrap Hinged (Child)", image: sub1412, desc: "Hinged knee wrap" },
+  { name: "Skin Traction Set (Child)", image: sub1413, desc: "Paediatric skin traction" },
+  { name: "Arch Support PU Gel (Child)", image: sub1414, desc: "PU gel arch support" },
+  { name: "Flat Foot Insole Paediatric (Child)", image: sub1415, desc: "Flat foot correction insole" },
+  { name: "Pavlik Harness", image: sub1416, desc: "Hip dysplasia harness" },
+],
   },
 ];
 
