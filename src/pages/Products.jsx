@@ -28,11 +28,11 @@ import sub42 from "../assets/4.2.jpg";
 import sub43 from "../assets/4.3.jpg";
 import sub44 from "../assets/4.4.jpeg";
 import sub21 from "../assets/2.1.jpg";
-import sub22 from "../assets/2.2.jpg";
+import sub22 from "../assets/2.2.jpeg";
 import sub23 from "../assets/2.3.jpg";
 import sub31 from "../assets/3.1.png";
 import sub32 from "../assets/3.2.png";
-import sub33 from "../assets/3.3.jpg";
+import sub33 from "../assets/3.3.jpeg";
 import sub34 from "../assets/3.4.jpg";
 import sub35 from "../assets/3.5.jpg";
 
