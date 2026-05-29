@@ -88,7 +88,7 @@ const products = [
     image: baby,
     desc: "Dermatologically safe baby hygiene products.",
     subproducts: [
-  { name: "Baby Diapers Pant Style (NB, S, M, L & XL)", image: sub21, desc: "Soft & gentle on baby skin" },
+  { name: "Baby Diapers Pant Style (NB, S, M, L & XL)", image: sub21, desc: "Soft & gentle on baby skin",contain: true },
   { name: "Baby Wipes Regular 99% Water Based", image: sub22, desc: "99% water based, hypoallergenic" },
   { name: "Baby Wipes Honey", image: sub23, desc: "Gentle honey formula" },
 ],
@@ -161,7 +161,7 @@ const products = [
   { name: "Crepe Bandage (Standard & Premium)", image: sub66, desc: "Standard & Premium variants",contain: true },
   { name: "POP Bandage Kramson", image: sub67, desc: "Plaster of paris bandage" },
   { name: "Gauze Swabs Sterile Kramson", image: sub68, desc: "Sterile gauze swabs" },
-  { name: "Elastic Adhesive Bandage Kramson", image: sub69, desc: "Elastic adhesive bandage" },
+  { name: "Elastic Adhesive Bandage Kramson", image: sub69, desc: "Elastic adhesive bandage",contain: true },
   { name: "Cannula Fixer Kramson", image: sub610, desc: "Secure cannula fixation",contain: true },
   { name: "Microporous Paper Tape Wellness Surgical", image: sub611, desc: "Gentle microporous tape" ,contain: true},
   { name: "Roller Bandage Kramson", image: sub612, desc: "Kramson roller bandage" },
