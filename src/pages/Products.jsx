@@ -32,15 +32,15 @@ const products = [
   category: "Feminine Hygiene Care",
   image: hygiene,
   desc: "Premium feminine hygiene and wellness essentials.",
-  subproducts: [
-    { name: "Disposable Period Panty", image: sub1 },
-    { name: "Sanitary Pads Ultra Soft XL with Wings", image: sub2 },
-    { name: "Panty Liners (155mm & 185mm)", image: sub3 },
-    { name: "Menstrual Cup (Small, Medium & Large)", image: sub4 },
-    { name: "Intimate Wash Natural Sulfate Free", image: sub5 },
-    { name: "Period Relax & Relief Cream", image: sub6 },
-    { name: "Pregnancy Test Kit", image: sub7 },
-  ],
+ subproducts: [
+  { name: "Disposable Period Panty", image: sub1, desc: "Comfortable & leak-proof" },
+  { name: "Sanitary Pads Ultra Soft XL with Wings", image: sub2, desc: "Ultra soft, XL with wings" },
+  { name: "Panty Liners (155mm & 185mm)", image: sub3, desc: "Available in 155mm & 185mm" },
+  { name: "Menstrual Cup (Small, Medium & Large)", image: sub4, desc: "Small, Medium & Large sizes" },
+  { name: "Intimate Wash Natural Sulfate Free", image: sub5, desc: "Natural, sulfate free formula" },
+  { name: "Period Relax & Relief Cream", image: sub6, desc: "Soothing relief cream" },
+  { name: "Pregnancy Test Kit", image: sub7, desc: "Fast & accurate results" },
+],
 },
 
 
@@ -456,18 +456,24 @@ const Products = () => {
             </div>
             <div className="modal-products">
               <h4 className="modal-products-heading">Products Included</h4>
-              <ul className="modal-subproducts-list">
+            <ul className="modal-subproducts-list">
   {modalProduct.subproducts.map((item, index) => (
-    <li key={index}>
+    <li key={index} className="modal-subproduct-item">
       {typeof item === "object" && item.image && (
-        <img
-          src={item.image}
-          alt={item.name}
-          className="modal-subproduct-img"
-        />
+        <div className="modal-subproduct-img-wrap">
+          <img
+            src={item.image}
+            alt={item.name}
+            className="modal-subproduct-img"
+          />
+        </div>
       )}
-      <span className="modal-bullet">✦</span>
-      {typeof item === "object" ? item.name : item}
+      <p className="modal-subproduct-name">
+        {typeof item === "object" ? item.name : item}
+      </p>
+      {typeof item === "object" && item.desc && (
+        <p className="modal-subproduct-desc">{item.desc}</p>
+      )}
     </li>
   ))}
 </ul>
