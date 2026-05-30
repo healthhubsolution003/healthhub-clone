@@ -21,7 +21,7 @@
 
 .navbar-logo { text-decoration: none; display: flex; align-items: center; }
 
-.logo-img { height: 70px; width: auto; }
+.logo-img { height: 80px; width: auto; }
 
 .navbar-links {
   display: flex;
