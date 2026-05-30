@@ -13,7 +13,6 @@ function Navbar() {
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo">
   <img src={logo} alt="HealthHub Solution" className="logo-img" />
-  <span className="logo-text">HealthHub<br/>Solution</span>
 </Link>
        
 

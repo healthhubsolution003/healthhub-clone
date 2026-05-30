@@ -11,10 +11,8 @@ function Footer() {
 
             <div className="footer-brand">
              
-             <div className="footer-logo-wrap">
-  <img src={logo} alt="HealthHub Solution" className="footer-logo-img" />
-  <span className="footer-logo-text">HealthHub<br/>Solution</span>
-</div>
+        <img src={logo} alt="HealthHub Solution" className="footer-logo-img" />
+        
   <p className="footer-desc">
                 Delivering health, Distributing trust. A trusted partner for
                 hospitals, clinics, pharmacies and retail customers across India.

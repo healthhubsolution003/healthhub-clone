@@ -25,11 +25,12 @@
 }
 
 .footer-logo-img {
-  height: 48px;
+  height: 64px;
   width: auto;
   background: white;
   border-radius: 10px;
   padding: 6px;
+  margin-bottom: 16px;
   display: block;
 }
 
