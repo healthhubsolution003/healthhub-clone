@@ -13,7 +13,7 @@ const CategoriesManager = ({ token }) => {
   }, []);
 
   const fetchCategories = async () => {
-    const res = await fetch("http://localhost:5001/api/categories");
+    const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/categories");
     const data = await res.json();
     setCategories(data);
   };
@@ -22,7 +22,7 @@ const CategoriesManager = ({ token }) => {
     if (!name) return setMessage("Category name is required.");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/api/categories", {
+      const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/categories", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,8 @@ const CategoriesManager = ({ token }) => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this category?")) return;
-    await fetch(`http://localhost:5001/api/categories/${id}`, {
+    await fetch(`https://healthhub-backend-f9g1.onrender.com
+/api/categories/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });

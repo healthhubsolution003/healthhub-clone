@@ -15,7 +15,7 @@ const QuoteModal = ({ product, onClose }) => {
     if (!form.name || !form.phone) return alert("Name and phone are required.");
     setLoading(true);
     try {
-      await fetch("http://localhost:5001/api/leads", {
+      await fetch("https://healthhub-backend-f9g1.onrender.com/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

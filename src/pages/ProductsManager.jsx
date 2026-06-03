@@ -15,13 +15,13 @@ const ProductsManager = ({ token }) => {
   }, []);
 
   const fetchCategories = async () => {
-    const res = await fetch("http://localhost:5001/api/categories");
+    const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/categories");
     const data = await res.json();
     setCategories(data);
   };
 
   const fetchProducts = async () => {
-    const res = await fetch("http://localhost:5001/api/products");
+    const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/products");
     const data = await res.json();
     setProducts(data);
   };
@@ -31,7 +31,7 @@ const ProductsManager = ({ token }) => {
       return setMessage("Name and category are required.");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5001/api/products", {
+      const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const ProductsManager = ({ token }) => {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Delete this product?")) return;
-    await fetch(`http://localhost:5001/api/products/${id}`, {
+    await fetch(`https://healthhub-backend-f9g1.onrender.com/api/products/${id}`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${token}` },
     });
