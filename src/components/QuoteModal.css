@@ -1,0 +1,39 @@
+.quote-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex; align-items: center; justify-content: center;
+}
+.quote-modal {
+  background: white; border-radius: 16px;
+  padding: 32px; width: 90%; max-width: 480px;
+  position: relative;
+}
+.quote-close {
+  position: absolute; top: 16px; right: 16px;
+  background: none; border: none; font-size: 18px; cursor: pointer;
+}
+.quote-title {
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 4px; color: #0f2137;
+}
+.quote-product-name { color: #555; margin-bottom: 20px; font-size: 14px; }
+.quote-form { display: flex; flex-direction: column; gap: 12px; }
+.quote-form input, .quote-form textarea {
+  padding: 12px 16px; border: 1px solid #ddd;
+  border-radius: 8px; font-size: 15px; font-family: inherit;
+}
+.quote-form input:focus, .quote-form textarea:focus {
+  outline: none; border-color: #1a7c6e;
+}
+.quote-btn {
+  background: #0f2137; color: white; padding: 13px;
+  border: none; border-radius: 8px; font-size: 15px;
+  font-weight: 600; cursor: pointer;
+}
+.quote-btn:hover { background: #1a7c6e; }
+.quote-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.quote-success { text-align: center; padding: 20px 0; }
+.quote-success-icon { font-size: 48px; margin-bottom: 12px; }
+.quote-success h3 { font-size: 22px; margin-bottom: 8px; }
+.quote-success p { color: #666; margin-bottom: 24px; }
