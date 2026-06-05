@@ -570,9 +570,10 @@
   margin: 20px;
 }
 
+
 .zoom-out {
   object-fit: contain;
-  padding: 25px;
-  background: #f5f7fa;
+  padding: 8px;
   border-radius: 20px;
+  transform: scale(1.08);
 }
