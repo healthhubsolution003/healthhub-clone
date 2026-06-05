@@ -208,35 +208,14 @@ import sub1513 from "../assets/15.13.png";
 import sub1514 from "../assets/15.14.png";
 import sub1515 from "../assets/15.15.png";
 import sub1516 from "../assets/15.16.png";
-import sub161 from "../assets/16.1.png";
-import sub162 from "../assets/16.2.png";
-import sub163 from "../assets/16.3.png";
-import sub164 from "../assets/16.4.png";
-import sub165 from "../assets/16.5.png";
-import sub166 from "../assets/16.6.png";
-import sub167 from "../assets/16.7.png";
-import sub168 from "../assets/16.8.png";
-import sub169 from "../assets/16.9.png";
-import sub1610 from "../assets/16.10.png";
+
+
 import sub171 from "../assets/17.1.png";
 import sub172 from "../assets/17.2.png";
 import sub173 from "../assets/17.3.png";
-import sub181 from "../assets/18.1.png";
-import sub182 from "../assets/18.2.png";
-import sub183 from "../assets/18.3.png";
-import sub184 from "../assets/18.4.png";
-import sub185 from "../assets/18.5.png";
-import sub186 from "../assets/18.6.png";
-import sub187 from "../assets/18.7.png";
-import sub188 from "../assets/18.8.png";
-import sub189 from "../assets/18.9.png";
-import sub1810 from "../assets/18.10.png";
-import sub1811 from "../assets/18.11.png";
-import sub1812 from "../assets/18.12.png";
-import sub1813 from "../assets/18.13.png";
-import sub1814 from "../assets/18.14.png";
-import sub1815 from "../assets/18.15.png";
-import sub1816 from "../assets/18.16.png";
+
+
+
 import sub201 from "../assets/20.1.png";
 import sub202 from "../assets/20.2.png";
 import sub203 from "../assets/20.3.png";
@@ -307,11 +286,11 @@ const LOCAL_IMAGE_MAP = {
   
   "Medical Disposables / Surgical": {
     cardImage: surgical,
-    subImages: [sub51, sub52, sub53, sub54, sub55, sub56, sub57, sub58, sub59, sub510, sub511, sub512, sub513],
+    subImages: [sub51, sub52, sub53, sub54, sub55, sub56, sub57, sub58, sub511],
   },
   "Wound Care & Cotton": {
     cardImage: woundcare,
-    subImages: [sub61, sub62, sub63, sub64, sub65, sub66, sub67, sub68, sub69, sub610, sub611, sub612],
+    subImages: [sub61, sub62, sub64, sub65, sub66, sub67, sub68, sub69, sub610, sub611, sub612],
   },
   "Orthopaedic Supports & Braces": {
     cardImage: orthopedic,
@@ -335,7 +314,7 @@ const LOCAL_IMAGE_MAP = {
   },
   "Surgical Dressing": {
     cardImage: surgicaldressing,
-    subImages: [sub121, sub122, sub123, sub124, sub125, sub126, sub127, sub128],
+subImages: [sub124, sub125, sub126, sub127, sub128],
   },
   "Sport Gear": {
     cardImage: sportgear,
