@@ -544,10 +544,17 @@ const Products = () => {
                 <div className="product-card-img placeholder-card">
                   {product.cardImage ? (
                     <img
-                      src={product.cardImage}
-                      alt={getCategoryName(product)}
-                      className="product-image"
-                    />
+  src={product.cardImage}
+  alt={getCategoryName(product)}
+  className={`product-image ${
+    [
+      "Thigh & Calf Support / Varicose Vein Compression Stockings",
+      "Wrist & Forearm Support / Splints",
+    ].includes(getCategoryName(product))
+      ? "zoom-out"
+      : ""
+  }`}
+/>
                   ) : product.image ? (
                     // Fallback: if admin added a URL image via admin panel
                     <img

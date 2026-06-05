@@ -569,3 +569,7 @@
   border-radius: 8px;
   margin: 20px;
 }
+.zoom-out {
+  object-fit: contain;
+  padding: 10px;
+}
