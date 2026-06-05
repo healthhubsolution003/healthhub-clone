@@ -209,6 +209,16 @@ import sub1514 from "../assets/15.14.png";
 import sub1515 from "../assets/15.15.png";
 import sub1516 from "../assets/15.16.png";
 
+import sub161 from "../assets/16.1.png";
+import sub162 from "../assets/16.2.png";
+import sub163 from "../assets/16.3.png";
+import sub164 from "../assets/16.4.png";
+import sub165 from "../assets/16.5.png";
+import sub166 from "../assets/16.6.png";
+import sub167 from "../assets/16.7.png";
+import sub168 from "../assets/16.8.png";
+import sub169 from "../assets/16.9.png";
+import sub1610 from "../assets/16.10.png";
 
 import sub171 from "../assets/17.1.png";
 import sub172 from "../assets/17.2.png";
