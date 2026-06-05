@@ -53,20 +53,8 @@ const seedData = [
       ]
     }
   },
-  {
-    category: { name: "Women's Wellness", description: "Daily wellness gummies and nutrition support.", image: "" },
-    product: {
-      name: "Women's Wellness",
-      brand: "Dreamease",
-      description: "Daily wellness gummies and nutrition support.",
-      subproducts: [
-        { name: "UTI Defence Gummies", description: "Urinary tract defence support" },
-        { name: "Iron Gummies", description: "Daily iron supplement" },
-        { name: "Calcium & Vitamin-D Gummies", description: "Bone strength support" },
-        { name: "Multivitamin & Minerals Gummies", description: "Complete daily nutrition" },
-      ]
-    }
-  },
+
+
   {
     category: { name: "Medical Disposables / Surgical", description: "Hospital-grade disposable and surgical products.", image: "" },
     product: {
@@ -74,20 +62,16 @@ const seedData = [
       brand: "Aurum Care",
       description: "Hospital-grade disposable and surgical products.",
       subproducts: [
-        { name: "Au-Fix Infusion Set (Classic & Ultra)", description: "Classic & Ultra variants" },
-        { name: "Au-Safe Disposable Syringes", description: "Safe single-use syringes" },
-        { name: "Au-Flon IV Cannula", description: "Smooth IV cannula insertion" },
-        { name: "Scalp Vein Set", description: "Precision scalp vein set" },
-        { name: "Urine Bag (Classic, Premium, Superior & with Urometer)", description: "Multiple variants available" },
-        { name: "2-Way Foley Balloon Catheter", description: "2-way balloon catheter" },
-        { name: "Oxygen Mask", description: "Standard oxygen delivery mask" },
-        { name: "Nebulizer Mask", description: "For nebulization therapy" },
-        { name: "Nasal Cannula", description: "Comfortable nasal oxygen delivery" },
-        { name: "High Oxygen Concentration Mask", description: "High concentration oxygen mask" },
-        { name: "Au-Care Surgical Gloves", description: "Sterile surgical gloves" },
-        { name: "Au-Pore Microporous Paper Tape", description: "Gentle microporous tape" },
-        { name: "Au-Plast Elastic Adhesive Bandage", description: "Elastic adhesive bandage" },
-      ]
+  { name: "Au-Fix Infusion Set (Classic & Ultra)", description: "Classic & Ultra variants" },
+  { name: "Au-Safe Disposable Syringes", description: "Safe single-use syringes" },
+  { name: "Au-Flon IV Cannula", description: "Smooth IV cannula insertion" },
+  { name: "Scalp Vein Set", description: "Precision scalp vein set" },
+  { name: "Urine Bag (Classic, Premium, Superior & with Urometer)", description: "Multiple variants available" },
+  { name: "2-Way Foley Balloon Catheter", description: "2-way balloon catheter" },
+  { name: "Oxygen Mask", description: "Standard oxygen delivery mask" },
+  { name: "Nebulizer Mask", description: "For nebulization therapy" },
+  { name: "Au-Care Surgical Gloves", description: "Sterile surgical gloves" },
+]
     }
   },
   {
@@ -204,15 +188,11 @@ const seedData = [
       brand: "Samson",
       description: "Professional surgical dressing products.",
       subproducts: [
-        { name: "SAM POP Plaster of Paris Bandage", description: "Plaster of paris bandage" },
-        { name: "SAM PORE Microporous Paper Tape (5m & 9m)", description: "5m & 9m variants" },
-        { name: "Kinesiology Therapeutic Tape", description: "Therapeutic kinesiology tape" },
-        { name: "SAM CREPE Cotton Crepe Bandage", description: "Cotton crepe bandage" },
-        { name: "SAM NETT Stockinette", description: "Tubular stockinette" },
-        { name: "SAM PLAST Elastic Adhesive Bandage", description: "Elastic adhesive bandage" },
-        { name: "SAM FIX Cannula Fixator", description: "Secure cannula fixation" },
-        { name: "CAST PAD Soft Roll", description: "Soft cast padding roll" },
-      ]
+  { name: "Kinesiology Therapeutic Tape", description: "Therapeutic kinesiology tape" },
+  { name: "SAM CREPE Cotton Crepe Bandage", description: "Cotton crepe bandage" },
+  { name: "SAM PLAST Elastic Adhesive Bandage", description: "Elastic adhesive bandage" },
+  { name: "SAM FIX Cannula Fixator", description: "Secure cannula fixation" },
+]
     }
   },
   {
@@ -266,23 +246,7 @@ const seedData = [
       ]
     }
   },
-  {
-    category: { name: "Traction Kits", description: "Traction therapy and rehabilitation support products.", image: "" },
-    product: {
-      name: "Traction Kits",
-      brand: "Samson",
-      description: "Traction therapy and rehabilitation support products.",
-      subproducts: [
-        { name: "Cervical Traction (Head Halter)", description: "UNIVERSAL" },
-        { name: "Cervical Traction Kit Sitting with Weight Bag", description: "UNIVERSAL" },
-        { name: "Pelvic Traction Belt", description: "S,M,L,XL,XXL" },
-        { name: "Traction Pulley Bracket", description: "UNIVERSAL" },
-        { name: "Traction Weight Bag", description: "UNIVERSAL" },
-        { name: "Skin Traction Set (PUF Liner)", description: "CH,S,UNIVERSAL" },
-        { name: "Ankle Traction Belt", description: "UNIVERSAL" },
-      ]
-    }
-  },
+ 
   {
     category: { name: "Finger Splints", description: "Finger protection and rehabilitation splints.", image: "" },
     product: {
@@ -296,40 +260,7 @@ const seedData = [
       ]
     }
   },
-  {
-    category: { name: "Neoprene Support / Braces", description: "Advanced neoprene orthopedic braces and supports.", image: "" },
-    product: {
-      name: "Neoprene Support / Braces",
-      brand: "Samson",
-      description: "Advanced neoprene orthopedic braces and supports.",
-      subproducts: [
-        { name: "Abdominal Binder", description: "UNIVERSAL,SPL" },
-        { name: "Wrist Wrap", description: "UNIVERSAL" },
-        { name: "Knee Support Hinged", description: "S,M,L,XL,XXL" },
-        { name: "Knee Wrap Hinged", description: "CH,S,M,L,XL,XXL" },
-        { name: "Shoulder Support", description: "UNIVERSAL,SPL" },
-        { name: "Ankle Support", description: "UNIVERSAL" },
-        { name: "Hip Brace", description: "UNIVERSAL" },
-      ]
-    }
-  },
-  {
-    category: { name: "Foot Care & Support", description: "Foot care, insoles and support products.", image: "" },
-    product: {
-      name: "Foot Care & Support",
-      brand: "Samson",
-      description: "Foot care, insoles and support products.",
-      subproducts: [
-        { name: "Silicone Insole Pair", description: "S,M,L,XL" },
-        { name: "Orthotic Insole Pair", description: "S,M,L,XL" },
-        { name: "Gel Heel Cushion", description: "S,L" },
-        { name: "Toe Separator Pair", description: "S,M,L" },
-        { name: "Hallux Valgus Splint", description: "UNIVERSAL" },
-        { name: "Silicone Socks Pair", description: "UNIVERSAL" },
-        { name: "Flat Foot Insole Paediatric Pair", description: "CH1,CH2,CH3,CH4" },
-      ]
-    }
-  },
+
   {
     category: { name: "Physiotherapy & Rehabilitation", description: "Recovery, rehabilitation and physiotherapy aids.", image: "" },
     product: {
