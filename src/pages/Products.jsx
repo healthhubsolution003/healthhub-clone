@@ -2,6 +2,13 @@ import { useState, useEffect } from "react";
 import "./Products.css";
 import QuoteModal from "../components/QuoteModal";
 
+
+import fingersplints from "../assets/finger_splints.png";
+import orthopaedicbraces from "../assets/Orthopaedic Supports & Braces.png";
+import thighcalf from "../assets/Thigh & Calf Support.png";
+import wrist from "../assets/wrist.png";
+
+
 import physiotherapy from "../assets/physiotherapy.jpg";
 import adultincontinence from "../assets/adultincontinence.png";
 
@@ -338,7 +345,7 @@ const LOCAL_IMAGE_MAP = {
     subImages: [sub61, sub62, sub64, sub65, sub66, sub67, sub612,sub611, sub69,sub610, sub68],
   },
   "Orthopaedic Supports & Braces": {
-    cardImage: orthopedic,
+    cardImage: orthopaedicbraces,
     subImages: [sub71, sub72, sub73, sub74, sub75, sub76, sub77, sub78, sub79, sub710, sub711, sub712, sub713, sub714, sub715, sub716, sub717, sub718, sub719, sub720, sub721, sub722, sub723, sub724, sub725, sub726, sub727, sub728, sub729, sub730],
   },
   "Fracture Aids": {
@@ -354,7 +361,7 @@ const LOCAL_IMAGE_MAP = {
     subImages: [sub101, sub102, sub103, sub104, sub105, sub106, sub107, sub108, sub109, sub1010, sub1011, sub1012, sub1013, sub1014, sub1015],
   },
   "Thigh & Calf Support / Varicose Vein Compression Stockings": {
-    cardImage: orthopedic,
+    cardImage: thighcalf,
     subImages: [sub111, sub112, sub113, sub114, sub115, sub116, sub117, sub118, sub119, sub1110, sub1111, sub1112, sub1113, sub1114],
   },
  "Surgical Dressing": {
@@ -370,12 +377,12 @@ const LOCAL_IMAGE_MAP = {
     subImages: [sub141, sub142, sub143, sub144, sub145, sub146, sub147, sub148, sub149, sub1410, sub1411, sub1412, sub1413, sub1414, sub1415, sub1416],
   },
   "Wrist & Forearm Support / Splints": {
-    cardImage: orthopedic,
+    cardImage: wrist,
     subImages: [sub151, sub152, sub153, sub154, sub155, sub156, sub157, sub158, sub159, sub1510, sub1511, sub1512, sub1513, sub1514, sub1515, sub1516],
   },
   
   "Finger Splints": {
-    cardImage: orthopedic,
+    cardImage: fingersplints,
     subImages: [sub171, sub172, sub173],
   },
   
