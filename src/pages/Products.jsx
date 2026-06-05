@@ -335,7 +335,7 @@ const LOCAL_IMAGE_MAP = {
   },
   "Wound Care & Cotton": {
     cardImage: woundcare,
-    subImages: [sub61, sub62, sub64, sub65, sub66, sub67, sub612, sub610, sub68, sub69, sub67],
+    subImages: [sub61, sub62, sub64, sub65, sub66, sub67, sub612,sub611, sub68,sub610, sub69],
   },
   "Orthopaedic Supports & Braces": {
     cardImage: orthopedic,
