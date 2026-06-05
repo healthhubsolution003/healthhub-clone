@@ -359,7 +359,7 @@ const LOCAL_IMAGE_MAP = {
   },
   "Surgical Dressing": {
     cardImage: surgicaldressing,
-subImages: [sub124, sub125, sub126, sub127, sub128],
+subImages: [sub123, sub124, sub125, sub126, sub127],
   },
   "Sport Gear": {
     cardImage: sportgear,
