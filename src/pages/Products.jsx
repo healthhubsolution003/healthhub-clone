@@ -357,10 +357,10 @@ const LOCAL_IMAGE_MAP = {
     cardImage: orthopedic,
     subImages: [sub111, sub112, sub113, sub114, sub115, sub116, sub117, sub118, sub119, sub1110, sub1111, sub1112, sub1113, sub1114],
   },
-  "Surgical Dressing": {
-    cardImage: surgicaldressing,
-subImages: [sub123, sub124, sub125, sub126, sub127],
-  },
+ "Surgical Dressing": {
+  cardImage: surgicaldressing,
+  subImages: [sub123, sub124, sub125, sub127],
+},
   "Sport Gear": {
     cardImage: sportgear,
     subImages: [sub131, sub132, sub133, sub134, sub135, sub136, sub137, sub138, sub139, sub1310, sub1311, sub1312, sub1313, sub1314, sub1315, sub1316, sub1317, sub1318, sub1319, sub1320],
@@ -373,19 +373,12 @@ subImages: [sub123, sub124, sub125, sub126, sub127],
     cardImage: orthopedic,
     subImages: [sub151, sub152, sub153, sub154, sub155, sub156, sub157, sub158, sub159, sub1510, sub1511, sub1512, sub1513, sub1514, sub1515, sub1516],
   },
-  "Traction Kits": {
-    cardImage: orthopedic,
-    subImages: [sub161, sub162, sub163, sub164, sub165, sub166, sub167, sub168, sub169, sub1610],
-  },
+  
   "Finger Splints": {
     cardImage: orthopedic,
     subImages: [sub171, sub172, sub173],
   },
-  "Neoprene Support / Braces": {
-    cardImage: orthopedic,
-    subImages: [sub181, sub182, sub183, sub184, sub185, sub186, sub187, sub188, sub189, sub1810, sub1811, sub1812, sub1813, sub1814, sub1815, sub1816],
-  },
- 
+  
   "Physiotherapy & Rehabilitation": {
     cardImage: physiotherapy,
     subImages: [sub201, sub202, sub203, sub204, sub205, sub206, sub207, sub208, sub209, sub2010, sub2011, sub2012, sub2013, sub2014, sub2015, sub2016, sub2017, sub2018, sub2019, sub2020, sub2021, sub2022, sub2023, sub2024, sub2025, sub2026, sub2027, sub2028, sub2029, sub2030, sub2031, sub2032],
