@@ -96,22 +96,19 @@ const seedData = [
       name: "Wound Care & Cotton",
       brand: "Wellness Surgical / Kramson",
       description: "Cotton, gauze, bandages and wound care essentials.",
-
-
       subproducts: [
         { name: "Absorbent Cotton Wellness Surgical", description: "Premium absorbent cotton" },
         { name: "Absorbent Cotton Kramson", description: "Premium absorbent cotton" },
         { name: "Zigzag Cotton", description: "Zigzag cut cotton rolls" },
         { name: "Roller Bandage / Rolled Gauze", description: "Standard roller bandage" },
         { name: "Gauze Cloth / Bandage Than Roll", description: "Gauze cloth bandage roll" },
-       
-      { name: "Crepe Bandage", description: "Standard & Premium variants" },
-{ name: "Premium Crepe Bandage", description: "Premium crepe bandage" },
-{ name: "Microporous Paper Tape", description: "Gentle microporous tape" },
-{ name: "Cannula Fixer", description: "Secure cannula fixation" },
-{ name: "Gauze Swabs (Sterile)", description: "Sterile gauze swabs" },
-{ name: "Elastic Adhesive Bandage", description: "Elastic adhesive bandage" },
-{ name: "POP Bandages (Plaster Of Paris)", description: "Plaster of paris bandage" },
+        { name: "Crepe Bandage (Standard & Premium)", description: "Standard & Premium variants" },
+        { name: "POP Bandage Kramson", description: "Plaster of paris bandage" },
+        { name: "Gauze Swabs Sterile Kramson", description: "Sterile gauze swabs" },
+        { name: "Elastic Adhesive Bandage Kramson", description: "Elastic adhesive bandage" },
+        { name: "Cannula Fixer Kramson", description: "Secure cannula fixation" },
+        { name: "Microporous Paper Tape Wellness Surgical", description: "Gentle microporous tape" },
+        { name: "Roller Bandage Kramson", description: "Kramson roller bandage" },
       ]
     }
   },

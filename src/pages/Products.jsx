@@ -373,10 +373,17 @@ subImages: [sub123, sub124, sub125, sub126, sub127],
     cardImage: orthopedic,
     subImages: [sub151, sub152, sub153, sub154, sub155, sub156, sub157, sub158, sub159, sub1510, sub1511, sub1512, sub1513, sub1514, sub1515, sub1516],
   },
-  
+  "Traction Kits": {
+    cardImage: orthopedic,
+    subImages: [sub161, sub162, sub163, sub164, sub165, sub166, sub167, sub168, sub169, sub1610],
+  },
   "Finger Splints": {
     cardImage: orthopedic,
     subImages: [sub171, sub172, sub173],
+  },
+  "Neoprene Support / Braces": {
+    cardImage: orthopedic,
+    subImages: [sub181, sub182, sub183, sub184, sub185, sub186, sub187, sub188, sub189, sub1810, sub1811, sub1812, sub1813, sub1814, sub1815, sub1816],
   },
  
   "Physiotherapy & Rehabilitation": {
