@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 import "./Products.css";
 import QuoteModal from "../components/QuoteModal";
 
-// ─── Local category images (still used as fallback) ───────────────────────────
 import physiotherapy from "../assets/physiotherapy.jpg";
 import adultincontinence from "../assets/adultincontinence.png";
-import womenswellness from "../assets/womenswellness.png";
+
 import walkingaids from "../assets/walkingaids.jpeg";
 import sportgear from "../assets/sportgear.png";
 import last from "../assets/last.png";
@@ -17,7 +16,6 @@ import surgical from "../assets/surgical.jpg";
 import surgicaldressing from "../assets/surgicaldressing.JPG";
 import woundcare from "../assets/woundcare&cotton.jpeg";
 
-// ─── Local subproduct images (used for modal display) ─────────────────────────
 import sub1 from "../assets/1.1.jpg";
 import sub2 from "../assets/1.2.jpg";
 import sub3 from "../assets/1.3.jpeg";
@@ -25,10 +23,7 @@ import sub4 from "../assets/1.4.jpg";
 import sub5 from "../assets/1.5.jpg";
 import sub6 from "../assets/1.6.jpg";
 import sub7 from "../assets/1.7.jpeg";
-import sub41 from "../assets/4.1.jpg";
-import sub42 from "../assets/4.2.jpg";
-import sub43 from "../assets/4.3.jpg";
-import sub44 from "../assets/4.4.jpeg";
+
 import sub21 from "../assets/2.1.jpg";
 import sub22 from "../assets/2.2.jpeg";
 import sub23 from "../assets/2.3.jpg";
@@ -242,25 +237,6 @@ import sub1813 from "../assets/18.13.png";
 import sub1814 from "../assets/18.14.png";
 import sub1815 from "../assets/18.15.png";
 import sub1816 from "../assets/18.16.png";
-import sub191 from "../assets/19.1.png";
-import sub192 from "../assets/19.2.png";
-import sub193 from "../assets/19.3.png";
-import sub194 from "../assets/19.4.png";
-import sub195 from "../assets/19.5.png";
-import sub196 from "../assets/19.6.png";
-import sub197 from "../assets/19.7.png";
-import sub198 from "../assets/19.8.png";
-import sub199 from "../assets/19.9.png";
-import sub1910 from "../assets/19.10.png";
-import sub1911 from "../assets/19.11.png";
-import sub1912 from "../assets/19.12.png";
-import sub1913 from "../assets/19.13.png";
-import sub1914 from "../assets/19.14.png";
-import sub1915 from "../assets/19.15.png";
-import sub1916 from "../assets/19.16.png";
-import sub1917 from "../assets/19.17.png";
-import sub1918 from "../assets/19.18.png";
-import sub1919 from "../assets/19.19.png";
 import sub201 from "../assets/20.1.png";
 import sub202 from "../assets/20.2.png";
 import sub203 from "../assets/20.3.png";
@@ -328,10 +304,7 @@ const LOCAL_IMAGE_MAP = {
     cardImage: adultincontinence,
     subImages: [sub31, sub32, sub33, sub34, sub35],
   },
-  "Women's Wellness": {
-    cardImage: womenswellness,
-    subImages: [sub41, sub42, sub43, sub44],
-  },
+  
   "Medical Disposables / Surgical": {
     cardImage: surgical,
     subImages: [sub51, sub52, sub53, sub54, sub55, sub56, sub57, sub58, sub59, sub510, sub511, sub512, sub513],
@@ -388,10 +361,7 @@ const LOCAL_IMAGE_MAP = {
     cardImage: orthopedic,
     subImages: [sub181, sub182, sub183, sub184, sub185, sub186, sub187, sub188, sub189, sub1810, sub1811, sub1812, sub1813, sub1814, sub1815, sub1816],
   },
-  "Foot Care & Support": {
-    cardImage: orthopedic,
-    subImages: [sub191, sub192, sub193, sub194, sub195, sub196, sub197, sub198, sub199, sub1910, sub1911, sub1912, sub1913, sub1914, sub1915, sub1916, sub1917, sub1918, sub1919],
-  },
+ 
   "Physiotherapy & Rehabilitation": {
     cardImage: physiotherapy,
     subImages: [sub201, sub202, sub203, sub204, sub205, sub206, sub207, sub208, sub209, sub2010, sub2011, sub2012, sub2013, sub2014, sub2015, sub2016, sub2017, sub2018, sub2019, sub2020, sub2021, sub2022, sub2023, sub2024, sub2025, sub2026, sub2027, sub2028, sub2029, sub2030, sub2031, sub2032],
@@ -402,9 +372,6 @@ const LOCAL_IMAGE_MAP = {
   },
 };
 
-// ─── Helper: inject local images into a product from MongoDB ──────────────────
-// MongoDB product has: _id, name, category (string), description, brand, subproducts (array of {name, desc})
-// We merge local card image + local subproduct images on top.
 const enrichProduct = (product) => {
   const catName = product.category?.name || product.category || "";
   const localData = LOCAL_IMAGE_MAP[catName] || {};
