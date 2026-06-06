@@ -76,10 +76,6 @@ function Footer() {
         </div>
       </footer>
 
-      <a href="https://wa.me/918347480205" className="whatsapp-float" target="_blank" rel="noreferrer">
-        WhatsApp 8347480205
-      </a>
-
     </div>
   );
 }
