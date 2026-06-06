@@ -47,8 +47,8 @@ const QuoteModal = ({ product, onClose }) => {
             <h2 className="quote-title">Request a Quote</h2>
             {product && (
               <p className="quote-product-name">
-                For: <strong>{product.category}</strong>
-              </p>
+  For: <strong>{product.category?.name || product.category}</strong>
+</p>
             )}
             <div className="quote-form">
               <input
