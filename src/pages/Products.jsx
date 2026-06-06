@@ -64,6 +64,7 @@ import sub69 from "../assets/6.9.jpg";
 import sub610 from "../assets/6.10.jpeg";
 import sub611 from "../assets/6.11.png";
 import sub612 from "../assets/6.12.png";
+
 import sub71 from "../assets/7.1.png";
 import sub72 from "../assets/7.2.png";
 import sub73 from "../assets/7.3.png";
@@ -94,6 +95,7 @@ import sub727 from "../assets/7.27.png";
 import sub728 from "../assets/7.28.png";
 import sub729 from "../assets/7.29.png";
 import sub730 from "../assets/7.30.png";
+
 import sub81 from "../assets/8.1.png";
 import sub82 from "../assets/8.2.png";
 import sub83 from "../assets/8.3.png";
@@ -347,7 +349,7 @@ const LOCAL_IMAGE_MAP = {
   "Orthopaedic Supports & Braces": {
     cardImage: orthopaedicbraces,
     subImages: [sub71, sub72, sub73, sub74, sub75, sub76, sub77, sub78, sub79, sub710, sub711, sub712, sub713, sub714, sub715, sub716, sub717, sub718, sub719, sub720, sub721, sub722, sub723, sub724, sub725, sub726, sub727, sub728, sub729, sub730],
-  },
+ },
   "Fracture Aids": {
     cardImage: fractureaids,
     subImages: [sub81, sub82, sub83, sub84, sub85, sub86, sub87, sub88, sub89, sub810, sub811, sub812, sub813, sub814, sub815],
