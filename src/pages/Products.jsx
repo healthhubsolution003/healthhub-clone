@@ -368,7 +368,7 @@ const LOCAL_IMAGE_MAP = {
   },
  "Surgical Dressing": {
   cardImage: surgicaldressing,
-  subImages: [sub123, sub124, sub125, sub127],
+  subImages: [sub123, sub124, sub125, sub126],
 },
   "Sport Gear": {
     cardImage: sportgear,
@@ -470,201 +470,187 @@ const Products = () => {
   });
 
   // ── Render ───────────────────────────────────────────────────────────────────
-  return (
-    <div className="products-page">
-      <section className="products-hero">
-        <p className="products-eyebrow">CATALOG</p>
-        <h1 className="products-title">
-          Our complete{" "}
-          <span className="products-title-accent">healthcare product range</span>
-        </h1>
-        <p className="products-subtitle">
-          Browse our extensive range of medical, surgical, orthopedic,
-          rehabilitation and wellness products.
-        </p>
-      </section>
-
-      <section className="products-controls">
-        <div className="search-bar">
-          <span className="search-icon">🔍</span>
-          <input
-            type="text"
-            placeholder="Search categories or products..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <div className="view-toggles">
-            <button
-              className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
-              onClick={() => setViewMode("grid")}
-            >
-              ⬜
-            </button>
-            <button
-              className={`view-btn ${viewMode === "list" ? "active" : ""}`}
-              onClick={() => setViewMode("list")}
-            >
-              ☰
-            </button>
+  
+return (
+  <div className="products-page">
+    {/* ── Full Screen Detail View ── */}
+    {modalProduct ? (
+      <div className="detail-view">
+        <div className="detail-header">
+          <button className="btn-back" onClick={() => setModalProduct(null)}>
+            ← Back
+          </button>
+          <div className="detail-header-info">
+            <p className="modal-eyebrow">{getCategoryName(modalProduct)}</p>
+            <h2>{modalProduct.name}</h2>
+            <p className="modal-desc">{modalProduct.description || modalProduct.desc}</p>
           </div>
         </div>
 
-        <div className="category-pills">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              className={`pill ${activeCategory === cat ? "pill-active" : ""}`}
-              onClick={() => setActiveCategory(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="products-grid-section">
-        {/* Loading state */}
-        {loading && (
-          <div className="loading-state">
-            <div className="loading-spinner" />
-            <p>Loading products...</p>
-          </div>
-        )}
-
-        {/* Error state */}
-        {error && !loading && (
-          <div className="error-state">
-            <p>⚠️ {error}</p>
-          </div>
-        )}
-
-        {/* Products grid */}
-        {!loading && !error && (
-          <div className={`products-grid ${viewMode === "list" ? "products-list" : ""}`}>
-            {filtered.map((product) => (
-              <div className="product-card" key={product._id}>
-                <div className="product-card-img placeholder-card">
-                  {product.cardImage ? (
+        <div className="detail-products">
+          <h4 className="modal-products-heading">Products Included</h4>
+          <ul className="modal-subproducts-list">
+            {(modalProduct.subproducts || []).map((item, index) => (
+              <li key={index} className="modal-subproduct-item">
+                <div className="modal-subproduct-img-wrap">
+                  {item.image ? (
                     <img
-  src={product.cardImage}
-  alt={getCategoryName(product)}
-  className={`product-image ${
-    [
-      "Thigh & Calf Support / Varicose Vein Compression Stockings",
-      "Wrist & Forearm Support / Splints",
-    ].includes(getCategoryName(product))
-      ? "zoom-out"
-      : ""
-  }`}
-/>
-                  ) : product.image ? (
-                    // Fallback: if admin added a URL image via admin panel
-                    <img
-                      src={product.image}
-                      alt={getCategoryName(product)}
-                      className="product-image"
+                      src={item.image}
+                      alt={item.name}
+                      className={`modal-subproduct-img ${item.contain ? "modal-subproduct-img-contain" : ""}`}
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        e.target.nextSibling.style.display = "flex";
+                      }}
                     />
-                  ) : (
-                    <div className="placeholder-icon">🏥</div>
-                  )}
-                </div>
-
-                <div className="product-card-body">
-                  <p className="product-category-name">
-                    {getCategoryName(product)}
-                  </p>
-                  <p className="product-card-desc">
-                    {product.description || product.desc}
-                  </p>
-                  <div className="product-card-footer">
-                    <button
-                      className="btn-view-details"
-                      onClick={() => setModalProduct(product)}
-                    >
-                      View Details →
-                    </button>
-                    <button
-                      className="btn-quote-icon"
-                      onClick={() => setQuoteProduct(product)}
-                    >
-                      💬
-                    </button>
+                  ) : null}
+                  <div
+                    className="modal-subproduct-emoji"
+                    style={{ display: item.image ? "none" : "flex" }}
+                  >
+                    🏥
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {!loading && !error && filtered.length === 0 && (
-          <div className="no-results">No products found.</div>
-        )}
-      </section>
-
-      {/* ── Details Modal ─────────────────────────────────────────────────────── */}
-      {modalProduct && (
-        <div className="modal-overlay" onClick={() => setModalProduct(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <div>
-                <p className="modal-eyebrow">{getCategoryName(modalProduct)}</p>
-                <h2>{modalProduct.name}</h2>
-                <p className="modal-desc">
-                  {modalProduct.description || modalProduct.desc}
+                <p className="modal-subproduct-name">
+                  {typeof item === "object" ? item.name : item}
                 </p>
-              </div>
-              <button className="modal-close" onClick={() => setModalProduct(null)}>
-                ✕
+                {item.desc && (
+                  <p className="modal-subproduct-desc">{item.desc}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ) : (
+      <>
+        <section className="products-hero">
+          <p className="products-eyebrow">CATALOG</p>
+          <h1 className="products-title">
+            Our complete{" "}
+            <span className="products-title-accent">healthcare product range</span>
+          </h1>
+          <p className="products-subtitle">
+            Browse our extensive range of medical, surgical, orthopedic,
+            rehabilitation and wellness products.
+          </p>
+        </section>
+
+        <section className="products-controls">
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Search categories or products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div className="view-toggles">
+              <button
+                className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
+                onClick={() => setViewMode("grid")}
+              >
+                ⬜
+              </button>
+              <button
+                className={`view-btn ${viewMode === "list" ? "active" : ""}`}
+                onClick={() => setViewMode("list")}
+              >
+                ☰
               </button>
             </div>
-
-            <div className="modal-products">
-              <h4 className="modal-products-heading">Products Included</h4>
-              <ul className="modal-subproducts-list">
-                {(modalProduct.subproducts || []).map((item, index) => (
-                  <li key={index} className="modal-subproduct-item">
-                    <div className="modal-subproduct-img-wrap">
-                      {item.image ? (
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className={`modal-subproduct-img ${item.contain ? "modal-subproduct-img-contain" : ""}`}
-                          onError={(e) => {
-                            e.target.style.display = "none";
-                            e.target.nextSibling.style.display = "flex";
-                          }}
-                        />
-                      ) : null}
-                      <div
-                        className="modal-subproduct-emoji"
-                        style={{ display: item.image ? "none" : "flex" }}
-                      >
-                        🏥
-                      </div>
-                    </div>
-                    <p className="modal-subproduct-name">
-                      {typeof item === "object" ? item.name : item}
-                    </p>
-                    {item.desc && (
-                      <p className="modal-subproduct-desc">{item.desc}</p>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
-        </div>
-      )}
 
-      {/* ── Quote Modal ───────────────────────────────────────────────────────── */}
-      {quoteProduct && (
-        <QuoteModal
-          product={quoteProduct}
-          onClose={() => setQuoteProduct(null)}
-        />
-      )}
-    </div>
-  );
+          <div className="category-pills">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`pill ${activeCategory === cat ? "pill-active" : ""}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="products-grid-section">
+          {loading && (
+            <div className="loading-state">
+              <div className="loading-spinner" />
+              <p>Loading products...</p>
+            </div>
+          )}
+          {error && !loading && (
+            <div className="error-state">
+              <p>⚠️ {error}</p>
+            </div>
+          )}
+          {!loading && !error && (
+            <div className={`products-grid ${viewMode === "list" ? "products-list" : ""}`}>
+              {filtered.map((product) => (
+                <div className="product-card" key={product._id}>
+                  <div className="product-card-img placeholder-card">
+                    {product.cardImage ? (
+                      <img
+                        src={product.cardImage}
+                        alt={getCategoryName(product)}
+                        className="product-image"
+                      />
+                    ) : product.image ? (
+                      <img
+                        src={product.image}
+                        alt={getCategoryName(product)}
+                        className="product-image"
+                      />
+                    ) : (
+                      <div className="placeholder-icon">🏥</div>
+                    )}
+                  </div>
+                  <div className="product-card-body">
+                    <p className="product-category-name">
+                      {getCategoryName(product)}
+                    </p>
+                    <p className="product-card-desc">
+                      {product.description || product.desc}
+                    </p>
+                    <div className="product-card-footer">
+                      <button
+                        className="btn-view-details"
+                        onClick={() => {
+                          setModalProduct(product);
+                          window.scrollTo(0, 0);
+                        }}
+                      >
+                        View Details →
+                      </button>
+                      <button
+                        className="btn-quote-icon"
+                        onClick={() => setQuoteProduct(product)}
+                      >
+                        💬
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          {!loading && !error && filtered.length === 0 && (
+            <div className="no-results">No products found.</div>
+          )}
+        </section>
+      </>
+    )}
+
+    {quoteProduct && (
+      <QuoteModal
+        product={quoteProduct}
+        onClose={() => setQuoteProduct(null)}
+      />
+    )}
+  </div>
+);
 };
 
 export default Products;
