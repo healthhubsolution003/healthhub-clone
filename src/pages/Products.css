@@ -572,8 +572,8 @@
 
 
 .zoom-out {
-  object-fit: contain;
-  padding: 8px;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.25);
   border-radius: 20px;
-  transform: scale(1.08);
 }
