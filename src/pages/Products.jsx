@@ -423,6 +423,7 @@ const Products = () => {
   const [viewMode, setViewMode]           = useState("grid");
   const [modalProduct, setModalProduct]   = useState(null);
   const [quoteProduct, setQuoteProduct]   = useState(null);
+  const [selectedSubproduct, setSelectedSubproduct] = useState(null);
 
   // ── Fetch products from MongoDB ──────────────────────────────────────────────
   useEffect(() => {
@@ -491,8 +492,8 @@ return (
           <h4 className="modal-products-heading">Products Included</h4>
           <ul className="modal-subproducts-list">
             {(modalProduct.subproducts || []).map((item, index) => (
-              <li key={index} className="modal-subproduct-item">
-                <div className="modal-subproduct-img-wrap">
+             <li key={index} className="modal-subproduct-item" onClick={() => setSelectedSubproduct(item)}>
+                  <div className="modal-subproduct-img-wrap">
                   {item.image ? (
                     <img
                       src={item.image}
@@ -520,6 +521,17 @@ return (
               </li>
             ))}
           </ul>
+          {selectedSubproduct && (
+  <div className="subproduct-popup-overlay" onClick={() => setSelectedSubproduct(null)}>
+    <div className="subproduct-popup" onClick={(e) => e.stopPropagation()}>
+      <button className="modal-close" onClick={() => setSelectedSubproduct(null)}>✕</button>
+      <p className="modal-eyebrow">Product Details</p>
+      <h3>{selectedSubproduct.name}</h3>
+      <p className="modal-desc">{selectedSubproduct.description}</p>
+    </div>
+  </div>
+)}
+
         </div>
       </div>
     ) : (
