@@ -146,3 +146,6 @@
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
+.footer-logo-img {
+  border-radius: 50%;
+}
