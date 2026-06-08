@@ -7,10 +7,20 @@ import surgical from '../assets/surgical.jpg';
 import { Link } from 'react-router-dom';
 
 import heroImg from '../assets/hero-medical.jpg';
-
+import { useState, useEffect } from 'react';
 
 // ── 1. HERO ──────────────────────────────────────────
 function HeroSection() {
+  const [current, setCurrent] = useState(0);
+  const slides = [heroImg, orthopedic, physiotherapy, surgical];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-inner">
@@ -57,13 +67,26 @@ function HeroSection() {
             </div>
           </div>
         </div>
+
         <div className="hero-right">
           <div className="hero-img-wrapper">
-            <img
-              src={heroImg}
-              alt="Medical products"
-              className="hero-img"
-            />
+            {slides.map((slide, i) => (
+              <img
+                key={i}
+                src={slide}
+                alt="Medical products"
+                className={`hero-img hero-slide ${i === current ? "hero-slide-active" : ""}`}
+              />
+            ))}
+            <div className="hero-slide-dots">
+              {slides.map((_, i) => (
+                <span
+                  key={i}
+                  className={`slide-dot ${i === current ? "slide-dot-active" : ""}`}
+                  onClick={() => setCurrent(i)}
+                />
+              ))}
+            </div>
             <div className="hero-card top-right">
               <span className="card-icon">🚚</span>
               <div>
@@ -80,6 +103,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
