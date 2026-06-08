@@ -8,12 +8,18 @@ import { Link } from 'react-router-dom';
 
 import heroImg from '../assets/hero-medical.jpg';
 
+
 // ── 1. HERO ──────────────────────────────────────────
 function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-inner">
         <div className="hero-left">
+          <div className="hero-slogan">
+            <span className="slogan-line"></span>
+            Delivering health, Distributing trust.
+            <span className="slogan-line"></span>
+          </div>
           <div className="hero-badge">
             <span className="badge-dot"></span>
             Trusted by hospitals, clinics &amp; pharmacies

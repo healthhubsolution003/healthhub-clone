@@ -487,3 +487,21 @@
 .home-product-card:hover .home-product-image {
   transform: scale(1.05);
 }
+.hero-slogan {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1D9E75;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.65rem;
+}
+
+.slogan-line {
+  width: 28px;
+  height: 2px;
+  background: #1D9E75;
+  border-radius: 2px;
+  display: inline-block;
+}
