@@ -23,6 +23,45 @@ function HeroSection() {
 
   return (
     <section className="hero">
+      <div className="hero-bg-slider">
+        {slides.map((slide, i) => (
+          <img
+            key={i}
+            src={slide}
+            alt=""
+            className={`hero-bg-slide ${i === current ? "hero-bg-slide-active" : ""}`}
+          />
+        ))}
+        <div className="hero-bg-overlay" />
+      </div>
+
+      <div className="hero-slide-dots">
+        {slides.map((_, i) => (
+          <span
+            key={i}
+            className={`slide-dot ${i === current ? "slide-dot-active" : ""}`}
+            onClick={() => setCurrent(i)}
+          />
+        ))}
+      </div>
+
+      <div className="hero-cards">
+        <div className="hero-card">
+          <span className="card-icon">🚚</span>
+          <div>
+            <div className="card-title">Pan-India delivery</div>
+            <div className="card-sub">Same-day dispatch</div>
+          </div>
+        </div>
+        <div className="hero-card">
+          <span className="card-icon">🛡️</span>
+          <div>
+            <div className="card-title">ISO-grade quality</div>
+            <div className="card-sub">Verified suppliers</div>
+          </div>
+        </div>
+      </div>
+
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-slogan">
@@ -67,47 +106,11 @@ function HeroSection() {
             </div>
           </div>
         </div>
-
-        <div className="hero-right">
-          <div className="hero-img-wrapper">
-            {slides.map((slide, i) => (
-              <img
-                key={i}
-                src={slide}
-                alt="Medical products"
-                className={`hero-img hero-slide ${i === current ? "hero-slide-active" : ""}`}
-              />
-            ))}
-            <div className="hero-slide-dots">
-              {slides.map((_, i) => (
-                <span
-                  key={i}
-                  className={`slide-dot ${i === current ? "slide-dot-active" : ""}`}
-                  onClick={() => setCurrent(i)}
-                />
-              ))}
-            </div>
-            <div className="hero-card top-right">
-              <span className="card-icon">🚚</span>
-              <div>
-                <div className="card-title">Pan-India delivery</div>
-                <div className="card-sub">Same-day dispatch</div>
-              </div>
-            </div>
-            <div className="hero-card bottom-left">
-              <span className="card-icon">🛡️</span>
-              <div>
-                <div className="card-title">ISO-grade quality</div>
-                <div className="card-sub">Verified suppliers</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
   );
 }
+
 
 // ── 2. PRODUCTS ──────────────────────────────────────
 function ProductsSection() {
