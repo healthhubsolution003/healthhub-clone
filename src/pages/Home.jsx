@@ -47,13 +47,6 @@ function HeroSection() {
 
       <div className="hero-cards">
         <div className="hero-card">
-          <span className="card-icon">🚚</span>
-          <div>
-            <div className="card-title">Pan-India delivery</div>
-            <div className="card-sub">Same-day dispatch</div>
-          </div>
-        </div>
-        <div className="hero-card">
           <span className="card-icon">🛡️</span>
           <div>
             <div className="card-title">ISO-grade quality</div>
@@ -64,15 +57,11 @@ function HeroSection() {
 
       <div className="hero-inner">
         <div className="hero-left">
-          <div className="hero-slogan">
-            <span className="slogan-line"></span>
-            Delivering health, Distributing trust.
-            <span className="slogan-line"></span>
-          </div>
-          <div className="hero-badge">
-            <span className="badge-dot"></span>
-            Trusted by hospitals, clinics &amp; pharmacies
-          </div>
+         <p className="hero-slogan">Delivering health, Distributing trust.</p>
+<div className="hero-badge">
+  <span className="badge-dot"></span>
+  Trusted by hospitals, clinics &amp; pharmacies
+</div>
           <h1 className="hero-title">
             Trusted Medical <br />
             &amp; <span className="hero-highlight">Healthcare</span> <br />
