@@ -1,12 +1,12 @@
-import './Home.css';
-import hygiene from '../assets/hygiene.jpg';
-import baby from '../assets/baby.jpg';
-import orthopedic from '../assets/orthopedic.jpg';
-import physiotherapy from '../assets/physiotherapy.jpg';
-import surgical from '../assets/surgical.jpg';
-import { Link } from 'react-router-dom';
 
-import heroImg from '../assets/hero-medical.jpg';
+import './Home.css';
+const heroImg    = "https://drive.google.com/uc?export=view&id=12D647Urb-m74oSAerLHnoGG_ExhC4RQe";
+const orthopedic = "https://drive.google.com/uc?export=view&id=1Bz9hApr8Ih1YaVn0t1Tv3Q0DUZ0hT-r9";
+const physiotherapy = "https://drive.google.com/uc?export=view&id=1NHbi0XkIJS-aQxqg5N0RQQMa9IGxKOU9";
+const surgical   = "https://drive.google.com/uc?export=view&id=1alQci1JjbW6ilNKOfwzTHVEmuDnZUB9i";
+const hygiene    = "https://drive.google.com/uc?export=view&id=1nytF3EBLEvPpRnq4yY5P2kGbpC_L6wG7";
+const baby       = "https://drive.google.com/uc?export=view&id=1_i8j3fqzgMhJHQLyVnTxzUbnpf4qiwC6";
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 // ── 1. HERO ──────────────────────────────────────────

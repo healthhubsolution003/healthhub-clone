@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/logo.png';
+
+const logo = "https://drive.google.com/uc?export=view&id=1hG10d_2r2zQOSWLZqwM2BaCo9sBApaiX";
 
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
-import warehouseImg from "../assets/a.jpg";
+
+const warehouseImg = "https://drive.google.com/uc?export=view&id=1diWWAApBrm6s3K0eqVpHnzUi9-BK3bDs";
 
 const About = () => {
   return (
