@@ -1,9 +1,9 @@
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../assets/logo.png';
 
-
+const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/logo_fvktbs";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,9 +12,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo">
-  <img src={logo} alt="HealthHub Solution" className="logo-img" />
-</Link>
-       
+          <img src={logo} alt="HealthHub Solution" className="logo-img" />
+        </Link>
 
         {/* DESKTOP LINKS */}
         <ul className="navbar-links">
@@ -32,7 +31,6 @@ function Navbar() {
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? '✕' : '☰'}
         </button>
-
       </div>
 
       {/* MOBILE MENU */}

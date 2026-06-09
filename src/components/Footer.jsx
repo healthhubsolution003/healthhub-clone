@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/logo_fvktbs";
 import './Footer.css';
 
 function Footer() {

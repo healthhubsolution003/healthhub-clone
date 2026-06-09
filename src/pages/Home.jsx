@@ -1,13 +1,14 @@
 import './Home.css';
-import hygiene from '../assets/hygiene.jpg';
-import baby from '../assets/baby.jpg';
-import orthopedic from '../assets/orthopedic.jpg';
-import physiotherapy from '../assets/physiotherapy.jpg';
-import surgical from '../assets/surgical.jpg';
 import { Link } from 'react-router-dom';
-
-import heroImg from '../assets/hero-medical.jpg';
 import { useState, useEffect } from 'react';
+
+const heroImg = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/hero-medical_e3vaqi";
+const hygiene = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/hygiene_m9nfo9";
+const baby = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/baby_makiwy";
+const orthopedic = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/orthopedic_yrp6jt";
+const physiotherapy = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/physiotherapy_apvpzc";
+const surgical = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/surgical_fqd4me";
+
 
 // ── 1. HERO ──────────────────────────────────────────
 function HeroSection() {
