@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png';
 import './Footer.css';
-
-const logo = "https://drive.google.com/uc?export=view&id=1hG10d_2r2zQOSWLZqwM2BaCo9sBApaiX";
 
 function Footer() {
   return (

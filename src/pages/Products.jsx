@@ -2,348 +2,399 @@ import { useState, useEffect } from "react";
 import "./Products.css";
 import QuoteModal from "../components/QuoteModal";
 
-// ─── Google Drive Image URLs ───────────────────────────────────────────────────
-const IMG = {
-  // Category card images
-  hygiene:           "https://drive.google.com/uc?export=view&id=1nytF3EBLEvPpRnq4yY5P2kGbpC_L6wG7",
-  baby:              "https://drive.google.com/uc?export=view&id=1_i8j3fqzgMhJHQLyVnTxzUbnpf4qiwC6",
-  adultincontinence: "https://drive.google.com/uc?export=view&id=1efyYcvveRwKexJOXTC-eXkSAutCdOWle",
-  surgical:          "https://drive.google.com/uc?export=view&id=1alQci1JjbW6ilNKOfwzTHVEmuDnZUB9i",
-  woundcare:         "https://drive.google.com/uc?export=view&id=1gjQEijRTnciZ9x-sjOoN2CvqVIPEe2Pv",
-  orthopedic:        "https://drive.google.com/uc?export=view&id=1Bz9hApr8Ih1YaVn0t1Tv3Q0DUZ0hT-r9",
-  orthopaedicbraces: "https://drive.google.com/uc?export=view&id=1V2WuDzDZPUEgHa8gdT4y0Gkj5PXjnegW",
-  fractureaids:      "https://drive.google.com/uc?export=view&id=1it1l47Nq5hQNsqj-0Vzfqbh8xg9ljtMj",
-  walkingaids:       "https://drive.google.com/uc?export=view&id=1vHkLaAiTsIfDugKqV2Am42AC-MvLnfAJ",
-  sportgear:         "https://drive.google.com/uc?export=view&id=11VCoOs_4rjD6QI93Osk_V-2PRnOp834x",
-  surgicaldressing:  "https://drive.google.com/uc?export=view&id=1kJQGK_ggFG9k-MAV5_fBzERQcIGpOPxC",
-  physiotherapy:     "https://drive.google.com/uc?export=view&id=1NHbi0XkIJS-aQxqg5N0RQQMa9IGxKOU9",
-  last:              "https://drive.google.com/uc?export=view&id=1fToYXGvyajert5WgKd7wS95twcOLJRA_",
-  thighcalf:         "https://drive.google.com/uc?export=view&id=1Cekd5NePyl6trpzkepLVW1lqfvXQJLyz",
-  wrist:             "https://drive.google.com/uc?export=view&id=1T6NKT7s2qILkcPK-xtz3EObXqv1cFWXi",
-  fingersplints:     "https://drive.google.com/uc?export=view&id=11Kj7UAwctbhzuDGSX3OpvakjMVTBH4NA",
-};
 
-// ─── Local image map ───────────────────────────────────────────────────────────
+import fingersplints from "../assets/finger_splints.png";
+import orthopaedicbraces from "../assets/Orthopaedic Supports & Braces.png";
+import thighcalf from "../assets/Thigh & Calf Support.png";
+import wrist from "../assets/wrist.png";
+
+
+import physiotherapy from "../assets/physiotherapy.jpg";
+import adultincontinence from "../assets/adultincontinence.png";
+
+import walkingaids from "../assets/walkingaids.jpeg";
+import sportgear from "../assets/sportgear.png";
+import last from "../assets/last.png";
+import hygiene from "../assets/hygiene.jpg";
+import baby from "../assets/baby.jpg";
+import fractureaids from "../assets/fractureaids.JPG";
+import orthopedic from "../assets/orthopedic.jpg";
+import surgical from "../assets/surgical.jpg";
+import surgicaldressing from "../assets/surgicaldressing.JPG";
+import woundcare from "../assets/woundcare&cotton.jpeg";
+
+import sub1 from "../assets/1.1.jpg";
+import sub2 from "../assets/1.2.jpg";
+import sub3 from "../assets/1.3.jpeg";
+import sub4 from "../assets/1.4.jpg";
+import sub5 from "../assets/1.5.jpg";
+import sub6 from "../assets/1.6.jpg";
+import sub7 from "../assets/1.7.jpeg";
+
+import sub21 from "../assets/2.1.jpg";
+import sub22 from "../assets/2.2.jpeg";
+import sub23 from "../assets/2.3.jpg";
+import sub31 from "../assets/3.1.png";
+import sub32 from "../assets/3.2.png";
+import sub33 from "../assets/3.3.jpeg";
+import sub34 from "../assets/3.4.jpg";
+import sub35 from "../assets/3.5.jpg";
+import sub51 from "../assets/5.1.jpeg";
+import sub52 from "../assets/5.2.jpg";
+import sub53 from "../assets/5.3.jpeg";
+import sub54 from "../assets/5.4.jpg";
+import sub55 from "../assets/5.5.jpg";
+import sub56 from "../assets/5.6.jpg";
+import sub57 from "../assets/5.7.jpeg";
+import sub58 from "../assets/5.8.jpeg";
+import sub59 from "../assets/5.9.jpg";
+import sub510 from "../assets/5.10.png";
+import sub511 from "../assets/5.11.jpeg";
+import sub512 from "../assets/5.12.png";
+import sub513 from "../assets/5.13.jpeg";
+import sub61 from "../assets/6.1.png";
+import sub62 from "../assets/6.2.png";
+import sub63 from "../assets/6.3.jpg";
+import sub64 from "../assets/6.4.png";
+import sub65 from "../assets/6.5.png";
+import sub66 from "../assets/6.6.png";
+import sub67 from "../assets/6.7.jpg";
+import sub68 from "../assets/6.8.jpeg";
+import sub69 from "../assets/6.9.jpg";
+import sub610 from "../assets/6.10.jpeg";
+import sub611 from "../assets/6.11.png";
+import sub612 from "../assets/6.12.png";
+
+import sub71 from "../assets/7.1.png";
+import sub72 from "../assets/7.2.png";
+import sub73 from "../assets/7.3.png";
+import sub74 from "../assets/7.4.png";
+import sub75 from "../assets/7.5.png";
+import sub76 from "../assets/7.6.png";
+import sub77 from "../assets/7.7.png";
+import sub78 from "../assets/7.8.png";
+import sub79 from "../assets/7.9.png";
+import sub710 from "../assets/7.10.png";
+import sub711 from "../assets/7.11.png";
+import sub712 from "../assets/7.12.png";
+import sub713 from "../assets/7.13.png";
+import sub714 from "../assets/7.14.png";
+import sub715 from "../assets/7.15.png";
+import sub716 from "../assets/7.16.png";
+import sub717 from "../assets/7.17.png";
+import sub718 from "../assets/7.18.png";
+import sub719 from "../assets/7.19.png";
+import sub720 from "../assets/7.20.png";
+import sub721 from "../assets/7.21.png";
+import sub722 from "../assets/7.22.png";
+import sub723 from "../assets/7.23.png";
+import sub724 from "../assets/7.24.png";
+import sub725 from "../assets/7.25.png";
+import sub726 from "../assets/7.26.png";
+import sub727 from "../assets/7.27.png";
+import sub728 from "../assets/7.28.png";
+import sub729 from "../assets/7.29.png";
+import sub730 from "../assets/7.30.png";
+
+import sub81 from "../assets/8.1.png";
+import sub82 from "../assets/8.2.png";
+import sub83 from "../assets/8.3.png";
+import sub84 from "../assets/8.4.png";
+import sub85 from "../assets/8.5.png";
+import sub86 from "../assets/8.6.png";
+import sub87 from "../assets/8.7.png";
+import sub88 from "../assets/8.8.png";
+import sub89 from "../assets/8.9.png";
+import sub810 from "../assets/8.10.png";
+import sub811 from "../assets/8.11.png";
+import sub812 from "../assets/8.12.png";
+import sub813 from "../assets/8.13.png";
+import sub814 from "../assets/8.14.png";
+import sub815 from "../assets/8.15.png";
+import sub91 from "../assets/9.1.png";
+import sub92 from "../assets/9.2.png";
+import sub93 from "../assets/9.3.png";
+import sub94 from "../assets/9.4.png";
+import sub95 from "../assets/9.5.png";
+import sub96 from "../assets/9.6.png";
+import sub97 from "../assets/9.7.png";
+import sub98 from "../assets/9.8.png";
+import sub99 from "../assets/9.9.png";
+import sub910 from "../assets/9.10.png";
+import sub911 from "../assets/9.11.png";
+import sub912 from "../assets/9.12.png";
+import sub913 from "../assets/9.13.png";
+import sub914 from "../assets/9.14.png";
+import sub915 from "../assets/9.15.png";
+import sub916 from "../assets/9.16.png";
+import sub917 from "../assets/9.17.png";
+import sub101 from "../assets/10.1.png";
+import sub102 from "../assets/10.2.png";
+import sub103 from "../assets/10.3.png";
+import sub104 from "../assets/10.4.png";
+import sub105 from "../assets/10.5.png";
+import sub106 from "../assets/10.6.png";
+import sub107 from "../assets/10.7.png";
+import sub108 from "../assets/10.8.png";
+import sub109 from "../assets/10.9.png";
+import sub1010 from "../assets/10.10.png";
+import sub1011 from "../assets/10.11.png";
+import sub1012 from "../assets/10.12.png";
+import sub1013 from "../assets/10.13.png";
+import sub1014 from "../assets/10.14.png";
+import sub1015 from "../assets/10.15.png";
+import sub111 from "../assets/11.1.png";
+import sub112 from "../assets/11.2.png";
+import sub113 from "../assets/11.3.png";
+import sub114 from "../assets/11.4.png";
+import sub115 from "../assets/11.5.png";
+import sub116 from "../assets/11.6.png";
+import sub117 from "../assets/11.7.png";
+import sub118 from "../assets/11.8.png";
+import sub119 from "../assets/11.9.png";
+import sub1110 from "../assets/11.10.png";
+import sub1111 from "../assets/11.11.png";
+import sub1112 from "../assets/11.12.png";
+import sub1113 from "../assets/11.13.png";
+import sub1114 from "../assets/11.14.png";
+import sub121 from "../assets/12.1.png";
+import sub122 from "../assets/12.2.png";
+import sub123 from "../assets/12.3.png";
+import sub124 from "../assets/12.4.png";
+import sub125 from "../assets/12.5.png";
+import sub126 from "../assets/12.6.png";
+import sub127 from "../assets/12.7.png";
+import sub128 from "../assets/12.8.png";
+import sub131 from "../assets/13.1.png";
+import sub132 from "../assets/13.2.png";
+import sub133 from "../assets/13.3.png";
+import sub134 from "../assets/13.4.png";
+import sub135 from "../assets/13.5.png";
+import sub136 from "../assets/13.6.png";
+import sub137 from "../assets/13.7.png";
+import sub138 from "../assets/13.8.png";
+import sub139 from "../assets/13.9.png";
+import sub1310 from "../assets/13.10.png";
+import sub1311 from "../assets/13.11.png";
+import sub1312 from "../assets/13.12.png";
+import sub1313 from "../assets/13.13.png";
+import sub1314 from "../assets/13.14.png";
+import sub1315 from "../assets/13.15.png";
+import sub1316 from "../assets/13.16.png";
+import sub1317 from "../assets/13.17.png";
+import sub1318 from "../assets/13.18.png";
+import sub1319 from "../assets/13.19.png";
+import sub1320 from "../assets/13.20.png";
+import sub141 from "../assets/14.1.png";
+import sub142 from "../assets/14.2.png";
+import sub143 from "../assets/14.3.png";
+import sub144 from "../assets/14.4.png";
+import sub145 from "../assets/14.5.png";
+import sub146 from "../assets/14.6.png";
+import sub147 from "../assets/14.7.png";
+import sub148 from "../assets/14.8.png";
+import sub149 from "../assets/14.9.png";
+import sub1410 from "../assets/14.10.png";
+import sub1411 from "../assets/14.11.png";
+import sub1412 from "../assets/14.12.png";
+import sub1413 from "../assets/14.13.png";
+import sub1414 from "../assets/14.14.png";
+import sub1415 from "../assets/14.15.png";
+import sub1416 from "../assets/14.16.png";
+import sub151 from "../assets/15.1.png";
+import sub152 from "../assets/15.2.png";
+import sub153 from "../assets/15.3.png";
+import sub154 from "../assets/15.4.png";
+import sub155 from "../assets/15.5.png";
+import sub156 from "../assets/15.6.png";
+import sub157 from "../assets/15.7.png";
+import sub158 from "../assets/15.8.png";
+import sub159 from "../assets/15.9.png";
+import sub1510 from "../assets/15.10.png";
+import sub1511 from "../assets/15.11.png";
+import sub1512 from "../assets/15.12.png";
+import sub1513 from "../assets/15.13.png";
+import sub1514 from "../assets/15.14.png";
+import sub1515 from "../assets/15.15.png";
+import sub1516 from "../assets/15.16.png";
+
+import sub161 from "../assets/16.1.png";
+import sub162 from "../assets/16.2.png";
+import sub163 from "../assets/16.3.png";
+import sub164 from "../assets/16.4.png";
+import sub165 from "../assets/16.5.png";
+import sub166 from "../assets/16.6.png";
+import sub167 from "../assets/16.7.png";
+import sub168 from "../assets/16.8.png";
+import sub169 from "../assets/16.9.png";
+import sub1610 from "../assets/16.10.png";
+
+import sub171 from "../assets/17.1.png";
+import sub172 from "../assets/17.2.png";
+import sub173 from "../assets/17.3.png";
+
+import sub181 from "../assets/18.1.png";
+import sub182 from "../assets/18.2.png";
+import sub183 from "../assets/18.3.png";
+import sub184 from "../assets/18.4.png";
+import sub185 from "../assets/18.5.png";
+import sub186 from "../assets/18.6.png";
+import sub187 from "../assets/18.7.png";
+import sub188 from "../assets/18.8.png";
+import sub189 from "../assets/18.9.png";
+import sub1810 from "../assets/18.10.png";
+import sub1811 from "../assets/18.11.png";
+import sub1812 from "../assets/18.12.png";
+import sub1813 from "../assets/18.13.png";
+import sub1814 from "../assets/18.14.png";
+import sub1815 from "../assets/18.15.png";
+import sub1816 from "../assets/18.16.png";
+
+import sub191 from "../assets/19.1.png";
+import sub192 from "../assets/19.2.png";
+import sub193 from "../assets/19.3.png";
+import sub194 from "../assets/19.4.png";
+import sub195 from "../assets/19.5.png";
+import sub196 from "../assets/19.6.png";
+import sub197 from "../assets/19.7.png";
+import sub198 from "../assets/19.8.png";
+import sub199 from "../assets/19.9.png";
+import sub1910 from "../assets/19.10.png";
+import sub1911 from "../assets/19.11.png";
+import sub1912 from "../assets/19.12.png";
+import sub1913 from "../assets/19.13.png";
+import sub1914 from "../assets/19.14.png";
+import sub1915 from "../assets/19.15.png";
+import sub1916 from "../assets/19.16.png";
+import sub1917 from "../assets/19.17.png";
+import sub1918 from "../assets/19.18.png";
+import sub1919 from "../assets/19.19.png";
+
+import sub201 from "../assets/20.1.png";
+import sub202 from "../assets/20.2.png";
+import sub203 from "../assets/20.3.png";
+import sub204 from "../assets/20.4.png";
+import sub205 from "../assets/20.5.png";
+import sub206 from "../assets/20.6.png";
+import sub207 from "../assets/20.7.png";
+import sub208 from "../assets/20.8.png";
+import sub209 from "../assets/20.9.png";
+import sub2010 from "../assets/20.10.png";
+import sub2011 from "../assets/20.11.png";
+import sub2012 from "../assets/20.12.png";
+import sub2013 from "../assets/20.13.png";
+import sub2014 from "../assets/20.14.png";
+import sub2015 from "../assets/20.15.png";
+import sub2016 from "../assets/20.16.png";
+import sub2017 from "../assets/20.17.png";
+import sub2018 from "../assets/20.18.png";
+import sub2019 from "../assets/20.19.png";
+import sub2020 from "../assets/20.20.png";
+import sub2021 from "../assets/20.21.png";
+import sub2022 from "../assets/20.22.png";
+import sub2023 from "../assets/20.23.png";
+import sub2024 from "../assets/20.24.png";
+import sub2025 from "../assets/20.25.png";
+import sub2026 from "../assets/20.26.png";
+import sub2027 from "../assets/20.27.png";
+import sub2028 from "../assets/20.28.png";
+import sub2029 from "../assets/20.29.png";
+import sub2030 from "../assets/20.30.png";
+import sub2031 from "../assets/20.31.png";
+import sub2032 from "../assets/20.32.png";
+import sub211 from "../assets/21.1.png";
+import sub212 from "../assets/21.2.png";
+import sub213 from "../assets/21.3.png";
+import sub214 from "../assets/21.4.png";
+import sub215 from "../assets/21.5.png";
+import sub216 from "../assets/21.6.png";
+import sub217 from "../assets/21.7.png";
+import sub218 from "../assets/21.8.png";
+import sub219 from "../assets/21.9.png";
+import sub2110 from "../assets/21.10.png";
+import sub2111 from "../assets/21.11.png";
+import sub2112 from "../assets/21.12.png";
+import sub2113 from "../assets/21.13.png";
+import sub2114 from "../assets/21.14.png";
+import sub2115 from "../assets/21.15.png";
+import sub2116 from "../assets/21.16.png";
+import sub2117 from "../assets/21.17.png";
+import sub2118 from "../assets/21.18.png";
+
+// ─── Local image map: category name → { cardImage, subproductImages[] } ───────
+// This is the KEY to keeping local images while data comes from MongoDB.
+// When MongoDB returns a product, we look up its category name here to get images.
 const LOCAL_IMAGE_MAP = {
   "Feminine Hygiene Care": {
-    cardImage: IMG.hygiene,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1RpsnSDVrAN1G2S62vruyhqwRSAqi2Tt3",
-      "https://drive.google.com/uc?export=view&id=1Lydiu8H2sHNMFRyV9O9XNXASfMpExx3Z",
-      "https://drive.google.com/uc?export=view&id=1UryLvmeLbZVOrZujBjVZkx_JtERCtDmC",
-      "https://drive.google.com/uc?export=view&id=1wxS7rj546YgOMxNTEwq7VicDzewYWCIS",
-      "https://drive.google.com/uc?export=view&id=1BDYLzGt-MGMZvjGvUdni94cT-YIBHgmN",
-      "https://drive.google.com/uc?export=view&id=15vEeAWrZzidUe3sIweIvnKMJBHh5Rcmx",
-      "https://drive.google.com/uc?export=view&id=1tfUDNW2VzDaXImRTEXiWik5XBSc_J0pj",
-    ],
+    cardImage: hygiene,
+    subImages: [sub1, sub2, sub3, sub4, sub5, sub6, sub7],
   },
   "Baby Care": {
-    cardImage: IMG.baby,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1kvDocgiTA_M0XUowgmOEAxDcS_ZIWnGc",
-      "https://drive.google.com/uc?export=view&id=1_IHNk1v0MoeQ9PVkX-L-gh_Z8mZdRp2Q",
-      "https://drive.google.com/uc?export=view&id=1cVDNaPbGhblMQoCA0PYdTuGDPAqikcF3",
-    ],
+    cardImage: baby,
+    subImages: [sub21, sub22, sub23],
   },
   "Adult Incontinence": {
-    cardImage: IMG.adultincontinence,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1eBl1y4ezGOzxmvJjyPf7hK0EqMIYBMjZ",
-      "https://drive.google.com/uc?export=view&id=1LRJxfLcyu3Q7xXyEqSbLcU1HJpyTMjCB",
-      "https://drive.google.com/uc?export=view&id=1U29c-obDUIVTRmm9Zv_sdab48n3vRvob",
-      "https://drive.google.com/uc?export=view&id=18zSJd4fHRGeB3OyEXcxEaH2QQGwySx8V",
-      "https://drive.google.com/uc?export=view&id=1_-JWakvMCrC5VeFxK5nHn5mhDmWDPtjf",
-    ],
+    cardImage: adultincontinence,
+    subImages: [sub31, sub32, sub33, sub34, sub35],
   },
+  
   "Medical Disposables / Surgical": {
-    cardImage: IMG.surgical,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=18t8OhN1JoIUU9N7mS1wx0a2o9HOQIq8o",
-      "https://drive.google.com/uc?export=view&id=1tcO1KIR_TZrnKxI-BY4A6bjCBttsSkID",
-      "https://drive.google.com/uc?export=view&id=1uIdCkHAfYK7NyM9PuXkb2XLSbNgdOzzI",
-      "https://drive.google.com/uc?export=view&id=1sxFF2oQABgC55p2ggJEYM6H5WvIXzhR2",
-      "https://drive.google.com/uc?export=view&id=1raqJpAGdzqqqKrs1r0KhUTJ9lUCc5dcY",
-      "https://drive.google.com/uc?export=view&id=1enM8e8kyB0gv8Kzn1ll1R-woa9-DIdN8",
-      "https://drive.google.com/uc?export=view&id=1Qq4Sl-5N4j_RnRySBR7pYzWttpL-7RGW",
-      "https://drive.google.com/uc?export=view&id=1tSdYbIBQXMjLha5vfGjd_bEwSBaXFwoh",
-      "https://drive.google.com/uc?export=view&id=1oM2KwzUNgRuaFmAbUCLyudybM3YDKA7d",
-    ],
+    cardImage: surgical,
+    subImages: [sub51, sub52, sub53, sub54, sub55, sub56, sub57, sub58, sub511],
   },
   "Wound Care & Cotton": {
-    cardImage: IMG.woundcare,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1_F6duupGD6qYHuVL4kMbG-I30eFvFOB8",
-      "https://drive.google.com/uc?export=view&id=1FZpwhhmAbkm8Da5wkMGtj7Fvm8eLolWI",
-      "https://drive.google.com/uc?export=view&id=1qrkFoZFbVEdF1AQPYGcYTSLK7MEmIEoU",
-      "https://drive.google.com/uc?export=view&id=1kOfFY22k3BdGzPEcxSlPVJz5mhzpEGME",
-      "https://drive.google.com/uc?export=view&id=1blAQ2NI_vH0CA1KZmNEQcpTvyP6Q2uuA",
-      "https://drive.google.com/uc?export=view&id=10SpF1LdgflX7t8HHKsSrgyJjVA3uikPk",
-      "https://drive.google.com/uc?export=view&id=1yddiu3qvahdJJ0KVb7w6HrKzuxOfrMcV",
-      "https://drive.google.com/uc?export=view&id=1QPL3mSO-F4pg6CTyhsFstck0f7A_RWrO",
-      "https://drive.google.com/uc?export=view&id=1Uv45VTkr1czHSFZMOz867ppTa6HJnBQ5",
-      "https://drive.google.com/uc?export=view&id=1Sabv6ZGaFuPydy-z9OafaEVN662lLDxw",
-      "https://drive.google.com/uc?export=view&id=1K_IswK1vOjQbFcSBY5_oAORDAlgYV9Xg",
-    ],
+    cardImage: woundcare,
+    subImages: [sub61, sub62, sub64, sub65, sub66, sub67, sub612,sub611, sub69,sub610, sub68],
   },
   "Orthopaedic Supports & Braces": {
-    cardImage: IMG.orthopaedicbraces,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1knuKlI5T1w4CQVJWMv01iJhecroatIEe",
-      "https://drive.google.com/uc?export=view&id=1reCkonkR7TAysVKCfrTt79a9tYfHcUCh",
-      "https://drive.google.com/uc?export=view&id=1T0-a3ADVvnELeyV1MuwAIpqRXeqyDUr8",
-      "https://drive.google.com/uc?export=view&id=1whif5yqBNcHDJxg150pM6tZ_uPyIQnJ4",
-      "https://drive.google.com/uc?export=view&id=1caYs7rZpEfPmFjzfxgWa9iLe-ALJ-oTb",
-      "https://drive.google.com/uc?export=view&id=1yq2LatT63f5aurvYOhhXHxeQhRZGs6fy",
-      "https://drive.google.com/uc?export=view&id=1mBdqojSrJfvUEnvl4M4JgrhFmcv2a7Gj",
-      "https://drive.google.com/uc?export=view&id=1zVK6uXgHkWSjhL139VHNUDPa6yRTEtmL",
-      "https://drive.google.com/uc?export=view&id=1BnNqHiGsiVwWj0ShBb_gO0rtRPodnC9R",
-      "https://drive.google.com/uc?export=view&id=1R60mCRmmuKnOHxBmZ3PvXunwSGD6bEXf",
-      "https://drive.google.com/uc?export=view&id=1ceVc1uBlF53fpPyTegrRd7uSM_qBUAxw",
-      "https://drive.google.com/uc?export=view&id=10gxoDZV_mTdb_CJp7Ky8naxVLB28Wgli",
-      "https://drive.google.com/uc?export=view&id=1NJGgrb2F6qZ8_FQc7A2geHrlUZv1byx-",
-      "https://drive.google.com/uc?export=view&id=1MGoa0LWuZpXLXT6SQdcZ6kYuY5aKWHNI",
-      "https://drive.google.com/uc?export=view&id=1YopvfQUO4JrctyTUrA0ghcRUhEDSYLcM",
-      "https://drive.google.com/uc?export=view&id=1HKU4NqUKpWK47d-buTNIkp-cTamD2EuL",
-      "https://drive.google.com/uc?export=view&id=1Df53UnQjaISulpJUWsHdxxc-0Pbig2Vx",
-      "https://drive.google.com/uc?export=view&id=1-u9KDvvRzNOzGYkREDlP6SvkDfF1Ih7n",
-      "https://drive.google.com/uc?export=view&id=1eRTryLstugrMKBdiQnEQvrDP22hFTqO-",
-      "https://drive.google.com/uc?export=view&id=1MUuk-k27ee6XDzNLKj7nSJ2nF-ne2df_",
-      "https://drive.google.com/uc?export=view&id=1poMoxopWZmCogYiRWnA104tXDwRj_mgj",
-      "https://drive.google.com/uc?export=view&id=1_7IJ5HlPy3e2R2z4n09vD1csc1FB15UR",
-      "https://drive.google.com/uc?export=view&id=1GiM5quwVcHgzBV6gZFWEK0F0e1hx0sUy",
-      "https://drive.google.com/uc?export=view&id=1VsJsm-Wjv7i7itpLaOUk4F4qB1nsWdhj",
-      "https://drive.google.com/uc?export=view&id=1KzfvsK17ayf5hpijhUtbqKUxj2hQkgf-",
-      "https://drive.google.com/uc?export=view&id=1RPAMTkfbmy0h8cgeFiFgWw_Y2_XCr7Wc",
-      "https://drive.google.com/uc?export=view&id=1G97O_C4q4wyb1szSS7zAk94xD4RavqqH",
-      "https://drive.google.com/uc?export=view&id=1jdXJWgwgdH4JkJDmMQ_FQU6cat9qcdL3",
-      "https://drive.google.com/uc?export=view&id=1YMX-3F3jE-nl9kGzfhowhzw_YtBGcgdg",
-      "https://drive.google.com/uc?export=view&id=1BAEFbc7MSUZS9oNJQ67BsfzjpQiBRUrI",
-    ],
-  },
+    cardImage: orthopaedicbraces,
+    subImages: [sub71, sub72, sub73, sub74, sub75, sub76, sub77, sub78, sub79, sub710, sub711, sub712, sub713, sub714, sub715, sub716, sub717, sub718, sub719, sub720, sub721, sub722, sub723, sub724, sub725, sub726, sub727, sub728, sub729, sub730],
+ },
   "Fracture Aids": {
-    cardImage: IMG.fractureaids,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1vRJwjS3ikFCHH3MzBJ2XVkel_Qh3_ltT",
-      "https://drive.google.com/uc?export=view&id=1RvySAdVBkv_AM7ZgGt90JNprsQWUlH-4",
-      "https://drive.google.com/uc?export=view&id=1Z3r5QTpGAs8KYbhKa7zIqIyh0gBEhHKv",
-      "https://drive.google.com/uc?export=view&id=1mUBLJJjay4vIxTRjRl5JhCSj2fU4qIdB",
-      "https://drive.google.com/uc?export=view&id=1zA-DJK8Xeww4K_LCSFKvpiVWxXDHb7Bk",
-      "https://drive.google.com/uc?export=view&id=1VgL4L0rWbHANyuwso7kuaVlex4slmcEw",
-      "https://drive.google.com/uc?export=view&id=18SUBOjEIZe5MW194hyI5YUZo7wfwpo_N",
-      "https://drive.google.com/uc?export=view&id=1-l7LJI7Gpk4eFp1NYd-z1YCDq9_VNkyD",
-      "https://drive.google.com/uc?export=view&id=1tm3Aom3WUKPeapahDy1mSMqVoeK6irKC",
-      "https://drive.google.com/uc?export=view&id=1USJYZ_ee4ElBRohuNabTgJW_QxrhtSL2",
-      "https://drive.google.com/uc?export=view&id=1mZTlAdgupB-UZcB3-ge6BBFJjQVOhS7e",
-      "https://drive.google.com/uc?export=view&id=1hEhD94uu6brmyZA1Um8NEggBdiBUAc0V",
-      "https://drive.google.com/uc?export=view&id=1TWONfETDjJgWdrZGjorFNeg7uhuJbc0n",
-      "https://drive.google.com/uc?export=view&id=18MyYi2mzRu-HBy98bH102L1bzdhxtRQc",
-      "https://drive.google.com/uc?export=view&id=1kIblO__b3sBzkft8ZjKaJqU0eRlukINy",
-    ],
+    cardImage: fractureaids,
+    subImages: [sub81, sub82, sub83, sub84, sub85, sub86, sub87, sub88, sub89, sub810, sub811, sub812, sub813, sub814, sub815],
   },
   "Knee Support / Braces": {
-    cardImage: IMG.orthopedic,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1XPGI21aFOYAQccXtKYpbhqo9FmN8vbd5",
-      "https://drive.google.com/uc?export=view&id=1LMHUz3z0UlZ4ZHXTlpE6ZdVAU7eDr7hs",
-      "https://drive.google.com/uc?export=view&id=1MyuM4vi06DhuzOBNK-Sm7i177pJEjiTw",
-      "https://drive.google.com/uc?export=view&id=1gSFKnUJL811r3NZj06Yq3SXdL8IQnvOV",
-      "https://drive.google.com/uc?export=view&id=1L19FX8HNq_gITV6SKKqnQnzc6VJnF-BJ",
-      "https://drive.google.com/uc?export=view&id=19PygGvVfDHyblQAM6VS5JpKSL1Nxg5gB",
-      "https://drive.google.com/uc?export=view&id=1mO9nFyzQgVtHfedYEeskXf3KYETE1Xq5",
-      "https://drive.google.com/uc?export=view&id=1GfyFdxN70SNU73_4CbE8vKVJnew48pYq",
-      "https://drive.google.com/uc?export=view&id=15ER9n2O-zVplAl7CYQuZq3zGXL_cXCA9",
-      "https://drive.google.com/uc?export=view&id=1A6cnCO7Rzyd5yNuh79sGG8gY1TMPu-rm",
-      "https://drive.google.com/uc?export=view&id=1avfizZArXN-HHkgH-DR7gPIXJW8u4FCk",
-      "https://drive.google.com/uc?export=view&id=195ON5jvs7K7c_D_eaZPm53CVGvjF0BFm",
-      "https://drive.google.com/uc?export=view&id=143hgXlWlp4Qi8QdTEa8WEWIXD85banrw",
-      "https://drive.google.com/uc?export=view&id=1AbNl6FGI_v8NGFhokT4ytUGZmguh-CZA",
-      "https://drive.google.com/uc?export=view&id=1KWojMmzRToFNC50Lg2f-SnLLj4WD7tor",
-      "https://drive.google.com/uc?export=view&id=1Hqt9mob8DvNvrlPkG29-N7ujCABxeMQL",
-      "https://drive.google.com/uc?export=view&id=1lXcc6RCeUXd_sBL-L82oEh1QD8qOlFsO",
-    ],
+    cardImage: orthopedic,
+    subImages: [sub91, sub92, sub93, sub94, sub95, sub96, sub97, sub98, sub99, sub910, sub911, sub912, sub913, sub914, sub915, sub916, sub917],
   },
   "Ankle Support / Braces": {
-    cardImage: IMG.walkingaids,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1cD4iAyzVkkVBAOgajWV3JmuAPhSezSel",
-      "https://drive.google.com/uc?export=view&id=1xY-TnFIhiXYFyNCp2GL9x-shspLyyZ6X",
-      "https://drive.google.com/uc?export=view&id=1urjtDJ7tQAZLYDV5rj3zrFJbyiIq_185",
-      "https://drive.google.com/uc?export=view&id=1QumSPXicN1dKmGQQkCZUZO1b1VnhK1wK",
-      "https://drive.google.com/uc?export=view&id=1Pp3xvCOwv6ayl69GjvLgqFIs2qx5fw0I",
-      "https://drive.google.com/uc?export=view&id=12n3rkt0bTX1fKaQDPo41OJpVpnA1ny6N",
-      "https://drive.google.com/uc?export=view&id=1Pd1ndDMD7qi2IGmrNP2YfwFq5U5lrcbl",
-      "https://drive.google.com/uc?export=view&id=1seJ_ELgmX_thH1taGGqmT1N8n3u_oM6z",
-      "https://drive.google.com/uc?export=view&id=1CYtYAj0kxwuQG5x22c65T98NrzYqfBbd",
-      "https://drive.google.com/uc?export=view&id=1Kg3D4jbk2nqs6UxiG-dUz7c2t3j5Z2Zu",
-      "https://drive.google.com/uc?export=view&id=1bk2MmLVYgxZfZY4xu987aDMcpc94Y8GH",
-      "https://drive.google.com/uc?export=view&id=10wXMX9hosLlvpB_rUmQCvqrENIkjqC0v",
-      "https://drive.google.com/uc?export=view&id=18OPLD4Ex0sGO_nTPcbdy9OFqxoXPZHOw",
-      "https://drive.google.com/uc?export=view&id=1qWauaTHhbuNVXZLaC7IpZx5d_Az9VxNz",
-      "https://drive.google.com/uc?export=view&id=15Cf0C32xU4WJkgSwt5-bRUoj7h3per3E",
-    ],
+    cardImage: walkingaids,
+    subImages: [sub101, sub102, sub103, sub104, sub105, sub106, sub107, sub108, sub109, sub1010, sub1011, sub1012, sub1013, sub1014, sub1015],
   },
   "Thigh & Calf Support / Varicose Vein Compression Stockings": {
-    cardImage: IMG.thighcalf,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=13fC_sGyfUrXBGrHalbCnhyNdrmOP6gcF",
-      "https://drive.google.com/uc?export=view&id=1oJ6afb-1_XItQ02-0EeO9xsVONOm-1_g",
-      "https://drive.google.com/uc?export=view&id=18cG07-kxSmft68b0wjRmYO0a0rnlyqNN",
-      "https://drive.google.com/uc?export=view&id=1Gx6fgGcACwndXzdXOiJvEh2_zyDYgciA",
-      "https://drive.google.com/uc?export=view&id=1ML-ti0S_QCTDnWDGJ3WXOf7qLk9yF_c7",
-      "https://drive.google.com/uc?export=view&id=1B7sHeJSNGjkq5pJG9pu3cA0YXqFhsKtz",
-      "https://drive.google.com/uc?export=view&id=140XPvd9Szi7pFky4D-oGMS-h4zUR76LG",
-      "https://drive.google.com/uc?export=view&id=1lYvZF0uSWpr2lVQahNzXhuGHFFlQhOEv",
-      "https://drive.google.com/uc?export=view&id=1nMvpeCS7TS72wyMOHDmwHO0RzvKrJ2yl",
-      "https://drive.google.com/uc?export=view&id=1d6qhEjbZRg1fhIOgE1VUygGbrUFc7wOd",
-      "https://drive.google.com/uc?export=view&id=1ur4bnk1Vfw7y6WhN-w_ni9aSt2dz00jV",
-      "https://drive.google.com/uc?export=view&id=1DBedF4l3tpHREYaWSVMdK5u0u6G8SsWv",
-      "https://drive.google.com/uc?export=view&id=1N2g-rli5J7ADYeqdJ9jWH3bUO07Ump7F",
-      "https://drive.google.com/uc?export=view&id=1rwdOlxic-WBIC90HPyQKX323bnF6urSc",
-    ],
+    cardImage: thighcalf,
+    subImages: [sub111, sub112, sub113, sub114, sub115, sub116, sub117, sub118, sub119, sub1110, sub1111, sub1112, sub1113, sub1114],
   },
-  "Surgical Dressing": {
-    cardImage: IMG.surgicaldressing,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1s5RnaT1CafWTXnrA1A75mY9lnISfFAqM",
-      "https://drive.google.com/uc?export=view&id=1iQt2SFTYcDgMUiqFC3QuEfUFvbejPP7g",
-      "https://drive.google.com/uc?export=view&id=1iRt2HbbO9tGtN-sRkeWyG6PBX-H0_ZCL",
-      "https://drive.google.com/uc?export=view&id=1Uq1ozB84GtiyPqUtl0KLr33faoQpy-4R",
-    ],
-  },
+ "Surgical Dressing": {
+  cardImage: surgicaldressing,
+  subImages: [sub123, sub124, sub125, sub126],
+},
   "Sport Gear": {
-    cardImage: IMG.sportgear,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1_pIm0MQ-MVu_wtuUJZ_cTLHArcvHsode",
-      "https://drive.google.com/uc?export=view&id=1xf-NhIQ0M77iXrD3uFhel18FtlcxOslt",
-      "https://drive.google.com/uc?export=view&id=1KjB6XroVKAmevzgQOF3fgH-sgnjURVl5",
-      "https://drive.google.com/uc?export=view&id=1WWAh9NtFeaAwjNgLqyK8k8K19bF_0-wE",
-      "https://drive.google.com/uc?export=view&id=1jcpqkngXWWtZpW7Jxdg--mqe1ntCEiI6",
-      "https://drive.google.com/uc?export=view&id=13bUFUUOy60Du1sgoLJLnEOOk77SWr5no",
-      "https://drive.google.com/uc?export=view&id=1XH1SW8fZwPXSqeIxBTXosS1yqLdp7VeZ",
-      "https://drive.google.com/uc?export=view&id=1h8A7SVaUt1OmdLyPKNTWVv-xN0HclfcI",
-      "https://drive.google.com/uc?export=view&id=1HrEUJF6nw1GNFjYxJrZrTqyR1tD2afFa",
-      "https://drive.google.com/uc?export=view&id=1j8GayKf12KGdh03bXqE0Q483dJuuci35",
-      "https://drive.google.com/uc?export=view&id=1M-QfhCPW0O1uRu1WyWe1doBQNruzJ9-e",
-      "https://drive.google.com/uc?export=view&id=1Qjoyiv32jUtXnR-YDvjes8HS1hjBcRhQ",
-      "https://drive.google.com/uc?export=view&id=1jnY5siIrpMss--P0swxMIANM_iCfrjFF",
-      "https://drive.google.com/uc?export=view&id=1iJUx0hiWjlojs7MUeJLDY-2jLIaU9Hag",
-      "https://drive.google.com/uc?export=view&id=1rcc-XSGfWLYv6xI6i294MHR9r3J1B4S3",
-      "https://drive.google.com/uc?export=view&id=1D0VVW-vSMArcUUjARlLoA6i7PhAqbsmL",
-      "https://drive.google.com/uc?export=view&id=1ifC8jX3YxLdH9aUEy-fYZzH3hr50_4Q1",
-      "https://drive.google.com/uc?export=view&id=1JEAYMVad-D3PX4DvOC-qP8xQBd0AAy6m",
-      "https://drive.google.com/uc?export=view&id=1TM0EQUL09Uc1nvLWw_nGQFpxPAx9lsL9",
-      "https://drive.google.com/uc?export=view&id=1fHMQ7tFEpfEbMZG3NxKfnzLpe4xxoiVn",
-    ],
+    cardImage: sportgear,
+    subImages: [sub131, sub132, sub133, sub134, sub135, sub136, sub137, sub138, sub139, sub1310, sub1311, sub1312, sub1313, sub1314, sub1315, sub1316, sub1317, sub1318, sub1319, sub1320],
   },
   "Junior / Paediatric Range": {
-    cardImage: IMG.last,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1oWrDZztHrPLgDBBQPj4N2WWmRCwpz7n7",
-      "https://drive.google.com/uc?export=view&id=1jaAamFsR9bVtIVAQpIsO7pRYaVl2o2LS",
-      "https://drive.google.com/uc?export=view&id=1hgYLVKrQZk4cLSF7nID9xW_5LOJ4f91O",
-      "https://drive.google.com/uc?export=view&id=1-o9WhzUX9iyc29lX37eszEVh3KRyjhSo",
-      "https://drive.google.com/uc?export=view&id=13a10k2OYg4waswDBJalVEZzlx4VVrATv",
-      "https://drive.google.com/uc?export=view&id=1e_SeR4WPh-U4ixp7L-UOY2Pyo5nGU0aX",
-      "https://drive.google.com/uc?export=view&id=11LswtBXe5LtoK-siI049YGQ5Xe_4K-7G",
-      "https://drive.google.com/uc?export=view&id=1l40f-59xHphWb_FyCvzTDoudBku74DeD",
-      "https://drive.google.com/uc?export=view&id=1ayUX8pOnlmWZpbSHwEKaJ-D1GR_SZnO-",
-      "https://drive.google.com/uc?export=view&id=12ARIM45trycZGihzzL6fY64cf-SYHOiP",
-      "https://drive.google.com/uc?export=view&id=1hP-o52cheBc2sq-0LxaQ17nBQxP00s1W",
-      "https://drive.google.com/uc?export=view&id=1qGpv3uTaCtkM5zUOkiWCRRit3-6fUxRc",
-      "https://drive.google.com/uc?export=view&id=1je5V_Y9TcGlBSsQyqvTcvLCp4TqPnMkN",
-      "https://drive.google.com/uc?export=view&id=1SWlM-ndJDl8eJuPK2KuS-qrNPlGzcBwB",
-      "https://drive.google.com/uc?export=view&id=145MvIJ4RvXObr46B_PzR0BTCwYCe2T5A",
-      "https://drive.google.com/uc?export=view&id=1rhQxezBq9tEailD9IwduyLAk0fKQIRgu",
-    ],
+    cardImage: last,
+    subImages: [sub141, sub142, sub143, sub144, sub145, sub146, sub147, sub148, sub149, sub1410, sub1411, sub1412, sub1413, sub1414, sub1415, sub1416],
   },
   "Wrist & Forearm Support / Splints": {
-    cardImage: IMG.wrist,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1EPutZhnm8TGL44rz9x0Avsk82Btojz_H",
-      "https://drive.google.com/uc?export=view&id=1NVojAaT0R4qbU5A53IfgKvtZxPf3saBl",
-      "https://drive.google.com/uc?export=view&id=1nvGQyGGJDz8CSVrzWgs1Q7p6nfOD8HMB",
-      "https://drive.google.com/uc?export=view&id=1C8uZTwju5lUsYLVesqQxcGfajxMVAu-i",
-      "https://drive.google.com/uc?export=view&id=1ifmxGQpNgabIzPKhpqoh_6MpT2TCQerv",
-      "https://drive.google.com/uc?export=view&id=1MV8gT_dDCOFUmFM62W5eb8fpJzm71px3",
-      "https://drive.google.com/uc?export=view&id=1BhJuc0HLpEstlbtaUqaJRD99LQf5M76s",
-      "https://drive.google.com/uc?export=view&id=1CjH-raJLewUY7PY1K1hFe6xbuSQkaRth",
-      "https://drive.google.com/uc?export=view&id=1QubZw5-vXV8UJZq2LxcIwAbKFicOBHAM",
-      "https://drive.google.com/uc?export=view&id=13guBH4m-mwpASZ2D5784XXf2DnW_vGki",
-      "https://drive.google.com/uc?export=view&id=170Gunmx8gREqiApniEkIzRSEkStWNtMW",
-      "https://drive.google.com/uc?export=view&id=1Uz5T7fD0saFqIm3B9NdQkhWqdEDoAcDJ",
-      "https://drive.google.com/uc?export=view&id=19KU04YyNBa3h_w_e3B4FC2Y2fMfnWpVY",
-      "https://drive.google.com/uc?export=view&id=1ivtv88N5hCbKQeKAZJPzZQb9d5XReOWI",
-      "https://drive.google.com/uc?export=view&id=175yDXXoX_NpPw3_tZ_y10fpNbS40-AJR",
-      "https://drive.google.com/uc?export=view&id=1HDmdkWxuqFmWtQMG7z8UpPQJHbzvMajX",
-    ],
+    cardImage: wrist,
+    subImages: [sub151, sub152, sub153, sub154, sub155, sub156, sub157, sub158, sub159, sub1510, sub1511, sub1512, sub1513, sub1514, sub1515, sub1516],
   },
+  
   "Finger Splints": {
-    cardImage: IMG.fingersplints,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1_D8-kku49ew6m_tqEYCpSXAouZBGzYGC",
-      "https://drive.google.com/uc?export=view&id=1glVurkREE_KdpxPMcLEcaIF2nsoJqftz",
-      "https://drive.google.com/uc?export=view&id=1wIPtEDApr_AHoGOv2G-ePbn1CUVu4Ody",
-    ],
+    cardImage: fingersplints,
+    subImages: [sub171, sub172, sub173],
   },
+  
   "Physiotherapy & Rehabilitation": {
-    cardImage: IMG.physiotherapy,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1mwgOi3mYYA9Z1A9Z4T5ajj2yosq8UMVj",
-      "https://drive.google.com/uc?export=view&id=14qEg2xQGTZqOEqcm4zTwu0qLYU2s6UGW",
-      "https://drive.google.com/uc?export=view&id=16EmP_2rudGE5i9ML0lOUkZ4u9Yswjmhl",
-      "https://drive.google.com/uc?export=view&id=1wrhPBnGQEqdjUeT5rn2q8Rhxlsk9ZEQU",
-      "https://drive.google.com/uc?export=view&id=1B4Wc8a6QCO_tNwYK494DH7ifrQlHVnqu",
-      "https://drive.google.com/uc?export=view&id=1InYwh1h5hM9fczh1c69GA97KCOhyzttU",
-      "https://drive.google.com/uc?export=view&id=1XFJkGAF4g6Kk4s-smuzB7nYOIkuNfYLq",
-      "https://drive.google.com/uc?export=view&id=1UKmPlUfzlEDhxuzl54huehsfEmnvBwUV",
-      "https://drive.google.com/uc?export=view&id=1Synja4QVg3Tw409CJ60xwYIOKN_-lHq3",
-      "https://drive.google.com/uc?export=view&id=17U1qEPfVOKj-sMP93A0KYteJH7Pw9VL4",
-      "https://drive.google.com/uc?export=view&id=1LJxwOaZ6DZs_4ijyyVzk5C95Ror8XvJ0",
-      "https://drive.google.com/uc?export=view&id=1rl9R3pxHdO7GaugFoGzT15ys6nI2InAS",
-      "https://drive.google.com/uc?export=view&id=1UyDup6eEiXpmbSqHXuA_jxS8JWuwUV-a",
-      "https://drive.google.com/uc?export=view&id=1KlDl-G2_CU10MGIyToYo7vxjOnfWlgTM",
-      "https://drive.google.com/uc?export=view&id=1WWUjlS1g2SU_TWt0di-sVe34dJ-AjseY",
-      "https://drive.google.com/uc?export=view&id=1zPR70yfnkxPiBtbxmywA4AbcydGPVFmD",
-      "https://drive.google.com/uc?export=view&id=1qhrHzdNp41AKfJv6VAKS6j3g3Jeccblo",
-      "https://drive.google.com/uc?export=view&id=1CWxydRSJ2BgXcUQNXIB6brxzitEaFvTu",
-      "https://drive.google.com/uc?export=view&id=1oPjua0ZpXKY0B3BG6rj7xOHK2a0jt03_",
-      "https://drive.google.com/uc?export=view&id=1BHku92L758nNEZ8ue7_r7XToFaaDYRRS",
-      "https://drive.google.com/uc?export=view&id=160Sr2m1DK9FznFZEMwZx2GJYnho4JOoT",
-      "https://drive.google.com/uc?export=view&id=1jFxAFPc8L5xSjOGH_dK8Y-GKzreFYz2c",
-      "https://drive.google.com/uc?export=view&id=1AJ7ZoY7IiKg36O4BcuMGrfYUpVbund7O",
-      "https://drive.google.com/uc?export=view&id=1bITlDFQvVuUKceieov2k6PfBxtB7ca4P",
-      "https://drive.google.com/uc?export=view&id=1HLEfzOa0HpZgtFTTMDcidIIaNArtlwNw",
-      "https://drive.google.com/uc?export=view&id=1E8OnfeLlrcKFobjBuM99ydKNNpyWiP-5",
-      "https://drive.google.com/uc?export=view&id=1La3yRt-behAWNJab7GEzM0JLU31RTHNp",
-      "https://drive.google.com/uc?export=view&id=1j_mdweJy4AVzDNCbCHWiofyprOCbLBuM",
-      "https://drive.google.com/uc?export=view&id=1KlsMwCCV5XPIiuK19xjSw0naDCTg2-Gg",
-      "https://drive.google.com/uc?export=view&id=1wOn-AmuTF945iL2lxO_vW-_FM1_kCjYO",
-      "https://drive.google.com/uc?export=view&id=1hyhCyRrYFXRzHDD57rcxMJ_Wolf5aQj8",
-      "https://drive.google.com/uc?export=view&id=1g8DgF1jSh4CtUAkvhBZqDiIoEzzK-gUA",
-    ],
+    cardImage: physiotherapy,
+    subImages: [sub201, sub202, sub203, sub204, sub205, sub206, sub207, sub208, sub209, sub2010, sub2011, sub2012, sub2013, sub2014, sub2015, sub2016, sub2017, sub2018, sub2019, sub2020, sub2021, sub2022, sub2023, sub2024, sub2025, sub2026, sub2027, sub2028, sub2029, sub2030, sub2031, sub2032],
   },
   "Walking Aids & Mobility": {
-    cardImage: IMG.walkingaids,
-    subImages: [
-      "https://drive.google.com/uc?export=view&id=1vD5NTkDKkUWIVhKdHlreELyJmTwEJoGg",
-      "https://drive.google.com/uc?export=view&id=1cLdo48-7S4-wfm-N3v3fyKkYW4FQ0e6Z",
-      "https://drive.google.com/uc?export=view&id=1rAZCr854RnsOT9E5ei-19xOBRt4dqVpK",
-      "https://drive.google.com/uc?export=view&id=1tSEl-PnVCab3H_gHPu6MC5uugJPvoRMW",
-      "https://drive.google.com/uc?export=view&id=1HuHOWuAe78iNtMNoAUtD5UpCl-FlFm0p",
-      "https://drive.google.com/uc?export=view&id=15nev9TxF28Z1KOjoLKf13GJsO-2sEY1l",
-      "https://drive.google.com/uc?export=view&id=1NNJHtXdVxaOBy6RBFnZF4U6Lok2yvZWh",
-      "https://drive.google.com/uc?export=view&id=1mlH33KtxjxP-ObxoEOJbaJWiXB8DnTKW",
-      "https://drive.google.com/uc?export=view&id=1xdlQ6op4Y4bcRA8a39papW5jML-5a6HW",
-      "https://drive.google.com/uc?export=view&id=10fOf4TKxseERAyo_9-Iykzi_x6GF-bRQ",
-      "https://drive.google.com/uc?export=view&id=1bxyT_JCbCl4WkfiOmZbdtRqxGXMEiUHc",
-      "https://drive.google.com/uc?export=view&id=1y2XWedEStb1c2OSWGMtUCXKN4RitXsQJ",
-      "https://drive.google.com/uc?export=view&id=1EMWMmfbQlziaICqIRENGvtye6rE0t6_1",
-      "https://drive.google.com/uc?export=view&id=1HiOYhJGTARGCTi_zU188Q5i0XyHpGdni",
-      "https://drive.google.com/uc?export=view&id=10WU8p31zkKo2waihP8_x8AJgWu3jA7kt",
-      "https://drive.google.com/uc?export=view&id=19k8MAqWA2ymY-fElONbhHVt6tijSqvQq",
-      "https://drive.google.com/uc?export=view&id=1kE8MxpF98Rt-OM7nW6w2bs3bVXz4XTO2",
-      "https://drive.google.com/uc?export=view&id=1eJ6eq3k0iQz8i7y_j-21W-ZYnTvj7pNR",
-    ],
+    cardImage: walkingaids,
+    subImages: [sub211, sub212, sub213, sub214, sub215, sub216, sub217, sub218, sub219, sub2110, sub2111, sub2112, sub2113, sub2114, sub2115, sub2116, sub2117, sub2118],
   },
 };
 
@@ -352,11 +403,11 @@ const enrichProduct = (product) => {
   const localData = LOCAL_IMAGE_MAP[catName] || {};
   const enrichedSubproducts = (product.subproducts || []).map((sub, i) => ({
     ...sub,
-    image: localData.subImages?.[i] || sub.image || null,
+    image: localData.subImages?.[i] || null,
   }));
   return {
     ...product,
-    cardImage: localData.cardImage || product.image || null,
+    cardImage: localData.cardImage || null,
     subproducts: enrichedSubproducts,
   };
 };
@@ -374,18 +425,23 @@ const Products = () => {
   const [quoteProduct, setQuoteProduct]   = useState(null);
   const [selectedSubproduct, setSelectedSubproduct] = useState(null);
   const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
+const [showCart, setShowCart] = useState(false);
 
+  // ── Fetch products from MongoDB ──────────────────────────────────────────────
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         setLoading(true);
         setError(null);
-        const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/products");
+       const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/products");
         if (!res.ok) throw new Error(`Server error: ${res.status}`);
         const data = await res.json();
+
+        // Enrich each product with local images
         const enriched = data.map(enrichProduct);
         setProducts(enriched);
+
+        // Build category list from returned data
         const catNames = [...new Set(
           enriched.map((p) => p.category?.name || p.category || "")
         )].filter(Boolean);
@@ -397,32 +453,32 @@ const Products = () => {
         setLoading(false);
       }
     };
+
     fetchProducts();
   }, []);
 
+  // ── Filter logic ─────────────────────────────────────────────────────────────
   const getCategoryName = (p) => p.category?.name || p.category || "";
+const addToCart = (item) => {
+  setCart((prev) => {
+    const existing = prev.find((c) => c.name === item.name);
+    if (existing) {
+      return prev.map((c) => c.name === item.name ? { ...c, qty: c.qty + 1 } : c);
+    }
+    return [...prev, { ...item, qty: 1 }];
+  });
+};
 
-  const addToCart = (item) => {
-    setCart((prev) => {
-      const existing = prev.find((c) => c.name === item.name);
-      if (existing) {
-        return prev.map((c) => c.name === item.name ? { ...c, qty: c.qty + 1 } : c);
-      }
-      return [...prev, { ...item, qty: 1 }];
-    });
-  };
+const openWhatsApp = (productName) => {
+  const msg = `Hi, I'm interested in *${productName}*. Please share more details.`;
+  window.open(`https://wa.me/918347480205?text=${encodeURIComponent(msg)}`, "_blank");
+};
 
-  const openWhatsApp = (productName) => {
-    const msg = `Hi, I'm interested in *${productName}*. Please share more details.`;
-    window.open(`https://wa.me/918347480205?text=${encodeURIComponent(msg)}`, "_blank");
-  };
-
-  const checkoutWhatsApp = () => {
-    const lines = cart.map((c) => `• ${c.name} (Qty: ${c.qty})`).join("\n");
-    const msg = `Hi, I'd like to order the following products:\n\n${lines}\n\nPlease share more details.`;
-    window.open(`https://wa.me/918347480205?text=${encodeURIComponent(msg)}`, "_blank");
-  };
-
+const checkoutWhatsApp = () => {
+  const lines = cart.map((c) => `• ${c.name} (Qty: ${c.qty})`).join("\n");
+  const msg = `Hi, I'd like to order the following products:\n\n${lines}\n\nPlease share more details.`;
+  window.open(`https://wa.me/918347480205?text=${encodeURIComponent(msg)}`, "_blank");
+};
   const filtered = products.filter((p) => {
     const catName = getCategoryName(p);
     const matchCat = activeCategory === "All" || catName === activeCategory;
@@ -435,194 +491,260 @@ const Products = () => {
     return matchCat && matchSearch;
   });
 
-  return (
-    <div className="products-page">
-      {modalProduct ? (
-        <div className="detail-view">
-          <div className="detail-header">
-            <button className="btn-back" onClick={() => setModalProduct(null)}>← Back</button>
-            <div className="detail-header-info">
-              <p className="modal-eyebrow">{getCategoryName(modalProduct)}</p>
-              <h2>{modalProduct.name}</h2>
-              <p className="modal-desc">{modalProduct.description || modalProduct.desc}</p>
-            </div>
+  // ── Render ───────────────────────────────────────────────────────────────────
+  
+return (
+  <div className="products-page">
+    {/* ── Full Screen Detail View ── */}
+    {modalProduct ? (
+      <div className="detail-view">
+        <div className="detail-header">
+          <button className="btn-back" onClick={() => setModalProduct(null)}>
+            ← Back
+          </button>
+          <div className="detail-header-info">
+            <p className="modal-eyebrow">{getCategoryName(modalProduct)}</p>
+            <h2>{modalProduct.name}</h2>
+            <p className="modal-desc">{modalProduct.description || modalProduct.desc}</p>
           </div>
-          <div className="detail-products">
-            <h4 className="modal-products-heading">Products Included</h4>
-            <ul className="modal-subproducts-list">
-              {(modalProduct.subproducts || []).map((item, index) => (
-                <li key={index} className="modal-subproduct-item" onClick={() => setSelectedSubproduct(item)}>
+        </div>
+
+        <div className="detail-products">
+          <h4 className="modal-products-heading">Products Included</h4>
+          <ul className="modal-subproducts-list">
+            {(modalProduct.subproducts || []).map((item, index) => (
+             <li key={index} className="modal-subproduct-item" onClick={() => setSelectedSubproduct(item)}>
                   <div className="modal-subproduct-img-wrap">
-                    {item.image ? (
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className={`modal-subproduct-img ${item.contain ? "modal-subproduct-img-contain" : ""}`}
-                        onError={(e) => {
-                          e.target.style.display = "none";
-                          e.target.nextSibling.style.display = "flex";
-                        }}
-                      />
-                    ) : null}
-                    <div className="modal-subproduct-emoji" style={{ display: item.image ? "none" : "flex" }}>🏥</div>
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className={`modal-subproduct-img ${item.contain ? "modal-subproduct-img-contain" : ""}`}
+                      onError={(e) => {
+                        e.target.style.display = "none";
+                        e.target.nextSibling.style.display = "flex";
+                      }}
+                    />
+                  ) : null}
+                  <div
+                    className="modal-subproduct-emoji"
+                    style={{ display: item.image ? "none" : "flex" }}
+                  >
+                    🏥
                   </div>
-                  <p className="modal-subproduct-name">{typeof item === "object" ? item.name : item}</p>
-                  {item.desc && <p className="modal-subproduct-desc">{item.desc}</p>}
-                  <div className="subproduct-actions">
-                    {cart.find((c) => c.name === item.name) ? (
-                      <div className="qty-control" onClick={(e) => e.stopPropagation()}>
-                        <button onClick={() => setCart(prev => {
-                          const existing = prev.find(c => c.name === item.name);
-                          if (existing.qty === 1) return prev.filter(c => c.name !== item.name);
-                          return prev.map(c => c.name === item.name ? { ...c, qty: c.qty - 1 } : c);
-                        })}>−</button>
-                        <span>{cart.find((c) => c.name === item.name).qty}</span>
-                        <button onClick={() => addToCart(item)}>+</button>
-                      </div>
-                    ) : (
-                      <button className="btn-add-bag" onClick={(e) => { e.stopPropagation(); addToCart(item); }}>
-                        + Add to Bag
-                      </button>
-                    )}
-                    <button className="btn-whatsapp" onClick={(e) => { e.stopPropagation(); openWhatsApp(item.name); }}>
-                      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.135 1.527 5.882L.057 23.5l5.752-1.507A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.655-.502-5.19-1.383l-.371-.22-3.814.999 1.018-3.714-.242-.383A9.955 9.955 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-                      </svg>
-                    </button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            {selectedSubproduct && (
-              <div className="subproduct-popup-overlay" onClick={() => setSelectedSubproduct(null)}>
-                <div className="subproduct-popup" onClick={(e) => e.stopPropagation()}>
-                  <button className="modal-close" onClick={() => setSelectedSubproduct(null)}>✕</button>
-                  <p className="modal-eyebrow">Product Details</p>
-                  <h3>{selectedSubproduct.name}</h3>
-                  <p className="modal-desc">{selectedSubproduct.description}</p>
                 </div>
-              </div>
-            )}
-          </div>
-        </div>
-      ) : (
-        <>
-          <section className="products-hero">
-            <p className="products-eyebrow">CATALOG</p>
-            <h1 className="products-title">
-              Our complete{" "}
-              <span className="products-title-accent">healthcare product range</span>
-            </h1>
-            <p className="products-subtitle">
-              Browse our extensive range of medical, surgical, orthopedic,
-              rehabilitation and wellness products.
-            </p>
-          </section>
+                <p className="modal-subproduct-name">
+                  {typeof item === "object" ? item.name : item}
+                </p>
+                {item.desc && (
+                  <p className="modal-subproduct-desc">{item.desc}</p>
+                )}
 
-          <section className="products-controls">
-            <div className="search-bar">
-              <span className="search-icon">🔍</span>
-              <input
-                type="text"
-                placeholder="Search categories or products..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <div className="view-toggles">
-                <button className={`view-btn ${viewMode === "grid" ? "active" : ""}`} onClick={() => setViewMode("grid")}>⬜</button>
-                <button className={`view-btn ${viewMode === "list" ? "active" : ""}`} onClick={() => setViewMode("list")}>☰</button>
-              </div>
-            </div>
-            <div className="category-pills">
-              {categories.map((cat) => (
-                <button key={cat} className={`pill ${activeCategory === cat ? "pill-active" : ""}`} onClick={() => setActiveCategory(cat)}>
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="products-grid-section">
-            {loading && (
-              <div className="loading-state">
-                <div className="loading-spinner" />
-                <p>Loading products...</p>
-              </div>
-            )}
-            {error && !loading && (
-              <div className="error-state"><p>⚠️ {error}</p></div>
-            )}
-            {!loading && !error && (
-              <div className={`products-grid ${viewMode === "list" ? "products-list" : ""}`}>
-                {filtered.map((product) => (
-                  <div className="product-card" key={product._id}>
-                    <div className="product-card-img placeholder-card">
-                      {product.cardImage ? (
-                        <img src={product.cardImage} alt={getCategoryName(product)} className="product-image" />
-                      ) : product.image ? (
-                        <img src={product.image} alt={getCategoryName(product)} className="product-image" />
-                      ) : (
-                        <div className="placeholder-icon">🏥</div>
-                      )}
-                    </div>
-                    <div className="product-card-body">
-                      <p className="product-category-name">{getCategoryName(product)}</p>
-                      <p className="product-card-desc">{product.description || product.desc}</p>
-                      <div className="product-card-footer">
-                        <button className="btn-view-details" onClick={() => { setModalProduct(product); window.scrollTo(0, 0); }}>
-                          View Details →
-                        </button>
-                        <button className="btn-quote-icon" onClick={() => setQuoteProduct(product)}>💬</button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-            {!loading && !error && filtered.length === 0 && (
-              <div className="no-results">No products found.</div>
-            )}
-          </section>
-        </>
-      )}
-
-      {cart.length > 0 && (
-        <button className="btn-cart-float" onClick={() => setShowCart(true)}>
-          🛒 {cart.reduce((a, c) => a + c.qty, 0)}
-        </button>
-      )}
-
-      {showCart && (
-        <div className="cart-overlay" onClick={() => setShowCart(false)}>
-          <div className="cart-panel" onClick={(e) => e.stopPropagation()}>
-            <div className="cart-header">
-              <h3>Your Bag</h3>
-              <button className="modal-close" onClick={() => setShowCart(false)}>✕</button>
-            </div>
-            <ul className="cart-list">
-              {cart.map((c, i) => (
-                <li key={i} className="cart-item">
-                  <span className="cart-item-name">{c.name}</span>
-                  <div className="cart-item-qty">
-                    <button onClick={() => setCart(prev => prev.map(x => x.name === c.name ? { ...x, qty: Math.max(1, x.qty - 1) } : x))}>−</button>
-                    <span>{c.qty}</span>
-                    <button onClick={() => setCart(prev => prev.map(x => x.name === c.name ? { ...x, qty: x.qty + 1 } : x))}>+</button>
-                    <button className="cart-item-remove" onClick={() => setCart(prev => prev.filter(x => x.name !== c.name))}>🗑</button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            <button className="btn-checkout" onClick={checkoutWhatsApp}>Checkout via WhatsApp</button>
-          </div>
-        </div>
-      )}
-
-      {quoteProduct && (
-        <QuoteModal product={quoteProduct} onClose={() => setQuoteProduct(null)} />
-      )}
+               <div className="subproduct-actions">
+  {cart.find((c) => c.name === item.name) ? (
+    <div className="qty-control" onClick={(e) => e.stopPropagation()}>
+      <button onClick={() => setCart(prev => {
+        const existing = prev.find(c => c.name === item.name);
+        if (existing.qty === 1) return prev.filter(c => c.name !== item.name);
+        return prev.map(c => c.name === item.name ? { ...c, qty: c.qty - 1 } : c);
+      })}>−</button>
+      <span>{cart.find((c) => c.name === item.name).qty}</span>
+      <button onClick={() => addToCart(item)}>+</button>
     </div>
-  );
+  ) : (
+    <button className="btn-add-bag" onClick={(e) => { e.stopPropagation(); addToCart(item); }}>
+      + Add to Bag
+    </button>
+  )}
+  <button className="btn-whatsapp" onClick={(e) => { e.stopPropagation(); openWhatsApp(item.name); }}>
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.135 1.527 5.882L.057 23.5l5.752-1.507A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.655-.502-5.19-1.383l-.371-.22-3.814.999 1.018-3.714-.242-.383A9.955 9.955 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </button>
+</div>
+
+
+              </li>
+            ))}
+          </ul>
+          {selectedSubproduct && (
+  <div className="subproduct-popup-overlay" onClick={() => setSelectedSubproduct(null)}>
+    <div className="subproduct-popup" onClick={(e) => e.stopPropagation()}>
+      <button className="modal-close" onClick={() => setSelectedSubproduct(null)}>✕</button>
+      <p className="modal-eyebrow">Product Details</p>
+      <h3>{selectedSubproduct.name}</h3>
+      <p className="modal-desc">{selectedSubproduct.description}</p>
+    </div>
+  </div>
+)}
+
+        </div>
+      </div>
+    ) : (
+      <>
+        <section className="products-hero">
+          <p className="products-eyebrow">CATALOG</p>
+          <h1 className="products-title">
+            Our complete{" "}
+            <span className="products-title-accent">healthcare product range</span>
+          </h1>
+          <p className="products-subtitle">
+            Browse our extensive range of medical, surgical, orthopedic,
+            rehabilitation and wellness products.
+          </p>
+        </section>
+
+        <section className="products-controls">
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Search categories or products..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <div className="view-toggles">
+              <button
+                className={`view-btn ${viewMode === "grid" ? "active" : ""}`}
+                onClick={() => setViewMode("grid")}
+              >
+                ⬜
+              </button>
+              <button
+                className={`view-btn ${viewMode === "list" ? "active" : ""}`}
+                onClick={() => setViewMode("list")}
+              >
+                ☰
+              </button>
+            </div>
+          </div>
+
+          <div className="category-pills">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                className={`pill ${activeCategory === cat ? "pill-active" : ""}`}
+                onClick={() => setActiveCategory(cat)}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="products-grid-section">
+          {loading && (
+            <div className="loading-state">
+              <div className="loading-spinner" />
+              <p>Loading products...</p>
+            </div>
+          )}
+          {error && !loading && (
+            <div className="error-state">
+              <p>⚠️ {error}</p>
+            </div>
+          )}
+          {!loading && !error && (
+            <div className={`products-grid ${viewMode === "list" ? "products-list" : ""}`}>
+              {filtered.map((product) => (
+                <div className="product-card" key={product._id}>
+                  <div className="product-card-img placeholder-card">
+                    {product.cardImage ? (
+                      <img
+                        src={product.cardImage}
+                        alt={getCategoryName(product)}
+                        className="product-image"
+                      />
+                    ) : product.image ? (
+                      <img
+                        src={product.image}
+                        alt={getCategoryName(product)}
+                        className="product-image"
+                      />
+                    ) : (
+                      <div className="placeholder-icon">🏥</div>
+                    )}
+                  </div>
+                  <div className="product-card-body">
+                    <p className="product-category-name">
+                      {getCategoryName(product)}
+                    </p>
+                    <p className="product-card-desc">
+                      {product.description || product.desc}
+                    </p>
+                    <div className="product-card-footer">
+                      <button
+                        className="btn-view-details"
+                        onClick={() => {
+                          setModalProduct(product);
+                          window.scrollTo(0, 0);
+                        }}
+                      >
+                        View Details →
+                      </button>
+                      <button
+                        className="btn-quote-icon"
+                        onClick={() => setQuoteProduct(product)}
+                      >
+                        💬
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          {!loading && !error && filtered.length === 0 && (
+            <div className="no-results">No products found.</div>
+          )}
+        </section>
+      </>
+    )}
+
+{/* Floating Cart Button */}
+{cart.length > 0 && (
+  <button className="btn-cart-float" onClick={() => setShowCart(true)}>
+    🛒 {cart.reduce((a, c) => a + c.qty, 0)}
+  </button>
+)}
+
+{/* Cart Panel */}
+{showCart && (
+  <div className="cart-overlay" onClick={() => setShowCart(false)}>
+    <div className="cart-panel" onClick={(e) => e.stopPropagation()}>
+      <div className="cart-header">
+        <h3>Your Bag</h3>
+        <button className="modal-close" onClick={() => setShowCart(false)}>✕</button>
+      </div>
+      <ul className="cart-list">
+        {cart.map((c, i) => (
+          <li key={i} className="cart-item">
+            <span className="cart-item-name">{c.name}</span>
+            <div className="cart-item-qty">
+              <button onClick={() => setCart(prev => prev.map(x => x.name === c.name ? { ...x, qty: Math.max(1, x.qty - 1) } : x))}>−</button>
+              <span>{c.qty}</span>
+              <button onClick={() => setCart(prev => prev.map(x => x.name === c.name ? { ...x, qty: x.qty + 1 } : x))}>+</button>
+              <button className="cart-item-remove" onClick={() => setCart(prev => prev.filter(x => x.name !== c.name))}>🗑</button>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <button className="btn-checkout" onClick={checkoutWhatsApp}>
+        Checkout via WhatsApp 
+      </button>
+    </div>
+  </div>
+)}
+
+    {quoteProduct && (
+      <QuoteModal
+        product={quoteProduct}
+        onClose={() => setQuoteProduct(null)}
+      />
+    )}
+  </div>
+);
 };
 
 export default Products;
