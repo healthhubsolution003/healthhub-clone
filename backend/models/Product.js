@@ -37,11 +37,12 @@ const productSchema = new mongoose.Schema(
     },
 
     subproducts: [
-      {
-        name: { type: String },
-        description: { type: String },
-      }
-    ],
+  {
+    name: { type: String },
+    description: { type: String },
+    image: { type: String, default: "" },
+  }
+],
   },
   {
     timestamps: true,
