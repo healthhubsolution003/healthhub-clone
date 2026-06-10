@@ -388,11 +388,11 @@ const enrichProduct = (product) => {
   const localData = LOCAL_IMAGE_MAP[catName] || {};
   const enrichedSubproducts = (product.subproducts || []).map((sub, i) => ({
     ...sub,
-    image: localData.subImages?.[i] || null,
+    image: localData.subImages?.[i] || sub.image || null,
   }));
   return {
     ...product,
-    cardImage: localData.cardImage || null,
+    cardImage: localData.cardImage || product.image || null,
     subproducts: enrichedSubproducts,
   };
 };
