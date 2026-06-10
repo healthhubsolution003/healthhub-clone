@@ -12,7 +12,7 @@ const ProductsManager = ({ token }) => {
 
   // Subproducts state
   const [expandedProduct, setExpandedProduct] = useState(null);
-  const [subForm, setSubForm] = useState({ name: "", desc: "" });
+  const [subForm, setSubForm] = useState({ name: "", desc: "", image: "" });
   const [subLoading, setSubLoading] = useState(false);
   const [editSubIndex, setEditSubIndex] = useState(null);
 
@@ -149,13 +149,22 @@ const ProductsManager = ({ token }) => {
             onChange={(e) => setForm({ ...form, name: e.target.value })} style={inputStyle} />
           <input placeholder="Description" value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })} style={inputStyle} />
-          <select value={form.category}
-            onChange={(e) => setForm({ ...form, category: e.target.value })} style={inputStyle}>
-            <option value="">Select Category *</option>
-            {categories.map((cat) => (
-              <option key={cat._id} value={cat._id}>{cat.name}</option>
-            ))}
-          </select>
+         
+         
+         <div style={{ display: "flex", gap: 8 }}>
+  <select value={form.category}
+    onChange={(e) => setForm({ ...form, category: e.target.value })}
+    style={{ ...inputStyle, flex: 1 }}>
+    <option value="">Select Category *</option>
+    {categories.map((cat) => (
+      <option key={cat._id} value={cat._id}>{cat.name}</option>
+    ))}
+  </select>
+  <button onClick={fetchCategories} style={{ ...cancelBtnStyle, padding: "12px 16px", fontSize: 13 }}>
+    🔄 Refresh
+  </button>
+</div>
+
           <input placeholder="Image URL (optional)" value={form.image}
             onChange={(e) => setForm({ ...form, image: e.target.value })} style={inputStyle} />
           {form.image && (
@@ -235,11 +244,18 @@ const ProductsManager = ({ token }) => {
                             style={{ ...inputStyle, flex: 1, minWidth: 200 }}
                           />
                           <input
-                            placeholder="Short description (optional)"
-                            value={subForm.desc}
-                            onChange={(e) => setSubForm({ ...subForm, desc: e.target.value })}
-                            style={{ ...inputStyle, flex: 1, minWidth: 200 }}
-                          />
+  placeholder="Short description (optional)"
+  value={subForm.desc}
+  onChange={(e) => setSubForm({ ...subForm, desc: e.target.value })}
+  style={{ ...inputStyle, flex: 1, minWidth: 200 }}
+/>
+<input
+  placeholder="Image URL (optional)"
+  value={subForm.image}
+  onChange={(e) => setSubForm({ ...subForm, image: e.target.value })}
+  style={{ ...inputStyle, flex: 1, minWidth: 200 }}
+/>
+
                           <button
                             onClick={() => handleAddSubproduct(product)}
                             disabled={subLoading}
@@ -262,10 +278,13 @@ const ProductsManager = ({ token }) => {
                           <table style={{ width: "100%", borderCollapse: "collapse" }}>
                             <thead>
                               <tr style={{ background: "#f1f5f9" }}>
+
                                 <th style={{ ...thStyle, fontSize: 11 }}>#</th>
-                                <th style={{ ...thStyle, fontSize: 11 }}>Name</th>
-                                <th style={{ ...thStyle, fontSize: 11 }}>Description</th>
-                                <th style={{ ...thStyle, fontSize: 11 }}>Actions</th>
+<th style={{ ...thStyle, fontSize: 11 }}>Image</th>
+<th style={{ ...thStyle, fontSize: 11 }}>Name</th>
+<th style={{ ...thStyle, fontSize: 11 }}>Description</th>
+<th style={{ ...thStyle, fontSize: 11 }}>Actions</th>
+
                               </tr>
                             </thead>
                             <tbody>
@@ -273,7 +292,15 @@ const ProductsManager = ({ token }) => {
                                 <tr key={i} style={{ borderBottom: "1px solid #f0f0f0",
                                   background: editSubIndex === i ? "#fffbea" : "white" }}>
                                   <td style={{ ...tdStyle, color: "#888", fontSize: 13 }}>{i + 1}</td>
-                                  <td style={{ ...tdStyle, fontWeight: 600, fontSize: 13 }}>{sub.name}</td>
+<td style={tdStyle}>
+  {sub.image ? (
+    <img src={sub.image} alt={sub.name}
+      style={{ width: 40, height: 40, objectFit: "cover", borderRadius: 4 }} />
+  ) : (
+    <span style={{ color: "#aaa", fontSize: 12 }}>No image</span>
+  )}
+</td>
+<td style={{ ...tdStyle, fontWeight: 600, fontSize: 13 }}>{sub.name}</td>
                                   <td style={{ ...tdStyle, color: "#888", fontSize: 13 }}>{sub.desc || "—"}</td>
                                   <td style={tdStyle}>
                                     <div style={{ display: "flex", gap: 6 }}>
