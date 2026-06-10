@@ -373,6 +373,14 @@ const LOCAL_IMAGE_MAP = {
     cardImage: walkingaids,
     subImages: [sub211, sub212, sub213, sub214, sub215, sub216, sub217, sub218, sub219, sub2110, sub2111, sub2112, sub2113, sub2114, sub2115, sub2116, sub2117, sub2118],
   },
+  "Medical Devices": {
+  cardImage: "https://res.cloudinary.com/dukoegkdj/image/upload/surgical_fqd4me.jpg",
+  subImages: [],
+},
+"ONE DRIP IV FLUID": {
+  cardImage: "https://res.cloudinary.com/dukoegkdj/image/upload/surgical_fqd4me.jpg",
+  subImages: [],
+},
 };
 
 const enrichProduct = (product) => {
