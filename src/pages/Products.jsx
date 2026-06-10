@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import "./Products.css";
 import QuoteModal from "../components/QuoteModal";
 
-
-
 const enrichProduct = (product) => {
   return {
     ...product,
-    cardImage: product.image || null,
+    cardImage: product.category?.image || product.image || null,
     subproducts: (product.subproducts || []).map((sub) => ({
       ...sub,
       image: sub.image || null,
