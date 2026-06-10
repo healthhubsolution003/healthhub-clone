@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import CategoriesManager from "./CategoriesManager";
-import ProductsManager from "./ProductsManager";
 
 const AdminDashboard = () => {
   const [tab, setTab] = useState("leads");
@@ -56,9 +55,7 @@ const AdminDashboard = () => {
           <button className={tab === "categories" ? "active" : ""} onClick={() => setTab("categories")}>
             🗂️ Categories
           </button>
-          <button className={tab === "products" ? "active" : ""} onClick={() => setTab("products")}>
-            📦 Products
-          </button>
+          
         </nav>
         <button className="admin-logout" onClick={logout}>Logout</button>
       </aside>
@@ -118,9 +115,6 @@ const AdminDashboard = () => {
   <CategoriesManager token={token} />
 )}
 
-        {tab === "products" && (
-  <ProductsManager token={token} />
-)}
       </main>
     </div>
   );

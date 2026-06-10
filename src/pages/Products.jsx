@@ -559,7 +559,7 @@ return (
       <button className="modal-close" onClick={() => setSelectedSubproduct(null)}>✕</button>
       <p className="modal-eyebrow">Product Details</p>
       <h3>{selectedSubproduct.name}</h3>
-      <p className="modal-desc">{selectedSubproduct.description}</p>
+      <p className="modal-desc">{selectedSubproduct.desc || selectedSubproduct.description}</p>
     </div>
   </div>
 )}
