@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/logo_fvktbs";
+
+const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/logo_fvktbs.png";
 import './Footer.css';
 
 function Footer() {

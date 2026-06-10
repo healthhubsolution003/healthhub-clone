@@ -2,13 +2,12 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-const heroImg = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/hero-medical_e3vaqi";
-const hygiene = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/hygiene_m9nfo9";
-const baby = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/baby_makiwy";
-const orthopedic = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/orthopedic_yrp6jt";
-const physiotherapy = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/physiotherapy_apvpzc";
-const surgical = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/surgical_fqd4me";
-
+const heroImg = "https://res.cloudinary.com/dukoegkdj/image/upload/hero-medical_e3vaqi.jpg";
+const hygiene = "https://res.cloudinary.com/dukoegkdj/image/upload/hygiene_m9nfo9.jpg";
+const baby = "https://res.cloudinary.com/dukoegkdj/image/upload/baby_makiwy.jpg";
+const orthopedic = "https://res.cloudinary.com/dukoegkdj/image/upload/orthopedic_yrp6jt.jpg";
+const physiotherapy = "https://res.cloudinary.com/dukoegkdj/image/upload/physiotherapy_apvpzc.jpg";
+const surgical = "https://res.cloudinary.com/dukoegkdj/image/upload/surgical_fqd4me.jpg";
 // ── 1. HERO ──────────────────────────────────────────
 function HeroSection() {
   const [current, setCurrent] = useState(0);
