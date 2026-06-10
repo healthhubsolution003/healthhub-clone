@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/logo_fvktbs";
+const logo = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/logo_fvktbs";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

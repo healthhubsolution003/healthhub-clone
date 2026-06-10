@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-const warehouseImg = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/a_vxufc2";
+const warehouseImg = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/a_vxufc2";
 
 const About = () => {
   return (

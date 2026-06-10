@@ -2,26 +2,24 @@ import { useState, useEffect } from "react";
 import "./Products.css";
 import QuoteModal from "../components/QuoteModal";
 
-const hygiene = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/hygiene_m9nfo9";
-const baby = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/baby_makiwy";
-const orthopedic = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/orthopedic_yrp6jt";
-const physiotherapy = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/physiotherapy_apvpzc";
-const surgical = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/surgical_fqd4me";
-const woundcare = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/woundcare_cotton_yrnf4r";
-const orthopaedicbraces = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/Orthopaedic_Supports_Braces_zku1ia";
-const fractureaids = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/fractureaids_dlwjmt";
-const walkingaids = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/walkingaids_xqf4kz";
-const thighcalf = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/Thigh_Calf_Support_kl00oz";
-const surgicaldressing = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/surgicaldressing_qqmbs6";
-const sportgear = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/sportgear_ktv6z6";
-const last = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/last_rzezcf";
-const wrist = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/wrist_oe4zra";
-const fingersplints = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/finger_splints_c3oiub";
-const adultincontinence = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/adultincontinence_dekld4";
+const hygiene = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/hygiene_m9nfo9";
+const baby = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/baby_makiwy";
+const orthopedic = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/orthopedic_yrp6jt";
+const physiotherapy = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/physiotherapy_apvpzc";
+const surgical = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/surgical_fqd4me";
+const woundcare = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/woundcare_cotton_yrnf4r";
+const orthopaedicbraces = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/Orthopaedic_Supports_Braces_zku1ia";
+const fractureaids = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/fractureaids_dlwjmt";
+const walkingaids = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/walkingaids_xqf4kz";
+const thighcalf = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/Thigh_Calf_Support_kl00oz";
+const surgicaldressing = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/surgicaldressing_qqmbs6";
+const sportgear = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/sportgear_ktv6z6";
+const last = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/last_rzezcf";
+const wrist = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/wrist_oe4zra";
+const fingersplints = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/finger_splints_c3oiub";
+const adultincontinence = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/adultincontinence_dekld4";
 
-
-const BASE = "https://res.cloudinary.com/dukoegkdj/image/upload/healthhub/";
-
+const BASE = "https://res.cloudinary.com/dukoegkdj/image/upload/f_auto,q_auto/healthhub/";
 // Category 1 - Feminine Hygiene
 const sub1 = BASE + "1.1_gftlgj";
 const sub2 = BASE + "1.2_tqzkos";
