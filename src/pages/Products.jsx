@@ -20,7 +20,7 @@ const last = "https://res.cloudinary.com/dukoegkdj/image/upload/last_rzezcf.png"
 const wrist = "https://res.cloudinary.com/dukoegkdj/image/upload/wrist_oe4zra.png";
 const fingersplints = "https://res.cloudinary.com/dukoegkdj/image/upload/finger_splints_c3oiub.png";
 const adultincontinence = "https://res.cloudinary.com/dukoegkdj/image/upload/adultincontinence_dekld4.png";
-const BASE = "https://res.cloudinary.com/dukoegkdj/image/upload/";
+
 
 // Category 1 - Feminine Hygiene
 const sub1 = BASE + "1.1_gftlgj";
