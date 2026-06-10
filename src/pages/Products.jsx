@@ -175,8 +175,15 @@ return (
       <button className="modal-close" onClick={() => setSelectedSubproduct(null)}>✕</button>
       <p className="modal-eyebrow">Product Details</p>
       <h3>{selectedSubproduct.name}</h3>
-      <p className="modal-desc">{selectedSubproduct.desc || selectedSubproduct.description}</p>
-    </div>
+     <ul style={{ paddingLeft: "18px", margin: 0, lineHeight: "1.8" }}>
+  {(selectedSubproduct.desc || selectedSubproduct.description || "")
+    .split("\n")
+    .filter(Boolean)
+    .map((line, i) => (
+      <li key={i} style={{ fontSize: "14px", color: "#4b5563" }}>{line}</li>
+    ))}
+</ul>
+       </div>
   </div>
 )}
 
@@ -272,8 +279,8 @@ return (
                       {getCategoryName(product)}
                     </p>
                     <p className="product-card-desc">
-                      {product.description || product.desc}
-                    </p>
+  {product.category?.description || product.description || product.desc}
+</p>
                     <div className="product-card-footer">
                       <button
                         className="btn-view-details"
