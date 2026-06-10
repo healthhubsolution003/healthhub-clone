@@ -14,7 +14,7 @@ const CategoriesManager = ({ token }) => {
   const [catMessage, setCatMessage] = useState("");
 
   // Subproduct form
-  const [subForm, setSubForm] = useState({ name: "", desc: "", image: "" });
+  const [subForm, setSubForm] = useState({ name: "", description: "", image: "" });
   const [editSubIndex, setEditSubIndex] = useState(null);
   const [subLoading, setSubLoading] = useState(false);
 
@@ -108,7 +108,7 @@ const CategoriesManager = ({ token }) => {
   };
 
   const handleEditSubproduct = (sub, index) => {
-    setSubForm({ name: sub.name, desc: sub.desc || "", image: sub.image || "" });
+    setSubForm({ name: sub.name, description: sub.description || sub.desc || "", image: sub.image || "" });
     setEditSubIndex(index);
   };
 
@@ -184,8 +184,8 @@ const CategoriesManager = ({ token }) => {
                     <input placeholder="Subproduct name *" value={subForm.name}
                       onChange={(e) => setSubForm({ ...subForm, name: e.target.value })}
                       style={{ ...inputStyle, flex: 1, minWidth: 160 }} />
-                    <input placeholder="Description (optional)" value={subForm.desc}
-                      onChange={(e) => setSubForm({ ...subForm, desc: e.target.value })}
+                    <input placeholder="Description (optional)" value={subForm.description}
+onChange={(e) => setSubForm({ ...subForm, description: e.target.value })}
                       style={{ ...inputStyle, flex: 1, minWidth: 160 }} />
                     <input placeholder="Image URL (Cloudinary)" value={subForm.image}
                       onChange={(e) => setSubForm({ ...subForm, image: e.target.value })}
@@ -226,7 +226,7 @@ const CategoriesManager = ({ token }) => {
                                 : <span style={{ color: "#aaa", fontSize: 12 }}>No image</span>}
                             </td>
                             <td style={{ ...tdStyle, fontWeight: 600 }}>{sub.name}</td>
-                            <td style={{ ...tdStyle, color: "#888" }}>{sub.desc || "—"}</td>
+                            <td style={{ ...tdStyle, color: "#888" }}>{sub.description || sub.desc || "—"}</td>
                             <td style={tdStyle}>
                               <div style={{ display: "flex", gap: 6 }}>
                                 <button onClick={() => handleEditSubproduct(sub, i)} style={editBtnStyle}>Edit</button>
