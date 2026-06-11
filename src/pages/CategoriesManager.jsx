@@ -184,9 +184,10 @@ const CategoriesManager = ({ token }) => {
                     <input placeholder="Subproduct name *" value={subForm.name}
                       onChange={(e) => setSubForm({ ...subForm, name: e.target.value })}
                       style={{ ...inputStyle, flex: 1, minWidth: 160 }} />
-                    <input placeholder="Description (optional)" value={subForm.description}
-onChange={(e) => setSubForm({ ...subForm, description: e.target.value })}
-                      style={{ ...inputStyle, flex: 1, minWidth: 160 }} />
+                    <textarea placeholder="Description (optional) — press Enter for each new point"
+  value={subForm.desc}
+  onChange={(e) => setSubForm({ ...subForm, desc: e.target.value })}
+  style={{ ...inputStyle, flex: 1, minWidth: 160, height: 80, resize: "vertical" }} />
                     <input placeholder="Image URL (Cloudinary)" value={subForm.image}
                       onChange={(e) => setSubForm({ ...subForm, image: e.target.value })}
                       style={{ ...inputStyle, flex: 1, minWidth: 160 }} />
