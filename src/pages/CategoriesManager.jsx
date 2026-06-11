@@ -80,8 +80,8 @@ const CategoriesManager = ({ token }) => {
       if (res.ok) { setSubForm({ name: "", desc: "", image: "" }); setEditSubIndex(null); fetchAll(); }
     } else {
       const updatedSubs = editSubIndex !== null
-        ? product.subproducts.map((s, i) => i === editSubIndex ? subForm : s)
-        : [...(product.subproducts || []), subForm];
+  ? product.subproducts.map((s, i) => i === editSubIndex ? { ...subForm, description: subForm.desc } : s)
+: [...(product.subproducts || []), { ...subForm, description: subForm.desc }];
       await fetch(`${API}/products/${product._id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
