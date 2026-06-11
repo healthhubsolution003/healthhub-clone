@@ -14,7 +14,7 @@ const CategoriesManager = ({ token }) => {
   const [catMessage, setCatMessage] = useState("");
 
   // Subproduct form
-  const [subForm, setSubForm] = useState({ name: "", description: "", image: "" });
+  const [subForm, setSubForm] = useState({ name: "", desc: "", image: "" });
   const [editSubIndex, setEditSubIndex] = useState(null);
   const [subLoading, setSubLoading] = useState(false);
 
@@ -108,7 +108,7 @@ const CategoriesManager = ({ token }) => {
   };
 
   const handleEditSubproduct = (sub, index) => {
-    setSubForm({ name: sub.name, description: sub.description || sub.desc || "", image: sub.image || "" });
+    setSubForm({ name: sub.name, desc: sub.description || sub.desc || "", image: sub.image || "" });
     setEditSubIndex(index);
   };
 
