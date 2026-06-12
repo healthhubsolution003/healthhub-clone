@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "https://healthhub-backend-f9g1.onrender.com/api";
+const API = "https://healthhub-backend-758p.onrender.com/api";
 
 const CategoriesManager = ({ token }) => {
   const [categories, setCategories] = useState([]);

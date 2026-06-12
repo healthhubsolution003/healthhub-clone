@@ -18,7 +18,7 @@ const AdminDashboard = () => {
   }, []);
 
   const fetchLeads = async () => {
-    const res = await fetch("https://healthhub-backend-f9g1.onrender.com/api/leads", {
+    const res = await fetch("https://healthhub-backend-758p.onrender.com/api/leads", {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (res.status === 401) {
@@ -31,7 +31,7 @@ const AdminDashboard = () => {
   };
 
   const updateStatus = async (id, status) => {
-    await fetch(`https://healthhub-backend-f9g1.onrender.com
+    await fetch(`https://healthhub-backend-758p.onrender.com
 /api/leads/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
