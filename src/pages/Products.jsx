@@ -34,7 +34,7 @@ const [showCart, setShowCart] = useState(false);
       try {
         setLoading(true);
         setError(null);
-       const res = await fetch("https://healthhub-backend-758p.onrender.com/api/products");
+        const res = await fetch("https://healthhub-backend-758p.onrender.com/api/products");
         if (!res.ok) throw new Error(`Server error: ${res.status}`);
         const data = await res.json();
 
